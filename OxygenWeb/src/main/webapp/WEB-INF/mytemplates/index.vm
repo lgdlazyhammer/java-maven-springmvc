@@ -17,10 +17,10 @@
     $br
 
     Here we get the date from the DateTool:  $date.medium
-    <script type="text/javascript" src="http://www.mynginx.com/SprintTestIOC/public/js/sea.js"></script>
+    <script type="text/javascript" src="http://www.mynginx.com/OxygenWeb/public/js/sea.js"></script>
 	<script type="text/javascript">
 		// 加载入口模块
-		seajs.use("http://www.mynginx.com/SprintTestIOC/public/js/test.js")
+		seajs.use("http://www.mynginx.com/OxygenWeb/public/js/test.js")
 	</script>
     </body>
     </html>

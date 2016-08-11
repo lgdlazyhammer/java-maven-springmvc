@@ -1328,3 +1328,18 @@
 2016-08-11 17:03:38,396 [main] INFO  o.e.m2e.actions.ExecutePomAction - Using existing launch configuration
 2016-08-11 17:03:38,473 [Worker-27] INFO  o.e.m.i.launch.MavenLaunchDelegate - J:\j2ee-mars-web\OxygenWeb
 2016-08-11 17:03:38,474 [Worker-27] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B tomcat:run
+2016-08-11 17:44:00,110 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:44:00,119 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-08-11 17:44:00,122 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:44:00,122 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory J:\j2ee-mars-web\OxygenWeb\src\test\resources
+2016-08-11 17:44:05,749 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2016-08-11 17:44:16,139 [Worker-9] INFO  o.e.m.i.launch.MavenLaunchDelegate - J:\j2ee-mars-web\OxygenWeb
+2016-08-11 17:44:16,140 [Worker-9] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B tomcat:run
+2016-08-11 17:50:08,075 [Worker-17] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:50:08,078 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-08-11 17:50:08,080 [Worker-17] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:50:08,081 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory J:\j2ee-mars-web\OxygenWeb\src\test\resources
+2016-08-11 17:50:33,438 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:50:33,439 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-08-11 17:50:33,440 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-11 17:50:33,440 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory J:\j2ee-mars-web\OxygenWeb\src\test\resources
