@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+	<Properties>
+		<Property name="filename">J:/web-release-logs/SpringIOC/logs/app-$${date:MM-dd-yyyy}.log</Property>
+		<Property name="filenamezip">J:/web-release-logs/SpringIOC/logs/zip/app-$${date:MM-dd-yyyy}.log</Property>
+	</Properties>
+	<Appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+		</Console>
+		<Console name="FLOW">
+			<!-- this pattern outputs class name and line number -->
+			<PatternLayout pattern="%C{1}.%M %m %ex%n" />
+			<filters>
+				<MarkerFilter marker="FLOW" onMatch="ACCEPT"
+					onMismatch="NEUTRAL" />
+				<MarkerFilter marker="EXCEPTION" onMatch="ACCEPT"
+					onMismatch="DENY" />
+			</filters>
+		</Console>
+		<File name="File" fileName="${filename}">
+			<PatternLayout>
+				<pattern>%d %p %C{1.} [%t] %m%n</pattern>
+			</PatternLayout>
+		</File>
+		<RollingFile name="RollingFile" fileName="${filenamezip}"
+			filePattern="app-%d{MM-dd-yyyy}.log.gz" ignoreExceptions="false">
+			<PatternLayout>
+				<Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+			</PatternLayout>
+			<TimeBasedTriggeringPolicy />
+		</RollingFile>
+	</Appenders>
+	<Loggers>
+		<Logger name="com.controller.IndexController" level="WARN"
+			additivity="false">
+			<AppenderRef ref="Console" />
+			<AppenderRef ref="File" />
+			<AppenderRef ref="RollingFile">
+			</AppenderRef>
+		</Logger>
+		<Root level="INFO">
+			<AppenderRef ref="Console" />
+		</Root>
+	</Loggers>
+</Configuration>

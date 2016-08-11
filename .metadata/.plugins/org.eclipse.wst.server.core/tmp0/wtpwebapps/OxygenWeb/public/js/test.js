@@ -1,0 +1,1 @@
+alert('sea.js loaded.');

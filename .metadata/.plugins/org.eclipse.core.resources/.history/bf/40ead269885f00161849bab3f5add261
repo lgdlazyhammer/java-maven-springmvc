@@ -1,0 +1,5 @@
+package com.econny.webapp.OxygenDao.mybatis.mapper;
+
+public class UserMapper {
+
+}

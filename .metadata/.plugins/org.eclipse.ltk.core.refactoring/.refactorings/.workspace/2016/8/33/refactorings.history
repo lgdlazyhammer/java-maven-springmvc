@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;OxygenService&apos; to &apos;OxygenWeb&apos;" description="Rename resource &apos;OxygenService&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/OxygenService" name="OxygenWeb" stamp="1470894404234" updateReferences="true"/>
+</session>
