@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                    http://www.springframework.org/schema/context
+                    http://www.springframework.org/schema/context/spring-context-3.0.xsd
+                    http://www.springframework.org/schema/mvc
+                    http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+                    ">
+
+	<!-- 引入jdbc配置文件 -->
+	<context:property-placeholder location="classpath:config.properties" />
+
+	<!-- 对静态资源文件的访问 -->
+	<mvc:resources mapping="/public/**" location="/public/" />
+	<mvc:default-servlet-handler />
+	<mvc:annotation-driven />
+	<context:annotation-config />
+	<context:component-scan base-package="com.econny.webapp.OxygenService" />
+	<context:component-scan base-package="com.econny.webapp.OxygenAction" />
+
+	<bean id="velocityConfig"
+		class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
+		<property name="resourceLoaderPath">
+			<value>/</value>
+		</property>
+		<property name="velocityProperties">
+			<props>
+				<prop key="resource.loader">webapp</prop>
+				<prop key="webapp.resource.loader.class">org.apache.velocity.tools.view.WebappResourceLoader
+				</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.velocity.VelocityViewResolver">
+		<property name="prefix">
+			<value>/WEB-INF/mytemplates/</value>
+		</property>
+		<property name="suffix">
+			<value>.vm</value>
+		</property>
+	</bean>
+
+	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"
+		init-method="init" destroy-method="close">
+		<property name="driverClassName">
+			<value>${driver}</value>
+		</property>
+		<property name="url">
+			<value>${url}</value>
+		</property>
+		<property name="username">
+			<value>${username}</value>
+		</property>
+		<property name="password">
+			<value>${password}</value>
+		</property>
+		<!-- 连接池最大使用连接数 -->
+		<property name="maxActive">
+			<value>20</value>
+		</property>
+		<!-- 初始化连接大小 -->
+		<property name="initialSize">
+			<value>1</value>
+		</property>
+		<!-- 获取连接最大等待时间 -->
+		<property name="maxWait">
+			<value>60000</value>
+		</property>
+		<!-- 连接池最大空闲 -->
+		<property name="maxIdle">
+			<value>20</value>
+		</property>
+		<!-- 连接池最小空闲 -->
+		<property name="minIdle">
+			<value>3</value>
+		</property>
+		<!-- 自动清除无用连接 -->
+		<property name="removeAbandoned">
+			<value>true</value>
+		</property>
+		<!-- 清除无用连接的等待时间 -->
+		<property name="removeAbandonedTimeout">
+			<value>180</value>
+		</property>
+		<!-- 连接属性 -->
+		<property name="connectionProperties">
+			<value>clientEncoding=UTF-8</value>
+		</property>
+	</bean>
+
+	<!-- mybatis文件配置，扫描所有mapper文件 -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean"
+		p:dataSource-ref="dataSource" p:configLocation="classpath:conf/mybatis-config.xml"
+		p:typeAliasesPackage="com.econny.webapp.OxygenDao.mybatis.mapper"
+		p:mapperLocations="classpath:com/econny/webapp/OxygenDao/**/*.xml" /><!-- 
+		configLocation为mybatis属性 mapperLocations为所有mapper -->
+
+	<!-- 扫描basePackage下所有以@MyBatisRepository标识的 接口 -->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.econny.webapp.OxygenDao.mybatis.mapper" />
+	</bean>
+
+	<!-- 对数据源进行事务管理 -->
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager"
+		p:dataSource-ref="dataSource" />
+
+</beans>

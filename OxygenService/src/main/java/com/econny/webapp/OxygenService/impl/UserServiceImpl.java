@@ -1,14 +1,8 @@
 package com.econny.webapp.OxygenService.impl;
 
-import java.io.IOException;
-import java.io.InputStream;
+import java.util.List;
+import java.util.Map;
 
-import org.apache.ibatis.io.Resources;
-import org.apache.ibatis.session.SqlSession;
-import org.apache.ibatis.session.SqlSessionFactory;
-import org.apache.ibatis.session.SqlSessionFactoryBuilder;
-
-import com.econny.webapp.OxygenDao.mybatis.mapper.UserMapper;
 import com.econny.webapp.OxygenEntity.UserEntity;
 import com.econny.webapp.OxygenService.inter.UserService;
 
@@ -16,23 +10,32 @@ public class UserServiceImpl implements UserService {
 
 	public UserEntity getUserById() {
 
-		String resource = "com/econny/webapp/OxygenDao/mybatis/mapper/mybatis-config.xml";
-		InputStream inputStream;
-		try {
-			inputStream = Resources.getResourceAsStream(resource);
-			SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
-
-			SqlSession session = sqlSessionFactory.openSession();
-			UserMapper mapper = session.getMapper(UserMapper.class);
-			UserEntity user = mapper.selectUser(1);
-			System.out.println("select user: " + user.toString());
-			return user;
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
 		return null;
+	}
+
+	public List<UserEntity> qryUserByPage(Map<String, Object> map) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void insertUser(Map<String, Object> map) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void updateUserById(Map<String, Object> map) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void deleteUserById(Map<String, Object> map) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void insertUserBatch(Map<String, Object> map) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

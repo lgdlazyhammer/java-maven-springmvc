@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="WARN">
 	<Properties>
-		<Property name="filename">J:/web-release-logs/SpringIOC/logs/app-$${date:MM-dd-yyyy}.log</Property>
-		<Property name="filenamezip">J:/web-release-logs/SpringIOC/logs/zip/app-$${date:MM-dd-yyyy}.log</Property>
+		<Property name="filename">E:/web-release-logs/SpringIOC/logs/app-$${date:MM-dd-yyyy}.log</Property>
+		<Property name="filenamezip">E:/web-release-logs/SpringIOC/logs/zip/app-$${date:MM-dd-yyyy}.log</Property>
 	</Properties>
 	<Appenders>
 		<Console name="Console" target="SYSTEM_OUT">
