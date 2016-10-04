@@ -1,7 +1,0 @@
-package com.econny.webapp.OxygenDao.mybatis.mapper;
-
-public interface UserMapper {
-
-	public UserEntity selectUser(int id);
-
-}

@@ -1,5 +1,0 @@
-package com.econny.webapp.OxygenService.inter;
-
-public interface UserService {
-
-}
