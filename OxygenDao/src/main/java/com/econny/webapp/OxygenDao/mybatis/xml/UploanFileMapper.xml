@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.econny.webapp.OxygenDao.mybatis.dao.UploadFileMapper">
+
+	<sql id="uploadFileColumns"> 
+		fil_up.id AS "id",
+		fil_up.file_name AS "fileName",
+		fil_up.file_type AS "fileType",
+		fil_up.file_size AS "fileSize",
+		fil_up.file_content_type AS "fileContentType",
+		fil_up.file_content AS "fileContent",
+		fil_up.secure_level AS "secureLevel"
+	</sql> 
+	
+	<resultMap type="com.econny.webapp.OxygenEntity.UploadFileEntity"
+		id="uploadFileEntity">
+		<result property="id" column="id" />
+		<result property="fileName" column="file_name" />
+		<result property="fileType" column="file_type" />
+		<result property="fileSize" column="file_size" />
+		<result property="fileContentType" column="file_content_type" />
+		<result property="fileContent" column="file_content" />
+		<result property="secureLevel" column="secure_level" />
+	</resultMap>
+
+	<insert id="insert" parameterType="com.econny.webapp.OxygenEntity.UploadFileEntity">
+		INSERT INTO file_upload (
+		id,
+		file_name,
+		file_type,
+		file_size,
+		file_content_type,
+		file_content,
+		secure_level
+		) values(
+		#{id},
+		#{fileName},
+		#{fileType},
+		#{fileSize},
+		#{fileContentType},
+		#{fileContent},
+		#{secureLevel}
+		)
+	</insert>
+	
+	<select id="getById" parameterType="com.econny.webapp.OxygenEntity.UploadFileEntity"  resultMap="uploadFileEntity">
+		SELECT
+		<include refid="uploadFileColumns"/>
+		FROM file_upload fil_up
+		WHERE
+		<if test="id !=null and id !=''">
+			fil_up.id = #{id}
+		</if>
+	</select>
+
+</mapper>

@@ -1,5 +1,6 @@
 package com.econny.webapp.OxygenEntity;
 
+import java.sql.Blob;
 import java.util.UUID;
 
 public class UploadFileEntity {
@@ -7,17 +8,17 @@ public class UploadFileEntity {
 	private String id;// 主键--文件中保存的文件实际名字
 	private String fileName;// 文件实际名字
 	private String fileType;// 文件类型
-	private String fileSize;// 文件大小
+	private Long fileSize;// 文件大小
 	private String fileContentType;// 文件类型
-	private Byte fileContent; // 文件2进制内容
+	private byte[] fileContent; // 文件2进制内容
 	private Integer secureLevel;
 	
 	public UploadFileEntity(){
 		this.id = UUID.randomUUID().toString();
 	}
 
-	public UploadFileEntity(String id, String fileName, String fileType, String fileSize, String fileContentType,
-			Byte fileContent, Integer secureLevel) {
+	public UploadFileEntity(String id, String fileName, String fileType, Long fileSize, String fileContentType,
+			byte[] fileContent, Integer secureLevel) {
 		super();
 		this.id = id;
 		this.fileName = fileName;
@@ -52,11 +53,11 @@ public class UploadFileEntity {
 		this.fileType = fileType;
 	}
 
-	public String getFileSize() {
+	public Long getFileSize() {
 		return fileSize;
 	}
 
-	public void setFileSize(String fileSize) {
+	public void setFileSize(Long fileSize) {
 		this.fileSize = fileSize;
 	}
 
@@ -68,20 +69,20 @@ public class UploadFileEntity {
 		this.fileContentType = fileContentType;
 	}
 
-	public Byte getFileContent() {
+	public byte[] getFileContent() {
 		return fileContent;
 	}
 
-	public void setFileContent(Byte fileContent) {
+	public void setFileContent(byte[] fileContent) {
 		this.fileContent = fileContent;
+	}
+
+	public void setSecureLevel(Integer secureLevel) {
+		this.secureLevel = secureLevel;
 	}
 
 	public Integer getSecureLevel() {
 		return secureLevel;
-	}
-
-	public void setSecureLevel(int secureLevel) {
-		this.secureLevel = secureLevel;
 	}
 
 }
