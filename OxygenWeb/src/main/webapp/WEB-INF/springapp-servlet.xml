@@ -7,19 +7,26 @@
                     http://www.springframework.org/schema/context
                     http://www.springframework.org/schema/context/spring-context-3.0.xsd
                     http://www.springframework.org/schema/mvc
-                    http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
-                    ">
+                    http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 
 	<!-- 引入jdbc配置文件 -->
 	<context:property-placeholder location="classpath:conf/config.properties" />
 
 	<!-- 对静态资源文件的访问 -->
-	<mvc:resources mapping="/public/**" location="/public/" />
-	<mvc:default-servlet-handler />
-	<mvc:annotation-driven />
+	<mvc:resources mapping="/public/**" location="/public/"/>
+	<mvc:default-servlet-handler/>
+	<mvc:annotation-driven/>
 	<context:annotation-config />
 	<context:component-scan base-package="com.econny.webapp.OxygenService" />
 	<context:component-scan base-package="com.econny.webapp.OxygenAction" />
+	<context:component-scan base-package="com.econny.webapp.OxygenTasks" />
+	
+	
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+
+        <property name="maxUploadSize" value="100000"/>
+
+    </bean>
 
 	<bean id="velocityConfig"
 		class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
@@ -116,11 +123,25 @@
 		<property name="targetMethod" value="printMessage" />
 	</bean>
 	
-	<!-- Run the job every 2 seconds with initial delay of 1 second -->
+	<!-- Run the job every 1 hour with initial delay of 1 second -->
     <bean id="simpleTrigger"  class="org.springframework.scheduling.quartz.SimpleTriggerFactoryBean">
         <property name="jobDetail" ref="simpleJobDetail" />
         <property name="startDelay" value="1000" />
-        <property name="repeatInterval" value="2000" />
+        <property name="repeatInterval" value="3600000" />
+    </bean>
+    
+    <!-- For times when you just need to invoke a method on a specific object -->
+	<bean id="createFileUploadFolderTaskDetail"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="CreateFileUploadFolderTask" />
+		<property name="targetMethod" value="CreateFileUploadFolder" />
+	</bean>
+	
+	<!-- Run the job every 10000 day with initial delay of 1 seconds -->
+    <bean id="createFileUploadFolderTaskTrigger"  class="org.springframework.scheduling.quartz.SimpleTriggerFactoryBean">
+        <property name="jobDetail" ref="createFileUploadFolderTaskDetail" />
+        <property name="startDelay" value="1000" />
+        <property name="repeatInterval" value="864000000000" />
     </bean>
     
     <!-- Scheduler factory bean to glue together jobDetails and triggers to Configure Quartz Scheduler -->
@@ -128,12 +149,14 @@
         <property name="jobDetails">
             <list>
                 <ref bean="simpleJobDetail" />
+                <ref bean="createFileUploadFolderTaskDetail" />
             </list>
         </property>
  
         <property name="triggers">
             <list>
                 <ref bean="simpleTrigger" />
+                <ref bean="createFileUploadFolderTaskTrigger" />
             </list>
         </property>
     </bean>

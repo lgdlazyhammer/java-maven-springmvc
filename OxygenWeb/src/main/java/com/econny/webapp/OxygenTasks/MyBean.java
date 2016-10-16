@@ -1,4 +1,4 @@
-package com.econny.webapp.OxygenAction;
+package com.econny.webapp.OxygenTasks;
 
 import org.springframework.stereotype.Component;
 
