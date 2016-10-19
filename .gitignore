@@ -2,3 +2,8 @@
 /.recommenders
 /Servers
 /RemoteSystemsTempFiles
+/OxygenAction/target
+/OxygenDao/target
+/OxygenEntity/target
+/OxygenService/target
+/OxygenWeb/target
