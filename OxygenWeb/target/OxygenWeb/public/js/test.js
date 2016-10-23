@@ -1,1 +1,0 @@
-alert('sea.js loaded.');

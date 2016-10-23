@@ -3,17 +3,17 @@ package com.econny.webapp.OxygenService.impl;
 import java.util.List;
 import java.util.Map;
 
-import com.econny.webapp.OxygenEntity.UserEntity;
+import com.econny.webapp.OxygenEntity.OauthUserEntity;
 import com.econny.webapp.OxygenService.inter.UserService;
 
 public class UserServiceImpl implements UserService {
 
-	public UserEntity getUserById() {
+	public OauthUserEntity getUserById() {
 
 		return null;
 	}
 
-	public List<UserEntity> qryUserByPage(Map<String, Object> map) {
+	public List<OauthUserEntity> qryUserByPage(Map<String, Object> map) {
 		// TODO Auto-generated method stub
 		return null;
 	}

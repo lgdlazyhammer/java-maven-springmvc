@@ -3,11 +3,11 @@ package com.econny.webapp.OxygenEntity;
 public class ApiResultEntity {
 
 	private Boolean success;
-	private String result;
+	private Object result;
 	private Integer statusCode;
 	private String error;
 
-	public ApiResultEntity(Boolean success, String result, Integer statusCode, String error) {
+	public ApiResultEntity(Boolean success, Object result, Integer statusCode, String error) {
 		super();
 		this.success = success;
 		this.result = result;
@@ -23,11 +23,11 @@ public class ApiResultEntity {
 		this.success = success;
 	}
 
-	public String getResult() {
+	public Object getResult() {
 		return result;
 	}
 
-	public void setResult(String result) {
+	public void setResult(Object result) {
 		this.result = result;
 	}
 

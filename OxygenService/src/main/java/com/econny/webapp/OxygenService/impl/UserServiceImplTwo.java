@@ -6,22 +6,22 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.econny.webapp.OxygenDao.mybatis.dao.UserMapper;
-import com.econny.webapp.OxygenEntity.UserEntity;
+import com.econny.webapp.OxygenDao.mybatis.dao.OauthUserMapper;
+import com.econny.webapp.OxygenEntity.OauthUserEntity;
 import com.econny.webapp.OxygenService.inter.UserService;
 
 @Service
 public class UserServiceImplTwo implements UserService {
 	
 	@Autowired
-	UserMapper userMapper;
+	OauthUserMapper userMapper;
 
-	public UserEntity getUserById() {
+	public OauthUserEntity getUserById() {
 		// TODO Auto-generated method stub
-		return userMapper.selectUser(1);
+		return userMapper.selectUser("1");
 	}
 
-	public List<UserEntity> qryUserByPage(Map<String, Object> map) {
+	public List<OauthUserEntity> qryUserByPage(Map<String, Object> map) {
 		// TODO Auto-generated method stub
 		return userMapper.qryUserByPage(map);
 	}

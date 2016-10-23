@@ -38,9 +38,11 @@ public class CreateFileUploadFolder implements ServletContextAware {
 			e.printStackTrace();
 		}
 		String realPath = servletContext.getRealPath("/WEB-INF/" + prop.getProperty("filePathSave"));
+		String realPathStatic = servletContext.getRealPath("/WEB-INF/" + prop.getProperty("filePathStatic"));
 		// create the folder -- this should be done when the project first
 		// started
 		new File(realPath).mkdirs();
+		new File(realPathStatic).mkdirs();
 		
 		System.out.println("create file upload folder task.");
 	}

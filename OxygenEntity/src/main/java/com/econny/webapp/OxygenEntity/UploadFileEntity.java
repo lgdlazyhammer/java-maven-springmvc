@@ -13,6 +13,8 @@ public class UploadFileEntity {
 	private byte[] fileContent; // 文件2进制内容
 	private Integer secureLevel;
 	
+	private String refUrl;//reference url
+	
 	public UploadFileEntity(){
 		this.id = UUID.randomUUID().toString();
 	}
@@ -83,6 +85,14 @@ public class UploadFileEntity {
 
 	public Integer getSecureLevel() {
 		return secureLevel;
+	}
+
+	public String getRefUrl() {
+		return refUrl;
+	}
+
+	public void setRefUrl(String refUrl) {
+		this.refUrl = refUrl;
 	}
 
 }

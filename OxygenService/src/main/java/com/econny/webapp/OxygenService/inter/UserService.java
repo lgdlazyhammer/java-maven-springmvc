@@ -3,13 +3,13 @@ package com.econny.webapp.OxygenService.inter;
 import java.util.List;
 import java.util.Map;
 
-import com.econny.webapp.OxygenEntity.UserEntity;
+import com.econny.webapp.OxygenEntity.OauthUserEntity;
 
 public interface UserService {
 
-	public UserEntity getUserById();
+	public OauthUserEntity getUserById();
 	
-	public List<UserEntity> qryUserByPage(Map<String, Object> map);
+	public List<OauthUserEntity> qryUserByPage(Map<String, Object> map);
 	
 	public void insertUser(Map<String, Object> map);
 	

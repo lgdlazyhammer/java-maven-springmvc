@@ -1,0 +1,66 @@
+  <!DOCTYPE html>
+  <html>
+	<head>
+	 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="http://www.mynginx.com/OxygenWeb/public/js/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	    <link href="http://www.mynginx.com/OxygenWeb/public/js/bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+	    <link href="http://www.mynginx.com/OxygenWeb/public/js/bower_components/bootstrap-fileinput/css/fileinput.min.css" rel="stylesheet">
+	</head>
+    <body>
+    I'm a velocity template.  $!user.name 
+
+    #if( $XHTML )
+      #set( $br = "<br />" )
+    #else
+      #set( $br = "<br>" )
+    #end
+
+    $br
+    $br
+
+    Here we use a custom tool: $toytool.message
+
+    $br
+    $br
+    
+	<input id="file-upload" type="file" class="file" data-preview-file-type="text" >
+	
+	<span id="downloadTypeZero">file download type 0</span>
+	<span id="downloadTypeOne">file download type 1</span>
+	
+	
+    Here we get the date from the DateTool:  $date.medium
+    
+    <form id="fileupload" action="http://localhost:8090/OxygenWeb/commonService/fileUploadSingle" method="POST" enctype="multipart/form-data">
+    	<input type="file" name="file_data" multiple>
+    	<input type="text" name="secureLevel" value="1">
+    	<button type="submit">submit</button>
+    	<button type="reset">reset</button>
+    </form>
+    
+    <a href="http://localhost:8090/OxygenWeb/commonService/fileDownloadSingle?id=bfddae44-3a48-48db-9fce-d745d0564577">file download</a>
+    
+    <img id="img_result" src=""></img>
+
+    <!-- ionic/angularjs js -->
+	<!--<script data-main="lib/main.js" src="lib/requirejs-2.1.11.js"></script>
+    <script src="http://www.mynginx.com/OxygenWeb/public/js/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="http://www.mynginx.com/OxygenWeb/public/js/bower_components/jquery/dist/jquery.slim.min.js"></script>
+    <script src="http://www.mynginx.com/OxygenWeb/public/js/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="http://www.mynginx.com/OxygenWeb/public/js/bower_components/bootstrap-fileinput/js/fileinput.min.js"></script>-->
+    <script src="http://www.mynginx.com/OxygenWeb/public/js/jquery-3.1.0.min.js"></script>
+    <script src="http://www.mynginx.com/OxygenWeb/public/js/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="http://www.mynginx.com/OxygenWeb/public/js/bower_components/bootstrap-fileinput/js/fileinput.min.js"></script>
+    <script src="http://www.mynginx.com/OxygenWeb/public/js/test.js"></script>
+    
+    <!--<script type="text/javascript" src="http://www.mynginx.com/OxygenWeb/public/js/sea.js"></script>
+	<script type="text/javascript">
+		// 加载入口模块
+		seajs.use("http://www.mynginx.com/OxygenWeb/public/js/jquery-3.1.0.min.js")
+		seajs.use("http://www.mynginx.com/OxygenWeb/public/js/bootstrap-3.3.7-dist/js/bootstrap.min.js")
+		seajs.use("http://www.mynginx.com/OxygenWeb/public/js/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.min.js")
+		seajs.use("http://www.mynginx.com/OxygenWeb/public/js/bootstrap-fileinput/js/fileinput.min.js")
+		seajs.use("http://www.mynginx.com/OxygenWeb/public/js/test.js")
+	</script>-->
+    </body>
+    </html>

@@ -14,11 +14,12 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.econny.webapp.OxygenEntity.UserEntity;
+import com.econny.webapp.OxygenEntity.OauthUserEntity;
 import com.econny.webapp.OxygenService.impl.UserServiceImpl;
 import com.econny.webapp.OxygenService.inter.UserService;
 
@@ -61,7 +62,7 @@ public class IndexController {
 			e.printStackTrace();
 		}
 
-		UserEntity user = userService.getUserById();
+		OauthUserEntity user = userService.getUserById();
 		return new ModelAndView("index", "user", user);
 	}
 
@@ -72,7 +73,7 @@ public class IndexController {
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("start", 1);
 		map.put("end", 10);
-		List<UserEntity> users = userServiceImplTwo.qryUserByPage(map);
+		List<OauthUserEntity> users = userServiceImplTwo.qryUserByPage(map);
 		return users;
 	}
 
@@ -96,7 +97,7 @@ public class IndexController {
 	@ResponseBody
 	public Object json() {
 
-		UserEntity user = userServiceImplTwo.getUserById();
+		OauthUserEntity user = userServiceImplTwo.getUserById();
 		System.out.println("this is the autowired user: " + user.getName());
 		Map<String, Object> result = new HashMap<String, Object>();
 		result.put("data", "success");

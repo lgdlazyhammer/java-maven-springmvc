@@ -45,7 +45,7 @@ public class CommonService {
 	 * "header3", "header4" }, method = RequestMethod.DELETE, maxAge = 123,
 	 * allowCredentials = "false")
 	 */
-	@CrossOrigin(origins = "*", maxAge = 3600, methods = { RequestMethod.POST })
+	@CrossOrigin(origins = "http://localhost:9000", maxAge = 3600, methods = { RequestMethod.POST })
 	@RequestMapping(value = "/fileUploadSingle", method = RequestMethod.POST)
 	@ResponseBody
 	public Object fileUploadSingle(HttpServletRequest request, HttpServletResponse response,
@@ -82,6 +82,9 @@ public class CommonService {
 			String realPath = request.getSession().getServletContext()
 					.getRealPath("/WEB-INF/" + prop.getProperty("filePathSave"));
 
+			String realPathStatic = request.getSession().getServletContext()
+					.getRealPath("/WEB-INF/" + prop.getProperty("filePathStatic"));
+
 			if (secureLevel == FileSecureLevel.LevelOne.getCode()) {
 				// 保存2进制文件内容
 				uploadFileEntity.setFileContent(myfile.getBytes());
@@ -93,10 +96,19 @@ public class CommonService {
 				// 这里不必处理IO流关闭的问题，因为FileUtils.copyInputStreamToFile()方法内部会自动把用到的IO流关掉
 				FileUtils.copyFileToDirectory(multipartToFile(myfile), new File(realPath, uploadFileEntity.getId()));
 
+				uploadFileServiceImpl.insert(uploadFileEntity);
+
+				return new ApiResultEntity(true, uploadFileEntity.getId(), 200, "");
+			} else if (secureLevel == FileSecureLevel.LevelThree.getCode()) {
+				// 这里不必处理IO流关闭的问题，因为FileUtils.copyInputStreamToFile()方法内部会自动把用到的IO流关掉
+				FileUtils.copyFileToDirectory(multipartToFile(myfile),
+						new File(realPathStatic, uploadFileEntity.getId()));
+
+				uploadFileServiceImpl.insert(uploadFileEntity);
+
 				return new ApiResultEntity(true, uploadFileEntity.getId(), 200, "");
 			}
-		}
-		;
+		};
 
 		return new ApiResultEntity(false, "", 500, "");
 	}
@@ -114,7 +126,7 @@ public class CommonService {
 	@RequestMapping(value = "/fileUploadMulti", method = RequestMethod.POST)
 	@ResponseBody
 	public Object fileUploadMulti(HttpServletRequest request, HttpServletResponse response,
-			@RequestParam MultipartFile[] myfiles, @RequestParam String secureLevel) throws IOException {
+			@RequestParam MultipartFile[] myfiles, @RequestParam Integer secureLevel) throws IOException {
 		// 获取文件暂存和保存路径
 		Properties prop = new Properties();
 		InputStream in = request.getSession().getServletContext()
@@ -136,29 +148,60 @@ public class CommonService {
 			if (myfile.isEmpty()) {
 				System.out.println("文件未上传");
 			} else {
-				System.out.println("文件长度: " + myfile.getSize());
-				System.out.println("文件类型: " + myfile.getContentType());
-				System.out.println("文件名称: " + myfile.getName());
-				System.out.println("文件原名: " + myfile.getOriginalFilename());
-				System.out.println("========================================");
+
+				// generate the database save id
+				UploadFileEntity uploadFileEntity = new UploadFileEntity();
+				// set file original name -- aaa.txt
+				uploadFileEntity.setFileName(myfile.getOriginalFilename());
+				// set file size -- 3233
+				uploadFileEntity.setFileSize(myfile.getSize());
+				// set file type -- image/png
+				uploadFileEntity.setFileContentType(myfile.getContentType());
+				// set secure level
+				uploadFileEntity.setSecureLevel(secureLevel);
 				// 如果用的是Tomcat服务器，则文件会上传到\\%TOMCAT_HOME%\\webapps\\YourWebProject\\WEB-INF\\upload\\文件夹中
 				String realPath = request.getSession().getServletContext()
 						.getRealPath("/WEB-INF/" + prop.getProperty("filePathSave"));
-				// 这里不必处理IO流关闭的问题，因为FileUtils.copyInputStreamToFile()方法内部会自动把用到的IO流关掉，我是看它的源码才知道的
-				FileUtils.copyDirectoryToDirectory(multipartToFile(myfile),
-						new File(realPath, myfile.getOriginalFilename()));
+
+				String realPathStatic = request.getSession().getServletContext()
+						.getRealPath("/WEB-INF/" + prop.getProperty("filePathStatic"));
+
+				if (secureLevel == FileSecureLevel.LevelOne.getCode()) {
+					// 保存2进制文件内容
+					uploadFileEntity.setFileContent(myfile.getBytes());
+					uploadFileServiceImpl.insert(uploadFileEntity);
+
+					return new ApiResultEntity(true, uploadFileEntity.getId(), 200, "");
+					// do nothing
+				} else if (secureLevel == FileSecureLevel.LevelTwo.getCode()) {
+					// 这里不必处理IO流关闭的问题，因为FileUtils.copyInputStreamToFile()方法内部会自动把用到的IO流关掉
+					FileUtils.copyFileToDirectory(multipartToFile(myfile), new File(realPath, uploadFileEntity.getId()));
+
+					uploadFileServiceImpl.insert(uploadFileEntity);
+
+					return new ApiResultEntity(true, uploadFileEntity.getId(), 200, "");
+				} else if (secureLevel == FileSecureLevel.LevelThree.getCode()) {
+					// 这里不必处理IO流关闭的问题，因为FileUtils.copyInputStreamToFile()方法内部会自动把用到的IO流关掉
+					FileUtils.copyFileToDirectory(multipartToFile(myfile),
+							new File(realPathStatic, uploadFileEntity.getId()));
+
+					uploadFileServiceImpl.insert(uploadFileEntity);
+
+					return new ApiResultEntity(true, uploadFileEntity.getId(), 200, "");
+				}
 			}
 		}
-		return "ok";
+		
+		return new ApiResultEntity(false, "", 500, "");
 	}
-	
+
 	/*
 	 * file download
 	 */
 	@CrossOrigin(origins = "*", maxAge = 3600, methods = { RequestMethod.GET })
 	@RequestMapping(value = "/fileDownloadSingle", method = RequestMethod.GET)
 	@ResponseBody
-	public void fileDownloadSingleGET(HttpServletRequest request, HttpServletResponse response,
+	public Object fileDownloadSingleGET(HttpServletRequest request, HttpServletResponse response,
 			@RequestParam(required = true) String id) throws IOException {
 		// 获取文件暂存和保存路径
 		Properties prop = new Properties();
@@ -172,8 +215,19 @@ public class CommonService {
 
 		UploadFileEntity uploadFileEntityRes = uploadFileServiceImpl.getById(uploadFileEntityQry);
 
-		makeDownloadResponse(response, request.getSession().getServletContext(), prop, uploadFileEntityRes);
+		if (uploadFileEntityRes.getSecureLevel().equals(FileSecureLevel.LevelOne.getCode())
+				|| uploadFileEntityRes.getSecureLevel().equals(FileSecureLevel.LevelTwo.getCode())) {
+			// return the file bytes
+			makeDownloadResponse(response, request.getSession().getServletContext(), prop, uploadFileEntityRes);
+			return null;
+		} else if (uploadFileEntityRes.getSecureLevel().equals(FileSecureLevel.LevelThree.getCode())) {
+			uploadFileEntityRes.setRefUrl(prop.getProperty("filePathStatic") + "/" + uploadFileEntityRes.getId()
+			+ "/" + uploadFileEntityRes.getFileName());
+			// return the static url
+			return new ApiResultEntity(true, uploadFileEntityRes , 200, "");
+		}
 
+		return null;
 	}
 
 	/*
@@ -182,7 +236,7 @@ public class CommonService {
 	@CrossOrigin(origins = "*", maxAge = 3600, methods = { RequestMethod.POST })
 	@RequestMapping(value = "/fileDownloadSingle", method = RequestMethod.POST)
 	@ResponseBody
-	public void fileDownloadSinglePost(HttpServletRequest request, HttpServletResponse response,
+	public Object fileDownloadSinglePost(HttpServletRequest request, HttpServletResponse response,
 			@RequestParam(required = true) String id) throws IOException {
 		// 获取文件暂存和保存路径
 		Properties prop = new Properties();
@@ -196,7 +250,20 @@ public class CommonService {
 
 		UploadFileEntity uploadFileEntityRes = uploadFileServiceImpl.getById(uploadFileEntityQry);
 
-		makeDownloadResponse(response, request.getSession().getServletContext(), prop, uploadFileEntityRes);
+		if (uploadFileEntityRes.getSecureLevel().equals(FileSecureLevel.LevelOne.getCode())
+				|| uploadFileEntityRes.getSecureLevel().equals(FileSecureLevel.LevelTwo.getCode())) {
+			// return the file bytes
+			makeDownloadResponse(response, request.getSession().getServletContext(), prop, uploadFileEntityRes);
+			return null;
+		} else if (uploadFileEntityRes.getSecureLevel().equals(FileSecureLevel.LevelThree.getCode())) {
+			
+			uploadFileEntityRes.setRefUrl(prop.getProperty("filePathStatic") + "/" + uploadFileEntityRes.getId()
+			+ "/" + uploadFileEntityRes.getFileName());
+			// return the static url
+			return new ApiResultEntity(true, uploadFileEntityRes , 200, "");
+		}
+
+		return null;
 
 	}
 
@@ -207,6 +274,7 @@ public class CommonService {
 		return convFile;
 	}
 
+	//made download file response
 	public void makeDownloadResponse(HttpServletResponse response, ServletContext servletContext, Properties prop,
 			UploadFileEntity uploadFileEntity) throws IOException {
 		// 获取网站部署路径(通过ServletContext对象)，用于确定下载文件位置，从而实现下载
@@ -219,9 +287,9 @@ public class CommonService {
 		ServletOutputStream out;
 
 		if (uploadFileEntity.getSecureLevel() == FileSecureLevel.LevelOne.getCode()) {
-			
-			InputStream inputStream = new ByteArrayInputStream(uploadFileEntity.getFileContent()); 
-			
+
+			InputStream inputStream = new ByteArrayInputStream(uploadFileEntity.getFileContent());
+
 			// 3.通过response获取ServletOutputStream对象(out)
 			out = response.getOutputStream();
 
@@ -235,11 +303,11 @@ public class CommonService {
 			inputStream.close();
 			out.close();
 			out.flush();
-			
+
 		} else if (uploadFileEntity.getSecureLevel() == FileSecureLevel.LevelTwo.getCode()) {
 
 			// 通过文件路径获得File对象(假如此路径中有一个download.pdf文件)
-			File file = new File(path + uploadFileEntity.getId() + "/" + uploadFileEntity.getFileName());
+			File file = new File(path + "/" + uploadFileEntity.getId() + "/" + uploadFileEntity.getFileName());
 
 			FileInputStream inputStream = new FileInputStream(file);
 

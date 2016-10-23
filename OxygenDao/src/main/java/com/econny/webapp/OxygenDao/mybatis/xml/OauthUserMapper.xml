@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.econny.webapp.OxygenDao.mybatis.dao.OauthUserMapper">
+	<select id="selectUser" resultType="com.econny.webapp.OxygenEntity.OauthUserEntity">
+		SELECT id, name, password
+		FROM oauth_user where id = #{id}
+	</select>
+
+	<resultMap type="com.econny.webapp.OxygenEntity.OauthUserEntity"
+		id="userHashEntity">
+		<result property="id" column="id" />
+		<result property="name" column="name" />
+		<result property="password" column="password" />
+	</resultMap>
+
+	<select id="qryUserByPage" parameterType="HashMap" resultMap="userHashEntity">
+		SELECT usr.id as "id",
+		usr.name as "name",
+		usr.password as "password"
+		<if test="groupBySysId =='group'">,count(distinct
+		usr.name) as 'countNam'</if>
+		FROM oauth_user usr
+		WHERE usr.id &gt;= #{start}
+		AND usr.id &lt; ${end}
+	</select>
+
+	<insert id="insertUser" parameterType="HashMap">
+		INSERT INTO oauth_user (
+		name,
+		password
+		) values(
+		#{name},
+		#{password}
+		)
+	</insert>
+
+	<insert id="insertUserBatch" parameterType="HashMap" flushCache="true"
+		statementType="PREPARED" keyProperty="" keyColumn="" timeout="20">
+		INSERT INTO oauth_user (
+		name,
+		password
+		) values
+		<foreach item="item" collection="list" separator=",">
+			(#{item.name}, #{item.password})
+		</foreach>
+	</insert>
+
+	<update id="updateUserById" parameterType="HashMap">
+		UPDATE oauth_user
+		set name = ${name},
+		password = ${password}
+		<where>
+			<if test="id != null and id !=''">
+				id = ${id}
+			</if>
+			<if test="name != null and name !=''">
+				name like CONCAT('${name}','%' )
+			</if>
+		</where>
+	</update>
+
+	<delete id="deleteUserById" parameterType="HashMap">
+		DELETE FROM oauth_user
+		where
+		id =
+		#{id}
+	</delete>
+
+</mapper>
