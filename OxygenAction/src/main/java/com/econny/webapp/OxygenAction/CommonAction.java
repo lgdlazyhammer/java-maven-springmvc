@@ -31,7 +31,7 @@ import com.econny.webapp.OxygenService.impl.UploadFileServiceImpl;
 
 @Controller
 @RequestMapping("/commonService")
-public class CommonService {
+public class CommonAction {
 
 	@Autowired
 	UploadFileServiceImpl uploadFileServiceImpl;

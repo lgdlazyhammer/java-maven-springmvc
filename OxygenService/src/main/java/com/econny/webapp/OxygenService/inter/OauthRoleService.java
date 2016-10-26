@@ -1,13 +1,10 @@
-package com.econny.webapp.OxygenDao.mybatis.dao;
+package com.econny.webapp.OxygenService.inter;
 
 import java.util.List;
 
-import org.springframework.stereotype.Repository;
-
 import com.econny.webapp.OxygenEntity.OauthRoleEntity;
 
-@Repository
-public interface OauthRoleMapper {
+public interface OauthRoleService {
 	
 	public void save(OauthRoleEntity oauthRoleEntity);
 	

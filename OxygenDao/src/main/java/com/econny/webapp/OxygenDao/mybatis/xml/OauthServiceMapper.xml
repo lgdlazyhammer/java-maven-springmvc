@@ -4,4 +4,45 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.econny.webapp.OxygenDao.mybatis.dao.OauthServiceMapper">
 
+	<resultMap type="com.econny.webapp.OxygenEntity.OauthServiceEntity"
+		id="oauthServiceEntity">
+		<result property="id" column="id" />
+		<result property="role_id" column="roleId" />
+		<result property="description" column="description" />
+	</resultMap>
+		
+	<insert id="save" parameterType="com.econny.webapp.OxygenEntity.OauthServiceEntity">
+		INSERT INTO oauth_service (
+		id,
+		role_id,
+		description
+		) values(
+		#{id},
+		#{roleId},
+		#{description}
+		)
+	</insert>
+
+	<delete id="delete" parameterType="com.econny.webapp.OxygenEntity.OauthServiceEntity">
+		DELETE FROM oauth_service
+		where
+		id =
+		#{id}
+	</delete>
+	
+	<update id="update" parameterType="com.econny.webapp.OxygenEntity.OauthServiceEntity">
+		UPDATE oauth_service
+		set role_id = #{roleId},
+		password = #{password}
+		WHERE		
+		id = #{id}
+	</update>
+
+	<select id="findList" parameterType="com.econny.webapp.OxygenEntity.OauthServiceEntity" resultMap="oauthServiceEntity">
+		SELECT * FROM oauth_service
+		WHERE
+			<if test="id != null and id !=''">
+				id = #{id}
+			</if>
+	</select>
 </mapper>

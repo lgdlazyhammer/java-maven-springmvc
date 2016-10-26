@@ -1,13 +1,10 @@
-package com.econny.webapp.OxygenDao.mybatis.dao;
+package com.econny.webapp.OxygenService.inter;
 
 import java.util.List;
 
-import org.springframework.stereotype.Repository;
-
 import com.econny.webapp.OxygenEntity.OauthServiceEntity;
 
-@Repository
-public interface OauthServiceMapper {
+public interface OauthServiceService {
 	
 	public void save(OauthServiceEntity oauthServiceEntity);
 	
@@ -16,4 +13,5 @@ public interface OauthServiceMapper {
 	public void update(OauthServiceEntity oauthServiceEntity);
 	
 	public List<OauthServiceEntity> findList(OauthServiceEntity oauthServiceEntity);
+	
 }

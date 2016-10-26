@@ -9,8 +9,8 @@
                     http://www.springframework.org/schema/mvc
                     http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 
-	<!-- 引入jdbc配置文件 -->
-	<context:property-placeholder location="classpath:conf/config.properties" />
+	<!-- 引入jdbc配置文件 
+	<context:property-placeholder location="classpath*:/conf/config.properties" />-->
 
 	<!-- 对静态资源文件的访问 -->
 	<mvc:resources mapping="/public/**" location="/public/"/>
@@ -56,16 +56,16 @@
 	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"
 		init-method="init" destroy-method="close">
 		<property name="driverClassName">
-			<value>${driver}</value>
+			<value>com.mysql.jdbc.Driver</value>
 		</property>
 		<property name="url">
-			<value>${url}</value>
+			<value>jdbc:mysql://localhost:3306/test</value>
 		</property>
 		<property name="username">
-			<value>${username}</value>
+			<value>root</value>
 		</property>
 		<property name="password">
-			<value>${password}</value>
+			<value>root</value>
 		</property>
 		<!-- 连接池最大使用连接数 -->
 		<property name="maxActive">

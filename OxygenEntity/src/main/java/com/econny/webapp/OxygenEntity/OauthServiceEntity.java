@@ -1,10 +1,18 @@
 package com.econny.webapp.OxygenEntity;
+
+import java.util.UUID;
+
 /*service entity to identify the service permission*/
 public class OauthServiceEntity {
 
 	String id;
 	String roleId;
 	String description;
+
+	public OauthServiceEntity() {
+		super();
+		this.id = UUID.randomUUID().toString();
+	}
 
 	public OauthServiceEntity(String id, String roleId, String description) {
 		super();

@@ -13,7 +13,59 @@
 		<result property="id" column="id" />
 		<result property="name" column="name" />
 		<result property="password" column="password" />
+		<result property="gender" column="gender" />
+		<result property="phone_number" column="phoneNumber" />
+		<result property="email" column="email" />
+		<result property="description" column="description" />
 	</resultMap>
+	
+	<insert id="save" parameterType="com.econny.webapp.OxygenEntity.OauthUserEntity">
+		INSERT INTO oauth_user (
+		id,
+		name,
+		password,
+		gender,
+		phone_number,
+		email,
+		description
+		) values(
+		#{id},
+		#{name},
+		#{password},
+		#{gender},
+		#{phoneNumber},
+		#{email},
+		#{description}
+		)
+	</insert>
+
+	<delete id="delete" parameterType="com.econny.webapp.OxygenEntity.OauthUserEntity">
+		DELETE FROM oauth_user
+		where
+		id =
+		#{id}
+	</delete>
+	
+	<update id="update" parameterType="com.econny.webapp.OxygenEntity.OauthUserEntity">
+		UPDATE oauth_user
+		set 
+		name = #{name},
+		password = #{password},
+		gender = #{gender},
+		phone_number = #{phoneNumber},
+		email = #{email},
+		description = #{description}
+		WHERE		
+		id = #{id}
+	</update>
+
+	<select id="findList" parameterType="com.econny.webapp.OxygenEntity.OauthUserEntity" resultMap="userHashEntity">
+		SELECT * FROM oauth_user
+		WHERE
+			<if test="id != null and id !=''">
+				id = #{id}
+			</if>
+	</select>
 
 	<select id="qryUserByPage" parameterType="HashMap" resultMap="userHashEntity">
 		SELECT usr.id as "id",

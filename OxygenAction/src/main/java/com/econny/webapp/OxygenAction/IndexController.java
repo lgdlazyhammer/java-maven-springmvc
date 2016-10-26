@@ -20,8 +20,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.econny.webapp.OxygenEntity.OauthUserEntity;
-import com.econny.webapp.OxygenService.impl.UserServiceImpl;
-import com.econny.webapp.OxygenService.inter.UserService;
+import com.econny.webapp.OxygenService.impl.OauthUserServiceImpl;
+import com.econny.webapp.OxygenService.impl.OauthUserServiceImplTwo;
+import com.econny.webapp.OxygenService.inter.OauthUserService;
 
 import sun.misc.BASE64Encoder;
 
@@ -29,13 +30,13 @@ import sun.misc.BASE64Encoder;
 @RequestMapping("/index")
 public class IndexController {
 
-	public UserService userService = new UserServiceImpl();
+	public OauthUserService userService = new OauthUserServiceImpl();
 
 	@Autowired(required = true)
-	public UserService userServiceImplTwo;
+	public OauthUserServiceImplTwo oauthUserServiceImplTwo;
 
 	@Autowired(required = true)
-	public UserService userServiceImplThree;
+	public OauthUserServiceImpl oauthUserServiceImpl;
 
 	// 获取以当前类为参数的日志对象
 	// private static Log log = LogFactory.getLog(MainApp.class);
@@ -73,7 +74,7 @@ public class IndexController {
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("start", 1);
 		map.put("end", 10);
-		List<OauthUserEntity> users = userServiceImplTwo.qryUserByPage(map);
+		List<OauthUserEntity> users = oauthUserServiceImplTwo.qryUserByPage(map);
 		return users;
 	}
 
@@ -97,7 +98,7 @@ public class IndexController {
 	@ResponseBody
 	public Object json() {
 
-		OauthUserEntity user = userServiceImplTwo.getUserById();
+		OauthUserEntity user = oauthUserServiceImplTwo.getUserById();
 		System.out.println("this is the autowired user: " + user.getName());
 		Map<String, Object> result = new HashMap<String, Object>();
 		result.put("data", "success");
@@ -112,7 +113,7 @@ public class IndexController {
 			//map.put("name", UUID.randomUUID().toString());
 			//map.put("password", UUID.randomUUID().toString());
 			System.out.println("the parsed parameters for insert user: " + map.toString());
-			userServiceImplTwo.insertUser(map);
+			oauthUserServiceImplTwo.insertUser(map);
 		}
 	}
 	
@@ -130,6 +131,6 @@ public class IndexController {
 			list.add(map);		
 		}
 		map2.put("list",list);
-		userServiceImplTwo.insertUserBatch(map2);
+		oauthUserServiceImplTwo.insertUserBatch(map2);
 	}
 }

@@ -7,7 +7,7 @@ import org.springframework.web.servlet.view.RedirectView;
 
 @Controller
 @RequestMapping("/clientService")
-public class ClientService {
+public class ClientAction {
 	
 	@RequestMapping(value = "/fileUploadSingle", method = RequestMethod.POST)
 	public RedirectView fileUploadSingle(){
