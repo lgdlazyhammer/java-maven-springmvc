@@ -1,6 +1,7 @@
 package com.econny.webapp.OxygenService.impl;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -33,6 +34,11 @@ public class OauthRoleServiceImpl implements OauthRoleService {
 	public List<OauthRoleEntity> findList(OauthRoleEntity oauthRoleEntity) {
 		// TODO Auto-generated method stub
 		return oauthRoleMapper.findList(oauthRoleEntity);
+	}
+
+	public void saveBatch(Map<String, Object> map) {
+		// TODO Auto-generated method stub
+		oauthRoleMapper.saveBatch(map);
 	}
 
 }

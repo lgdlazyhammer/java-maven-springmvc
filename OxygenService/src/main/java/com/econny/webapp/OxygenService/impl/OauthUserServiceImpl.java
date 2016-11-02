@@ -66,4 +66,14 @@ public class OauthUserServiceImpl implements OauthUserService {
 		return oauthUserMapper.findList(oauthUserEntity);
 	}
 
+	public void saveBatch(Map<String, Object> map) {
+		// TODO Auto-generated method stub
+		oauthUserMapper.saveBatch(map);		
+	}
+
+	public Integer checkUserPermission(OauthUserEntity oauthUserEntity) {
+		// TODO Auto-generated method stub
+		return oauthUserMapper.checkUserPermission(oauthUserEntity);
+	}
+
 }

@@ -41,6 +41,28 @@
     <a href="http://localhost:8090/OxygenWeb/commonService/fileDownloadSingle?id=bfddae44-3a48-48db-9fce-d745d0564577">file download</a>
     
     <img id="img_result" src=""></img>
+    
+    
+    <hr/>
+    initialize the project
+    <hr/>
+    
+    <form action="http://localhost:8090/OxygenWeb/projectConfigService/initRoleAndService" method="POST" enctype="multipart/form-data">
+    	<input type="file" name="myfile" multiple>
+    	<button type="submit">submit</button>
+    	<button type="reset">reset</button>
+    </form>
+    
+    <hr/>
+    login form
+    <hr/>
+    
+    <form action="http://localhost:8090/OxygenWeb/oauthUserService/login" method="POST" enctype="multipart/form-data">
+    	<input type="text" name="name" value="peter"/>
+    	<input type="text" name="password" value="111111"/>
+    	<button type="submit">submit</button>
+    	<button type="reset">reset</button>
+    </form>
 
     <!-- ionic/angularjs js -->
 	<!--<script data-main="lib/main.js" src="lib/requirejs-2.1.11.js"></script>

@@ -26,9 +26,14 @@ public interface OauthUserMapper {
 	//common methods
 	public void save(OauthUserEntity oauthUserEntity);
 	
+	public void saveBatch(Map<String, Object> map);
+	
 	public void delete(OauthUserEntity oauthUserEntity);
 	
 	public void update(OauthUserEntity oauthUserEntity);
 	
 	public List<OauthUserEntity> findList(OauthUserEntity oauthUserEntity); 
+	
+	//check if user has the service permission
+	public Integer checkUserPermission(OauthUserEntity oauthUserEntity);
 }

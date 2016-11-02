@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.econny.webapp.OxygenEntity.ApiResultEntity;
 import com.econny.webapp.OxygenEntity.OauthUserEntity;
+import com.econny.webapp.OxygenEnum.ServicePermission;
 import com.econny.webapp.OxygenService.impl.OauthUserServiceImpl;
 
 @Controller
@@ -93,6 +94,23 @@ public class OauthUserAction {
 		}
 
 		return new ApiResultEntity(true, user, 200, "");
+	}
+
+	@CrossOrigin(origins = "*", maxAge = 3600, methods = { RequestMethod.POST })
+	@RequestMapping(value = "/login", method = RequestMethod.POST)
+	@ResponseBody
+	public Object login(HttpServletRequest request, HttpServletResponse response,
+			@RequestParam(required = true) String name, @RequestParam(required = true) String password) throws IOException {
+
+		OauthUserEntity user = new OauthUserEntity();
+		user.setName(name);
+		user.setPassword(password);
+		//check file service
+		user.setServiceType(ServicePermission.FileServicePermission.getPermission());
+		
+		Integer count = oauthUserServiceImpl.checkUserPermission(user);
+
+		return new ApiResultEntity(true, count, 200, "");
 	}
 
 }

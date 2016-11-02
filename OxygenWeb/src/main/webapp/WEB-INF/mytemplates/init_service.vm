@@ -1,0 +1,58 @@
+  <html>
+    <body>
+  
+	upload for file service:
+    
+    <form id="fileupload" action="/OxygenWeb/commonService/fileUploadSingle" method="POST" enctype="multipart/form-data">
+    	<input type="file" name="file_data" multiple>
+    	<select name="secureLevel">
+    		<option value="0">stored in database to be download</option>
+    		<option value="1">stored in file system to be download</option>
+    		<option value="2">stored in static file system to be displayed</option>
+    	</select>
+    	<button type="submit">submit</button>
+    	<button type="reset">reset</button>
+    </form>
+    
+	<hr/><br/>
+		<div id="prepareDownloadFile">prepare the download file.</div><br/>
+		to be downloaded file id:<input id="downloadFileId" type="text"/><br/>
+		<a id="downloadFile" href="#"></a>
+		<br/>
+	<hr/>
+	
+	<hr/>
+		<div id="displayPicture">display the picture.</div><br/>
+		display file id:<input id="displayPictureId" type="text"/>
+	<hr/>
+	<img src=""/>
+    
+    <img id="pictureToShow" id="img_result" src=""></img>
+    
+    
+    <hr/>
+    initialize the project
+    <hr/>
+    
+    <form action="/OxygenWeb/projectConfigService/initRoleAndService" method="POST" enctype="multipart/form-data">
+    	<input type="file" name="myfile" multiple>
+    	<button type="submit">submit</button>
+    	<button type="reset">reset</button>
+    </form>
+    
+    <hr/>
+    login form
+    <hr/>
+    
+    <form action="/OxygenWeb/oauthUserService/login" method="POST" enctype="multipart/form-data">
+    	<input type="text" name="name" value="peter"/>
+    	<input type="text" name="password" value="111111"/>
+    	<button type="submit">submit</button>
+    	<button type="reset">reset</button>
+    </form>
+
+    <script src="/OxygenWeb/public/js/jquery-2.1.4.min.js"></script>
+    <script src="/OxygenWeb/public/js/test.js"></script>
+
+    </body>
+    </html>

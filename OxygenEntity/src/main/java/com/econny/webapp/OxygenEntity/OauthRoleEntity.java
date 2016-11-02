@@ -8,10 +8,12 @@ public class OauthRoleEntity {
 	private String id;
 	private String userId;
 	private String description;
+	private String delFlag;
 
 	public OauthRoleEntity() {
 		super();
 		this.id = UUID.randomUUID().toString();
+		this.delFlag = "0";
 	}
 
 	public OauthRoleEntity(String id, String userId, String description) {
@@ -19,6 +21,7 @@ public class OauthRoleEntity {
 		this.id = id;
 		this.userId = userId;
 		this.description = description;
+		this.delFlag = "0";
 	}
 
 	public String getId() {
@@ -43,6 +46,14 @@ public class OauthRoleEntity {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public String getDelFlag() {
+		return delFlag;
+	}
+
+	public void setDelFlag(String delFlag) {
+		this.delFlag = delFlag;
 	}
 
 }

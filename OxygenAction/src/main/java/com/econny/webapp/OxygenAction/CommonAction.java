@@ -1,5 +1,6 @@
 package com.econny.webapp.OxygenAction;
 
+import java.io.BufferedInputStream;
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileInputStream;
@@ -45,7 +46,7 @@ public class CommonAction {
 	 * "header3", "header4" }, method = RequestMethod.DELETE, maxAge = 123,
 	 * allowCredentials = "false")
 	 */
-	@CrossOrigin(origins = "http://localhost:9000", maxAge = 3600, methods = { RequestMethod.POST })
+	@CrossOrigin(origins = "*", maxAge = 3600, methods = { RequestMethod.POST })
 	@RequestMapping(value = "/fileUploadSingle", method = RequestMethod.POST)
 	@ResponseBody
 	public Object fileUploadSingle(HttpServletRequest request, HttpServletResponse response,
@@ -81,9 +82,17 @@ public class CommonAction {
 			// 如果用的是Tomcat服务器，则文件会上传到\\%TOMCAT_HOME%\\webapps\\YourWebProject\\WEB-INF\\upload\\文件夹中
 			String realPath = request.getSession().getServletContext()
 					.getRealPath("/WEB-INF/" + prop.getProperty("filePathSave"));
+			
+			if (!realPath.endsWith(java.io.File.separator)) {
+				realPath += java.io.File.separator;
+		        }
 
 			String realPathStatic = request.getSession().getServletContext()
 					.getRealPath("/WEB-INF/" + prop.getProperty("filePathStatic"));
+			
+			if (!realPathStatic.endsWith(java.io.File.separator)) {
+				realPathStatic += java.io.File.separator;
+			        }
 
 			if (secureLevel == FileSecureLevel.LevelOne.getCode()) {
 				// 保存2进制文件内容
@@ -162,9 +171,17 @@ public class CommonAction {
 				// 如果用的是Tomcat服务器，则文件会上传到\\%TOMCAT_HOME%\\webapps\\YourWebProject\\WEB-INF\\upload\\文件夹中
 				String realPath = request.getSession().getServletContext()
 						.getRealPath("/WEB-INF/" + prop.getProperty("filePathSave"));
+				
+				if (!realPath.endsWith(java.io.File.separator)) {
+					realPath += java.io.File.separator;
+			        }
 
 				String realPathStatic = request.getSession().getServletContext()
 						.getRealPath("/WEB-INF/" + prop.getProperty("filePathStatic"));
+				
+				if (!realPathStatic.endsWith(java.io.File.separator)) {
+					realPathStatic += java.io.File.separator;
+				        }
 
 				if (secureLevel == FileSecureLevel.LevelOne.getCode()) {
 					// 保存2进制文件内容
@@ -279,6 +296,10 @@ public class CommonAction {
 			UploadFileEntity uploadFileEntity) throws IOException {
 		// 获取网站部署路径(通过ServletContext对象)，用于确定下载文件位置，从而实现下载
 		String path = servletContext.getRealPath("/WEB-INF/" + prop.getProperty("filePathSave"));
+		
+		if (!path.endsWith(java.io.File.separator)) {
+			path += java.io.File.separator;
+		        }
 
 		// 1.设置文件ContentType类型，这样设置，会自动判断下载文件类型
 		response.setContentType("multipart/form-data");
@@ -289,39 +310,44 @@ public class CommonAction {
 		if (uploadFileEntity.getSecureLevel() == FileSecureLevel.LevelOne.getCode()) {
 
 			InputStream inputStream = new ByteArrayInputStream(uploadFileEntity.getFileContent());
+			BufferedInputStream in = new BufferedInputStream(inputStream);
 
 			// 3.通过response获取ServletOutputStream对象(out)
 			out = response.getOutputStream();
 
 			int b = 0;
-			byte[] buffer = new byte[512];
-			while (b != -1) {
-				b = inputStream.read(buffer);
+			byte[] buffer = new byte[1024];
+			/*while (b != -1) {
+				b = in.read(buffer);
+				// 4.写到输出流(out)中
+				out.write(buffer, 0, b);
+			}*/
+			while ((b = in.read(buffer)) != -1) {
 				// 4.写到输出流(out)中
 				out.write(buffer, 0, b);
 			}
-			inputStream.close();
+			in.close();
 			out.close();
 			out.flush();
 
 		} else if (uploadFileEntity.getSecureLevel() == FileSecureLevel.LevelTwo.getCode()) {
 
 			// 通过文件路径获得File对象(假如此路径中有一个download.pdf文件)
-			File file = new File(path + "/" + uploadFileEntity.getId() + "/" + uploadFileEntity.getFileName());
+			File file = new File(path + uploadFileEntity.getId() + "/" + uploadFileEntity.getFileName());
 
 			FileInputStream inputStream = new FileInputStream(file);
+			BufferedInputStream in = new BufferedInputStream(inputStream);
 
 			// 3.通过response获取ServletOutputStream对象(out)
 			out = response.getOutputStream();
 
 			int b = 0;
-			byte[] buffer = new byte[512];
-			while (b != -1) {
-				b = inputStream.read(buffer);
+			byte[] buffer = new byte[1024];
+			while ((b = in.read(buffer)) != -1) {
 				// 4.写到输出流(out)中
 				out.write(buffer, 0, b);
 			}
-			inputStream.close();
+			in.close();
 			out.close();
 			out.flush();
 		}

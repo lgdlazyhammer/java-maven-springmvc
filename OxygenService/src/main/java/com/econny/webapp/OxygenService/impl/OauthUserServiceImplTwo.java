@@ -66,5 +66,15 @@ public class OauthUserServiceImplTwo implements OauthUserService {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	public void saveBatch(Map<String, Object> map) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public Integer checkUserPermission(OauthUserEntity oauthUserEntity) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 }

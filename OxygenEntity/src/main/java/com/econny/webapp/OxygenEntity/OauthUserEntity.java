@@ -11,10 +11,14 @@ public class OauthUserEntity {
 	private String phoneNumber;
 	private String email;
 	private String description;
+	private String delFlag;
+	//check option
+	private Integer serviceType;
 	
 	public OauthUserEntity(){
 		super();
 		this.id = UUID.randomUUID().toString();
+		this.delFlag = "0";
 	}
 
 	public OauthUserEntity(String id, String name, String password, String gender, String phoneNumber, String email,
@@ -27,6 +31,7 @@ public class OauthUserEntity {
 		this.phoneNumber = phoneNumber;
 		this.email = email;
 		this.description = description;
+		this.delFlag = "0";
 	}
 
 	public String getId() {
@@ -83,6 +88,22 @@ public class OauthUserEntity {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public String getDelFlag() {
+		return delFlag;
+	}
+
+	public void setDelFlag(String delFlag) {
+		this.delFlag = delFlag;
+	}
+
+	public Integer getServiceType() {
+		return serviceType;
+	}
+
+	public void setServiceType(Integer serviceType) {
+		this.serviceType = serviceType;
 	}
 
 }

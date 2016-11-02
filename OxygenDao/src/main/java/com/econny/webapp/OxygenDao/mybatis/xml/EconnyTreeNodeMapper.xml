@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.econny.webapp.OxygenDao.mybatis.dao.EconnyTreeNodeMapper">
+
+	<resultMap type="com.econny.webapp.OxygenEntity.TreeNodeEntity"
+		id="treeNodeEntity">
+		<result property="id" column="id" />
+		<result property="title" column="title" />
+		<result property="type" column="type" />
+		<result property="parent" column="parent" />
+		<result property="user_id" column="userId" />
+		<result property="description" column="description" />
+		<result property="del_flag" column="delFlag" />
+	</resultMap>
+		
+	<insert id="save" parameterType="com.econny.webapp.OxygenEntity.TreeNodeEntity">
+		INSERT INTO node (
+		id,
+		title,
+		type,
+		parent,
+		user_id,
+		description,
+		del_flag
+		) values(
+		#{id},
+		#{title},
+		#{type},
+		#{parent},
+		#{userId},
+		#{description},
+		#{delFlag}
+		)
+	</insert>
+
+	<delete id="delete" parameterType="com.econny.webapp.OxygenEntity.TreeNodeEntity">
+		DELETE FROM node
+		where
+		id =
+		#{id}
+	</delete>
+	
+	<update id="update" parameterType="com.econny.webapp.OxygenEntity.TreeNodeEntity">
+		UPDATE node
+		set 
+		title = #{title},
+		description = #{description}
+		WHERE		
+		id = #{id}
+	</update>
+
+	<select id="findList" parameterType="com.econny.webapp.OxygenEntity.TreeNodeEntity" resultMap="treeNodeEntity">
+		SELECT * FROM node
+		WHERE
+			del_flag = 0
+			<if test="id != null and id !=''">
+				AND id = #{id}
+			</if>
+			<if test="userId != null and userId !=''">
+				AND user_id = #{userId}
+			</if>
+			<if test="type != null and type !=''">
+				AND type = #{type}
+			</if>
+			<if test="parent != null and parent !=''">
+				AND parent = #{parent}
+			</if>
+	</select>
+		
+</mapper>

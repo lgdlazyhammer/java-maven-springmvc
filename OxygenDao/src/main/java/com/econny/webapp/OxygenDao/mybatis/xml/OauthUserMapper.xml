@@ -17,6 +17,7 @@
 		<result property="phone_number" column="phoneNumber" />
 		<result property="email" column="email" />
 		<result property="description" column="description" />
+		<result property="del_flag" column="delFlag" />
 	</resultMap>
 	
 	<insert id="save" parameterType="com.econny.webapp.OxygenEntity.OauthUserEntity">
@@ -27,7 +28,8 @@
 		gender,
 		phone_number,
 		email,
-		description
+		description,
+		del_flag
 		) values(
 		#{id},
 		#{name},
@@ -35,8 +37,26 @@
 		#{gender},
 		#{phoneNumber},
 		#{email},
-		#{description}
+		#{description},
+		#{delFlag}
 		)
+	</insert>
+	
+	<insert id="saveBatch" parameterType="com.econny.webapp.OxygenEntity.OauthUserEntity" flushCache="true"
+		statementType="PREPARED" keyProperty="" keyColumn="" timeout="20">
+		INSERT INTO oauth_user (
+		id,
+		name,
+		password,
+		gender,
+		phone_number,
+		email,
+		description,
+		del_flag
+		) values
+		<foreach item="item" collection="list" separator=",">
+			(#{item.id}, #{item.name}, #{item.password}, #{item.gender}, #{item.phoneNumber}, #{item.email}, #{item.description}, #{item.delFlag})
+		</foreach>
 	</insert>
 
 	<delete id="delete" parameterType="com.econny.webapp.OxygenEntity.OauthUserEntity">
@@ -58,6 +78,26 @@
 		WHERE		
 		id = #{id}
 	</update>
+	
+	<select id="checkUserPermission" parameterType="com.econny.webapp.OxygenEntity.OauthUserEntity" resultType="Integer">
+		SELECT COUNT(*) 
+		FROM oauth_user ouer
+		INNER JOIN oauth_role orle
+		ON ( ouer.id = orle.user_id )
+		INNER JOIN oauth_service osev
+		ON ( orle.id = osev.role_id )
+		WHERE
+				ouer.del_flag = #{delFlag}
+			<if test="name != null and name !=''">
+				AND ouer.name = #{name}
+			</if>
+			<if test="password != null and password !=''">
+				AND ouer.password = #{password}
+			</if>
+			<if test="serviceType != null and serviceType !=''">
+				AND osev.service_type = #{serviceType}
+			</if>
+	</select>
 
 	<select id="findList" parameterType="com.econny.webapp.OxygenEntity.OauthUserEntity" resultMap="userHashEntity">
 		SELECT * FROM oauth_user

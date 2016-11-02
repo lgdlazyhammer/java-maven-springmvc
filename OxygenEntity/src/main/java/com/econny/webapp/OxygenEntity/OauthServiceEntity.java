@@ -5,13 +5,16 @@ import java.util.UUID;
 /*service entity to identify the service permission*/
 public class OauthServiceEntity {
 
-	String id;
-	String roleId;
-	String description;
+	private String id;
+	private String roleId;
+	private Integer serviceType;
+	private String description;
+	private String delFlag;
 
 	public OauthServiceEntity() {
 		super();
 		this.id = UUID.randomUUID().toString();
+		this.delFlag = "0";
 	}
 
 	public OauthServiceEntity(String id, String roleId, String description) {
@@ -19,6 +22,7 @@ public class OauthServiceEntity {
 		this.id = id;
 		this.roleId = roleId;
 		this.description = description;
+		this.delFlag = "0";
 	}
 
 	public String getId() {
@@ -37,12 +41,28 @@ public class OauthServiceEntity {
 		this.roleId = roleId;
 	}
 
+	public Integer getServiceType() {
+		return serviceType;
+	}
+
+	public void setServiceType(Integer serviceType) {
+		this.serviceType = serviceType;
+	}
+
 	public String getDescription() {
 		return description;
 	}
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public String getDelFlag() {
+		return delFlag;
+	}
+
+	public void setDelFlag(String delFlag) {
+		this.delFlag = delFlag;
 	}
 
 }

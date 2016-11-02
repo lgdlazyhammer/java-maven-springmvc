@@ -9,25 +9,26 @@
                     http://www.springframework.org/schema/mvc
                     http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 
-	<!-- 引入jdbc配置文件 
-	<context:property-placeholder location="classpath*:/conf/config.properties" />-->
+	<!-- 引入jdbc配置文件 -->
+	<context:property-placeholder location="classpath:conf/config.properties" />
 
 	<!-- 对静态资源文件的访问 -->
-	<mvc:resources mapping="/public/**" location="/public/"/>
-	<mvc:resources mapping="/resources/**" location="/WEB-INF/resources/"/>
-	<mvc:default-servlet-handler/>
-	<mvc:annotation-driven/>
+	<mvc:resources mapping="/public/**" location="/WEB-INF/public/"/>
+	<mvc:resources mapping="/resources/**" location="/WEB-INF/resources/" />
+	<mvc:default-servlet-handler />
+	<mvc:annotation-driven />
 	<context:annotation-config />
 	<context:component-scan base-package="com.econny.webapp.OxygenService" />
 	<context:component-scan base-package="com.econny.webapp.OxygenAction" />
 	<context:component-scan base-package="com.econny.webapp.OxygenTasks" />
-	
-	
-	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
 
-        <property name="maxUploadSize" value="100000"/>
 
-    </bean>
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!-- 对静态资源文件的访问 default 100000bytes reset to 10M-->
+		<property name="maxUploadSize" value="10485760" />
+
+	</bean>
 
 	<bean id="velocityConfig"
 		class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
@@ -39,6 +40,9 @@
 				<prop key="resource.loader">webapp</prop>
 				<prop key="webapp.resource.loader.class">org.apache.velocity.tools.view.WebappResourceLoader
 				</prop>
+				<prop key="input.encoding">utf-8</prop>
+				<prop key="output.encoding">utf-8</prop>
+				<prop key="contentType">text/html;charset=utf-8</prop>
 			</props>
 		</property>
 	</bean>
@@ -51,21 +55,22 @@
 		<property name="suffix">
 			<value>.vm</value>
 		</property>
+        <property name="contentType" value="text/html;charset=UTF-8"/>
 	</bean>
 
 	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"
 		init-method="init" destroy-method="close">
 		<property name="driverClassName">
-			<value>com.mysql.jdbc.Driver</value>
+			<value>${driver}</value>
 		</property>
 		<property name="url">
-			<value>jdbc:mysql://localhost:3306/test</value>
+			<value>${url}</value>
 		</property>
 		<property name="username">
-			<value>root</value>
+			<value>${username}</value>
 		</property>
 		<property name="password">
-			<value>root</value>
+			<value>${password}</value>
 		</property>
 		<!-- 连接池最大使用连接数 -->
 		<property name="maxActive">
@@ -123,43 +128,46 @@
 		<property name="targetObject" ref="myBean" />
 		<property name="targetMethod" value="printMessage" />
 	</bean>
-	
+
 	<!-- Run the job every 1 hour with initial delay of 1 second -->
-    <bean id="simpleTrigger"  class="org.springframework.scheduling.quartz.SimpleTriggerFactoryBean">
-        <property name="jobDetail" ref="simpleJobDetail" />
-        <property name="startDelay" value="1000" />
-        <property name="repeatInterval" value="3600000" />
-    </bean>
-    
-    <!-- For times when you just need to invoke a method on a specific object -->
+	<bean id="simpleTrigger"
+		class="org.springframework.scheduling.quartz.SimpleTriggerFactoryBean">
+		<property name="jobDetail" ref="simpleJobDetail" />
+		<property name="startDelay" value="1000" />
+		<property name="repeatInterval" value="3600000" />
+	</bean>
+
+	<!-- For times when you just need to invoke a method on a specific object -->
 	<bean id="createFileUploadFolderTaskDetail"
 		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
 		<property name="targetObject" ref="CreateFileUploadFolderTask" />
 		<property name="targetMethod" value="CreateFileUploadFolder" />
 	</bean>
-	
+
 	<!-- Run the job every 10000 day with initial delay of 1 seconds -->
-    <bean id="createFileUploadFolderTaskTrigger"  class="org.springframework.scheduling.quartz.SimpleTriggerFactoryBean">
-        <property name="jobDetail" ref="createFileUploadFolderTaskDetail" />
-        <property name="startDelay" value="1000" />
-        <property name="repeatInterval" value="864000000000" />
-    </bean>
-    
-    <!-- Scheduler factory bean to glue together jobDetails and triggers to Configure Quartz Scheduler -->
-    <bean  class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
-        <property name="jobDetails">
-            <list>
-                <ref bean="simpleJobDetail" />
-                <ref bean="createFileUploadFolderTaskDetail" />
-            </list>
-        </property>
- 
-        <property name="triggers">
-            <list>
-                <ref bean="simpleTrigger" />
-                <ref bean="createFileUploadFolderTaskTrigger" />
-            </list>
-        </property>
-    </bean>
+	<bean id="createFileUploadFolderTaskTrigger"
+		class="org.springframework.scheduling.quartz.SimpleTriggerFactoryBean">
+		<property name="jobDetail" ref="createFileUploadFolderTaskDetail" />
+		<property name="startDelay" value="1000" />
+		<property name="repeatInterval" value="864000000000" />
+	</bean>
+
+	<!-- Scheduler factory bean to glue together jobDetails and triggers to 
+		Configure Quartz Scheduler -->
+	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="jobDetails">
+			<list>
+				<ref bean="simpleJobDetail" />
+				<ref bean="createFileUploadFolderTaskDetail" />
+			</list>
+		</property>
+
+		<property name="triggers">
+			<list>
+				<ref bean="simpleTrigger" />
+				<ref bean="createFileUploadFolderTaskTrigger" />
+			</list>
+		</property>
+	</bean>
 
 </beans>

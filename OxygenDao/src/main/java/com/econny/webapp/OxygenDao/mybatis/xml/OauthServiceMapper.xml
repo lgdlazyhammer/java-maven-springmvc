@@ -9,18 +9,37 @@
 		<result property="id" column="id" />
 		<result property="role_id" column="roleId" />
 		<result property="description" column="description" />
+		<result property="del_flag" column="delFlag" />
 	</resultMap>
 		
 	<insert id="save" parameterType="com.econny.webapp.OxygenEntity.OauthServiceEntity">
 		INSERT INTO oauth_service (
 		id,
 		role_id,
-		description
+		service_type,
+		description,
+		del_flag
 		) values(
 		#{id},
 		#{roleId},
-		#{description}
+		#{serviceType},
+		#{description},
+		#{delFlag}
 		)
+	</insert>
+	
+	<insert id="saveBatch" parameterType="com.econny.webapp.OxygenEntity.OauthServiceEntity" flushCache="true"
+		statementType="PREPARED" keyProperty="" keyColumn="" timeout="20">
+		INSERT INTO oauth_service (
+		id,
+		role_id,
+		service_type,
+		description,
+		del_flag
+		) values
+		<foreach item="item" collection="list" separator=",">
+			(#{item.id}, #{item.roleId}, #{item.serviceType}, #{item.description}, #{item.delFlag})
+		</foreach>
 	</insert>
 
 	<delete id="delete" parameterType="com.econny.webapp.OxygenEntity.OauthServiceEntity">

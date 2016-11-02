@@ -1,7 +1,7 @@
 package com.econny.webapp.OxygenEnum;
 
 public enum ServicePermission {
-	FileServicePermission (0,"文件服务权限");
+	FileServicePermission (1,"文件服务权限");
 
 	private final Integer permission;
 	private final String description;

@@ -27,7 +27,7 @@ import com.econny.webapp.OxygenService.inter.OauthUserService;
 import sun.misc.BASE64Encoder;
 
 @Controller
-@RequestMapping("/index")
+@RequestMapping("/")
 public class IndexController {
 
 	public OauthUserService userService = new OauthUserServiceImpl();
@@ -42,9 +42,30 @@ public class IndexController {
 	// private static Log log = LogFactory.getLog(MainApp.class);
 	// Logger instance named "MyApp".
 	private static final Logger logger = LogManager.getLogger(IndexController.class);
-
-	@RequestMapping("/index")
+	
+	@RequestMapping("/")
 	public ModelAndView index() {
+		return new ModelAndView("/plants/index");
+	}
+	@RequestMapping("/aboutus")
+	public ModelAndView aboutUs() {
+		return new ModelAndView("/plants/aboutus");
+	}
+	@RequestMapping("/plants")
+	public ModelAndView plants() {
+		return new ModelAndView("/plants/plants");
+	}
+	@RequestMapping("/progress")
+	public ModelAndView progress() {
+		return new ModelAndView("/plants/progress");
+	}
+	@RequestMapping("/init")
+	public ModelAndView initService() {
+		return new ModelAndView("/init_service");
+	}
+
+	@RequestMapping("/indexGenKey")
+	public ModelAndView indexGenKey() {
 
 		logger.trace("Entering application.");
 		logger.info("Didn't do it info.");

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.econny.webapp.OxygenDao.mybatis.dao.EconnyTreeNodePicMapper">
+
+	<resultMap type="com.econny.webapp.OxygenEntity.TreeNodePicEntity"
+		id="treeNodePicEntity">
+		<result property="id" column="id" />
+		<result property="node_id" column="nodeId" />
+		<result property="file_id" column="fileId" />
+		<result property="del_flag" column="delFlag" />
+	</resultMap>
+		
+	<insert id="save" parameterType="com.econny.webapp.OxygenEntity.TreeNodePicEntity">
+		INSERT INTO node_pic (
+		id,
+		node_id,
+		file_id,
+		del_flag
+		) values(
+		#{id},
+		#{nodeId},
+		#{fileId},
+		#{delFlag}
+		)
+	</insert>
+
+	<delete id="delete" parameterType="com.econny.webapp.OxygenEntity.TreeNodePicEntity">
+		DELETE FROM node_pic
+		where
+		id =
+		#{id}
+	</delete>
+	
+	<update id="update" parameterType="com.econny.webapp.OxygenEntity.TreeNodePicEntity">
+		UPDATE node_pic
+		set 
+		node_id = #{nodeId},
+		file_id = #{fileId}
+		WHERE		
+		id = #{id}
+	</update>
+
+	<select id="findList" parameterType="com.econny.webapp.OxygenEntity.TreeNodePicEntity" resultMap="treeNodePicEntity">
+		SELECT * FROM node_pic
+		WHERE
+			del_flag = 0
+			<if test="id != null and id !=''">
+				AND id = #{id}
+			</if>
+			<if test="nodeId != null and nodeId !=''">
+				AND node_id = #{nodeId}
+			</if>
+	</select>
+		
+</mapper>
