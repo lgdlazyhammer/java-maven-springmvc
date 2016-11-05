@@ -12,7 +12,7 @@ public enum DelFlag {
 		this.description = description;
 	}
 	
-	public String getPermission() {
+	public String getStatus() {
 		return status;
 	}
 	public String getDescription() {

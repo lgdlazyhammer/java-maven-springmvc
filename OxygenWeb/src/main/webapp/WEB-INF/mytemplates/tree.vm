@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<title>main layout</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">		
+		<link href="/OxygenWeb/public/reference_node_oauth/css/all.css" rel="stylesheet">
+		<link href="/OxygenWeb/public/reference_node_oauth/css/animate.min.css" rel="stylesheet">
+		<link href="/OxygenWeb/public/reference_node_oauth/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/OxygenWeb/public/reference_node_oauth/css/bootstrap-theme.min.css" rel="stylesheet">
+	</head>
+	<body class="bg-info page-background">
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">
+						<img class="herder-icon" alt="Brand" src="/OxygenWeb/public/reference_node_oauth/img/icon-header.png">
+					</a>
+				</div>
+				<div class="navbar-header pull-right ">
+					<a class="navbar-brand" href="#">
+						Logout
+					</a>
+				</div>
+				<div class="navbar-header pull-right">
+					<a class="navbar-brand" href="#">
+						Login
+					</a>
+				</div>
+			</div>
+		</nav>
+		<nav class="navbar">
+				<div class="navbar-header">
+					<span class="navbar-brand btn btn-primary" id="addTree">
+						Add Tree
+					</span>
+				</div>
+				<div class="navbar-header">
+					<span class="navbar-brand btn btn-primary" id="addNode">
+						Add Node
+					</span>
+				</div>
+				<div class="navbar-header">
+					<a class="navbar-brand btn btn-primary" href="#">
+						Delete Node Descendent
+					</a>
+				</div>
+				<div class="navbar-header">
+					<a id="goToDeatilNodePage" href="/OxygenWeb/treeNode" class="navbar-brand btn btn-primary">
+						Go To Detail Page
+					</a>
+				</div>
+			</div>
+		</nav>
+		<div class="container">
+			<table>
+				<tbody id="displayTree">
+				</tbody>
+			</table>
+		</div>
+	</body>	
+    <script src="/OxygenWeb/public/reference_node_oauth/js/jquery-3.0.0.min.js"></script>
+    <script src="/OxygenWeb/public/reference_node_oauth/js/bootstrap.min.js"></script>
+    <script src="/OxygenWeb/public/reference_node_oauth/econny-work-tree/js/EconnyNamespace.js"></script>
+    <script src="/OxygenWeb/public/reference_node_oauth/econny-work-tree/js/node.js"></script>
+    <script src="/OxygenWeb/public/reference_node_oauth/econny-work-tree/js/tree.js"></script>
+    <script src="/OxygenWeb/public/reference_node_oauth/tree/tree_main.js"></script>
+</html>

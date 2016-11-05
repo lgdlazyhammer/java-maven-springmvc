@@ -9,6 +9,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.apache.commons.lang.RandomStringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -16,6 +19,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -62,6 +66,17 @@ public class IndexController {
 	@RequestMapping("/init")
 	public ModelAndView initService() {
 		return new ModelAndView("/init_service");
+	}
+	
+	@RequestMapping("/tree")
+	public ModelAndView tree() {
+		return new ModelAndView("/tree");
+	}
+
+	@RequestMapping("/treeNode")
+	public ModelAndView treeNode(HttpServletRequest request, HttpServletResponse response,
+			@RequestParam(required = true) String id) {
+		return new ModelAndView("/tree_node", "nodeId", id);
 	}
 
 	@RequestMapping("/indexGenKey")
