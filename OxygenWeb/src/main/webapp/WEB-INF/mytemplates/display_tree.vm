@@ -30,21 +30,6 @@
 		</nav>
 		<nav class="navbar">
 				<div class="navbar-header">
-					<span class="navbar-brand btn btn-primary" id="addTree">
-						Add Tree
-					</span>
-				</div>
-				<div class="navbar-header">
-					<span class="navbar-brand btn btn-primary" id="addNode">
-						Add Node
-					</span>
-				</div>
-				<div class="navbar-header">
-					<a class="navbar-brand btn btn-primary" href="#">
-						Delete Tree
-					</a>
-				</div>
-				<div class="navbar-header">
 					<a id="goToDeatilNodePage" href="/OxygenWeb/treeNode" class="navbar-brand btn btn-primary">
 						Go To Detail Page
 					</a>
@@ -52,7 +37,7 @@
 			</div>
 		</nav>
 		<div class="container">
-			<table>
+			<table class="table table-bordered">
 				<tbody id="displayTree">
 				</tbody>
 			</table>
@@ -63,5 +48,5 @@
     <script src="/OxygenWeb/public/reference_node_oauth/econny-work-tree/js/EconnyNamespace.js"></script>
     <script src="/OxygenWeb/public/reference_node_oauth/econny-work-tree/js/node.js"></script>
     <script src="/OxygenWeb/public/reference_node_oauth/econny-work-tree/js/tree.js"></script>
-    <script src="/OxygenWeb/public/reference_node_oauth/tree/tree_main.js"></script>
+    <script src="/OxygenWeb/public/reference_node_oauth/tree/display_tree.js"></script>
 </html>

@@ -37,18 +37,18 @@ $(function(){
 			var displayContent = "";
 			if(node.id && globalTreeRootSelected){
 				if(node.id == globalTreeRootSelected){
-					displayContent += "<tr><td class='tree-node-item-root btn btn-primary fade-a-lot' title='"+node.id+"'>"+node.id+"</td></tr>";
+					displayContent += "<tr><td class='tree-node-item-root btn btn-primary fade-a-lot' title='"+node.id+"'>"+formatTitle(node.title)+"</td></tr>";
 				}else{
-					displayContent += "<tr><td class='tree-node-item-root btn btn-primary' title='"+node.id+"'>"+node.id+"</td></tr>";
+					displayContent += "<tr><td class='tree-node-item-root btn btn-primary' title='"+node.id+"'>"+formatTitle(node.title)+"</td></tr>";
 				}
 			}else{
-				displayContent += "<tr><td class='tree-node-item-root btn btn-primary' title='"+node.id+"'>"+node.id+"</td></tr>";
+				displayContent += "<tr><td class='tree-node-item-root btn btn-primary' title='"+node.id+"'>"+formatTitle(node.title)+"</td></tr>";
 			}
 			//display children	
 			if(node.children){
 				displayContent += "";
 				for(var i=0;i<node.children.length;i++){
-					displayContent += "<tr><td></td><td class='tree-node-item btn btn-primary' title='"+node.children[i].id+"'>"+node.children[i].id+"</td></tr>";				
+					displayContent += "<tr><td></td><td class='tree-node-item btn btn-primary' title='"+node.children[i].id+"'>"+formatTitle(node.children[i].title)+"</td></tr>";				
 				};	
 			}
 			$("#displayTree").html(displayContent);
@@ -119,4 +119,12 @@ $(function(){
 			$.ajax(addTreeNodeOption);
 	});
 	
+	//format title
+	function formatTitle(title){
+		if(title){
+			return title;
+		}else{
+			return "title not defined";
+		}
+	};
 });

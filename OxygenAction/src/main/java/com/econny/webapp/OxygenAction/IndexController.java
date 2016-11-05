@@ -79,6 +79,11 @@ public class IndexController {
 		return new ModelAndView("/tree_node", "nodeId", id);
 	}
 
+	@RequestMapping("/displayTree")
+	public ModelAndView displayTree(HttpServletRequest request, HttpServletResponse response) {
+		return new ModelAndView("/display_tree");
+	}
+
 	@RequestMapping("/indexGenKey")
 	public ModelAndView indexGenKey() {
 

@@ -1,5 +1,6 @@
 package com.econny.webapp.OxygenEntity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class TreeNodeEntity {
@@ -7,6 +8,7 @@ public class TreeNodeEntity {
 	private String id;// primary key
 	private String title;// title
 	private Integer type;// type 0-root 1-leaf
+	private Integer rank;// the level of the node located in
 	private String parent;//parent
 	private String userId;//user id
 	private String description;//description
@@ -14,6 +16,12 @@ public class TreeNodeEntity {
 	private List<TreeNodeEntity> children;// children
 	private List<TreeNodeDocEntity> docs;//document ids
 	private List<TreeNodePicEntity> pics;//picture ids
+	
+	public TreeNodeEntity(){
+		children = new ArrayList<TreeNodeEntity>();
+		docs = new ArrayList<TreeNodeDocEntity>();
+		pics = new ArrayList<TreeNodePicEntity>();
+	}
 
 	public String getId() {
 		return id;
@@ -37,6 +45,14 @@ public class TreeNodeEntity {
 
 	public void setType(Integer type) {
 		this.type = type;
+	}
+
+	public Integer getRank() {
+		return rank;
+	}
+
+	public void setRank(Integer rank) {
+		this.rank = rank;
 	}
 
 	public List<TreeNodeEntity> getChildren() {

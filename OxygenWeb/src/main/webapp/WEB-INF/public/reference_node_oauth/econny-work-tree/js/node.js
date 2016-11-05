@@ -1,8 +1,9 @@
 EconnyNamespace('econny.work.node');
 
-econny.work.node = function(id, title, children){
+econny.work.node = function(id, title, children, rank){
 	this.id = id;
 	this.title = title;
+	this.rank = rank;
 	if(children){
 		this.children = children;		
 	}else{
@@ -13,7 +14,7 @@ econny.work.node = function(id, title, children){
 };
 
 econny.work.node.prototype.getId = function(){
-	return this.title;
+	return this.id;
 };
 
 econny.work.node.prototype.setId  = function(id){
@@ -38,5 +39,13 @@ econny.work.node.prototype.getChild = function(index){
 
 econny.work.node.prototype.getChildren = function(){
 	return this.children;
+};
+
+econny.work.node.prototype.getRank = function(){
+	return this.rank;
+};
+
+econny.work.node.prototype.setRank = function(rank){
+	this.rank = rank;
 };
 

@@ -1,6 +1,7 @@
 package com.econny.webapp.OxygenAction;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -37,6 +38,7 @@ public class EconnyTreeAction {
 		TreeNodeEntity treeNodeEntity = new TreeNodeEntity();
 		treeNodeEntity.setId(UUID.randomUUID().toString());
 		treeNodeEntity.setType(TreeNodeType.LevelOne.getCode());
+		treeNodeEntity.setRank(0);
 		treeNodeEntity.setUserId(userId);
 		treeNodeEntity.setParent("root");
 		treeNodeEntity.setDelFlag(DelFlag.NORMAL.getStatus());
@@ -50,13 +52,20 @@ public class EconnyTreeAction {
 	public Object createNode(HttpServletRequest request, HttpServletResponse response,
 			@RequestParam(required = true) String id)
 			throws IOException {
-		TreeNodeEntity treeNodeEntity = new TreeNodeEntity();
-		treeNodeEntity.setId(UUID.randomUUID().toString());
-		treeNodeEntity.setType(TreeNodeType.LevelTwo.getCode());
-		treeNodeEntity.setParent(id);
-		treeNodeEntity.setDelFlag(DelFlag.NORMAL.getStatus());
-		econnyTreeNodeServiceImpl.save(treeNodeEntity);
-		return new ApiResultEntity(true, treeNodeEntity, 200, "");
+		TreeNodeEntity treeNodeEntityRqy = new TreeNodeEntity();
+		treeNodeEntityRqy.setId(id);
+		List<TreeNodeEntity> listQry = econnyTreeNodeServiceImpl.findList(treeNodeEntityRqy);
+		if(listQry.size()>0){
+			TreeNodeEntity treeNodeEntity = new TreeNodeEntity();
+			treeNodeEntity.setId(UUID.randomUUID().toString());
+			treeNodeEntity.setType(TreeNodeType.LevelTwo.getCode());
+			treeNodeEntity.setRank(listQry.get(0).getRank()+1);
+			treeNodeEntity.setParent(id);
+			treeNodeEntity.setDelFlag(DelFlag.NORMAL.getStatus());
+			econnyTreeNodeServiceImpl.save(treeNodeEntity);
+			return new ApiResultEntity(true, treeNodeEntity, 200, "");
+		}
+		return new ApiResultEntity(false, null, 200, "");
 	}
 	
 	@CrossOrigin(origins = "*", maxAge = 3600, methods = { RequestMethod.POST })
@@ -77,6 +86,45 @@ public class EconnyTreeAction {
 			return new ApiResultEntity(true, treeNodeEntityCurr, 200, "");
 		}
 		return new ApiResultEntity(false, null, 200, "");
+	}
+	
+	//get all trees for the user
+	@CrossOrigin(origins = "*", maxAge = 3600, methods = { RequestMethod.POST })
+	@RequestMapping(value = "/getUserTrees", method = RequestMethod.POST)
+	@ResponseBody
+	public Object getUserTrees(HttpServletRequest request, HttpServletResponse response)
+			throws IOException {
+		TreeNodeEntity treeNodeEntity = new TreeNodeEntity();
+		treeNodeEntity.setType(TreeNodeType.LevelOne.getCode());
+		treeNodeEntity.setUserId("111");
+		List<TreeNodeEntity> list = econnyTreeNodeServiceImpl.findList(treeNodeEntity);
+		List<TreeNodeEntity> listRes = new ArrayList<TreeNodeEntity>();
+		if(list.size()>0){
+			for(int i=0;i<list.size();i++){
+				TreeNodeEntity tree = getTreeNode(list.get(i));
+				listRes.add(tree);
+			}
+			return new ApiResultEntity(true, listRes, 200, "");
+		}
+		return new ApiResultEntity(false, null, 200, "");
+	}
+	
+	public TreeNodeEntity getTreeNode(TreeNodeEntity treeNodeEntity){
+		
+		TreeNodeEntity treeNodeEntityRes = treeNodeEntity;
+		
+		TreeNodeEntity treeNodeEntityQry = new TreeNodeEntity();
+		treeNodeEntityQry.setParent(treeNodeEntity.getId());
+		
+		List<TreeNodeEntity> list = econnyTreeNodeServiceImpl.findList(treeNodeEntityQry);
+		if(list.size()>0){
+			for(int i=0;i<list.size();i++){
+				treeNodeEntityRes.getChildren().add(getTreeNode(list.get(i)));
+			}
+			return treeNodeEntityRes;
+		}else{
+			return treeNodeEntityRes;
+		}
 	}
 
 }

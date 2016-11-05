@@ -9,6 +9,7 @@
 		<result property="id" column="id" />
 		<result property="title" column="title" />
 		<result property="type" column="type" />
+		<result property="rank" column="rank" />
 		<result property="parent" column="parent" />
 		<result property="user_id" column="userId" />
 		<result property="description" column="description" />
@@ -20,6 +21,7 @@
 		id,
 		title,
 		type,
+		rank,
 		parent,
 		user_id,
 		description,
@@ -28,6 +30,7 @@
 		#{id},
 		#{title},
 		#{type},
+		#{rank},
 		#{parent},
 		#{userId},
 		#{description},
@@ -46,6 +49,7 @@
 		UPDATE node
 		set 
 		title = #{title},
+		rank = #{rank},
 		description = #{description}
 		WHERE		
 		id = #{id}
