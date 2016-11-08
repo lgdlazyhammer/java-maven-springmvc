@@ -1,4 +1,8 @@
 eclipse.preferences.version=1
 encoding//src/main/java=UTF-8
-encoding//src/main/webapp/WEB-INF/mytemplates/plants/index.vm=UTF-8
+encoding//src/main/webapp/WEB-INF/mytemplates/econny/aboutus.vm=UTF-8
+encoding//src/main/webapp/WEB-INF/mytemplates/econny/approach.vm=UTF-8
+encoding//src/main/webapp/WEB-INF/mytemplates/econny/index.vm=UTF-8
+encoding//src/main/webapp/WEB-INF/mytemplates/econny/programs.vm=UTF-8
+encoding//src/main/webapp/WEB-INF/mytemplates/tree_node.vm=UTF-8
 encoding//src/test/java=UTF-8

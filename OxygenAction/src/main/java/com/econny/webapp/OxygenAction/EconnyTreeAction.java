@@ -67,6 +67,25 @@ public class EconnyTreeAction {
 		}
 		return new ApiResultEntity(false, null, 200, "");
 	}
+
+	@CrossOrigin(origins = "*", maxAge = 3600, methods = { RequestMethod.POST })
+	@RequestMapping(value = "/updateNode", method = RequestMethod.POST)
+	@ResponseBody
+	public Object updateNode(HttpServletRequest request, HttpServletResponse response,
+			@RequestParam(required = true) String id,@RequestParam(required = true) String title,@RequestParam(required = false) String description)
+			throws IOException {
+		TreeNodeEntity treeNodeEntityRqy = new TreeNodeEntity();
+		treeNodeEntityRqy.setId(id);
+		List<TreeNodeEntity> listQry = econnyTreeNodeServiceImpl.findList(treeNodeEntityRqy);
+		if(listQry.size()>0){
+			TreeNodeEntity treeNodeEntity = listQry.get(0);
+			treeNodeEntity.setTitle(title);
+			treeNodeEntity.setDescription(description);
+			econnyTreeNodeServiceImpl.update(treeNodeEntity);
+			return new ApiResultEntity(true, treeNodeEntity, 200, "");
+		}
+		return new ApiResultEntity(false, null, 200, "");
+	}
 	
 	@CrossOrigin(origins = "*", maxAge = 3600, methods = { RequestMethod.POST })
 	@RequestMapping(value = "/getByNodeId", method = RequestMethod.POST)

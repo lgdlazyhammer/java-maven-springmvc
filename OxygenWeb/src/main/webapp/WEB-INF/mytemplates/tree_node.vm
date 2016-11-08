@@ -53,6 +53,15 @@
 				</tbody>
 			</table>
 		</div>
+		<br/>
+		<div>
+			<table class="table">
+				<tbody>
+					<tr><td>标题:</td><td><input id="nodeTitleInput" type="text" readonly="readonly"/></td></tr>
+					<tr><td>描述信息:</td><td><textarea rows="3" cols="22" id="nodeDescriptionInput" readonly="readonly"></textarea></td><td id="updateNodeButton" class="btn btn-primary" disabled="disabled">更新</td></tr>
+				</tbody>
+			</table>
+		</div>
 	</body>	
     <script src="/OxygenWeb/public/reference_node_oauth/js/jquery-3.0.0.min.js"></script>
     <script src="/OxygenWeb/public/reference_node_oauth/js/bootstrap.min.js"></script>

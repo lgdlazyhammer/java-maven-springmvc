@@ -19,11 +19,15 @@ $(function(){
 					if(data.result){
 						var rootNode = new econny.work.node();
 						rootNode.setId(data.result.id);
+						rootNode.setTitle(data.result.title);
+						rootNode.setDescription(data.result.description);
+						rootNode.setChildren(data.result.children);
 						globalTree.setTree(rootNode);
 						if(data.result.children){
 							for(var i=0;i<data.result.children;i++){
 								var node = new econny.work.node();
-								node.setId(data.result.children.id);
+								node.setId(data.result.children[i].id);
+								node.setTitle(data.result.children[i].title);
 								rootNode.addChild(node);
 							}
 						}
@@ -42,6 +46,8 @@ $(function(){
 	//display the tree
 	function displayTree(node){
 		if(node){
+			$("#nodeTitleInput").val(node.title);
+			$("#nodeDescriptionInput").val(node.description);
 			//display node
 			var displayContent = "";
 			if(node.id && globalTreeRootSelected){
@@ -52,14 +58,14 @@ $(function(){
 				}
 			}else{
 				displayContent += "<tr><td class='tree-node-item-root btn btn-primary' title='"+node.id+"'>"+formatTitle(node.title)+"</td></tr>";
-			}
+			};
 			//display children	
 			if(node.children){
 				displayContent += "";
 				for(var i=0;i<node.children.length;i++){
 					displayContent += "<tr><td></td><td class='tree-node-item btn btn-primary' title='"+node.children[i].id+"'>"+formatTitle(node.children[i].title)+"</td></tr>";				
 				};	
-			}
+			};
 			$("#displayTree").html(displayContent);
 			
 			$(".tree-node-item-root").click(function(){
@@ -68,11 +74,26 @@ $(function(){
 					displayTree(globalTree.getTree());
 					 $("#addNode").removeClass("btn-success");
 					 $("#addNode").addClass("btn-primary");
+					 
+
+					 $("#updateNodeButton").removeClass("btn-success");
+					 $("#updateNodeButton").addClass("btn-primary");
+					 $("#updateNodeButton").attr("disabled",true);
+
+					 $("#nodeDescriptionInput").attr("readonly",true);
+					 $("#nodeTitleInput").attr("readonly",true);
 				}else{
 					globalTreeRootSelected = $(this).attr("title");
 					displayTree(globalTree.getTree());
 					 $("#addNode").removeClass("btn-primary");
 					 $("#addNode").addClass("btn-success");
+					 
+					 $("#updateNodeButton").removeClass("btn-primary");
+					 $("#updateNodeButton").addClass("btn-success");
+					 $("#updateNodeButton").attr("disabled",false);
+					 
+					 $("#nodeDescriptionInput").attr("readonly",false);
+					 $("#nodeTitleInput").attr("readonly",false);
 				}
 			});
 			
@@ -126,6 +147,45 @@ $(function(){
 			};
 			//initialize the page
 			$.ajax(addTreeNodeOption);
+	});
+	
+	//add a node
+	$("#updateNodeButton").click(function(){
+		
+		var param = {id:globalTreeRootSelected,title:$("#nodeTitleInput").val(),description:$("#nodeDescriptionInput").val()};
+		if(!param.title){
+			alert("title is empty.");
+			return false;
+		};
+		
+		var updateTreeNodeOption = {
+				type: 'POST',
+				url: '/OxygenWeb/econnyTreeService/updateNode',
+				data: param,
+				dataType: 'json',
+				success: function(data){
+					if(data.result){
+						 globalTreeRootSelected = "";
+						 $("#addNode").removeClass("btn-success");
+						 $("#addNode").addClass("btn-primary");
+						 //update success
+						 $("#updateNodeButton").removeClass("btn-success");
+						 $("#updateNodeButton").addClass("btn-primary");
+						 $("#updateNodeButton").attr("disabled",true);
+
+						 $("#nodeDescriptionInput").attr("readonly",true);
+						 $("#nodeTitleInput").attr("readonly",true);
+						getByNodeId();
+					};
+					
+				},
+				error: function(XMLHttpRequest, textStatus, errorThrown){
+				},
+				timeout: function(data){
+				}
+			};
+			//initialize the page
+			$.ajax(updateTreeNodeOption);
 	});
 	
 	//format title

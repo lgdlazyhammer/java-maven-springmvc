@@ -4,7 +4,7 @@ $(function(){
 	var globalTreeRootSelected = "";
 	var globalTreeItemSelected = "";
 	var globalAttrHref = $("#goToDeatilNodePage").attr("href");
-	var treeNodeArr = new Array();
+	var globalTreesArr = new Array();
 	var globalLineCount = 0;
 	var globalRowCount = 0;
 	
@@ -20,7 +20,11 @@ $(function(){
 				dataType: 'json',
 				success: function(data){
 					if(data.result){
-						saveTreeToArr(data.result[0]);
+						for(var i=0;i<data.result.length;i++){
+							var treeNodeArr = new Array();
+							saveTreeToArr(data.result[i], treeNodeArr);
+							globalTreesArr.push(treeNodeArr);
+						}
 					}
 					globalLineCount = calculateLine(treeNodeArr);
 					globalRowCount = calculateRow(treeNodeArr);
@@ -37,7 +41,7 @@ $(function(){
 			$.ajax(getTreeOption);
 	};
 	
-	function saveTreeToArr(node){
+	function saveTreeToArr(node, treeNodeArr){
 		if(node.children.length > 0){
 			//save the current node info
 			var nodeTemp = new econny.work.node();
@@ -47,7 +51,7 @@ $(function(){
 			treeNodeArr.push(nodeTemp);
 			//loop the children
 			for(var i=0;i<node.children.length;i++){
-				saveTreeToArr(node.children[i]);
+				saveTreeToArr(node.children[i], treeNodeArr);
 			}
 		}else{
 			//save the node info without children
@@ -61,14 +65,17 @@ $(function(){
 	
 	function displayAll(){
 		var contentHtml = "";
-		for(var i=0;i<globalRowCount;i++){
-			contentHtml += "<tr><td>"+(parseInt(i)+1)+" level</td>";
-			for(var j=0;j<treeNodeArr.length;j++){
-				if(treeNodeArr[j].rank == i){
-					contentHtml += "<td class='tree-node-item' title='"+treeNodeArr[j].id+"'>"+formatTitle(treeNodeArr[j].title)+"</td>";
+		for(var count=0;count<globalTreesArr.length;count++){
+			var rowCount = calculateRow(globalTreesArr[count]);
+			for(var i=0;i<rowCount;i++){
+				contentHtml += "<tr><td>"+(parseInt(i)+1)+" level</td>";
+				for(var j=0;j<globalTreesArr[count].length;j++){
+					if(globalTreesArr[count][j].rank == i){
+						contentHtml += "<td class='tree-node-item' title='"+globalTreesArr[count][j].id+"'>"+formatTitle(globalTreesArr[count][j].title)+"</td>";
+					}
 				}
+				contentHtml += "</tr>";
 			}
-			contentHtml += "</tr>";
 		}
 		$("#displayTree").html(contentHtml);
 		

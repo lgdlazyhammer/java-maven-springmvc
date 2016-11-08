@@ -49,19 +49,19 @@ public class IndexController {
 	
 	@RequestMapping("/")
 	public ModelAndView index() {
-		return new ModelAndView("/plants/index");
+		return new ModelAndView("/econny/index");
 	}
 	@RequestMapping("/aboutus")
 	public ModelAndView aboutUs() {
-		return new ModelAndView("/plants/aboutus");
+		return new ModelAndView("/econny/aboutus");
 	}
-	@RequestMapping("/plants")
+	@RequestMapping("/programs")
 	public ModelAndView plants() {
-		return new ModelAndView("/plants/plants");
+		return new ModelAndView("/econny/programs");
 	}
-	@RequestMapping("/progress")
+	@RequestMapping("/approach")
 	public ModelAndView progress() {
-		return new ModelAndView("/plants/progress");
+		return new ModelAndView("/econny/approach");
 	}
 	@RequestMapping("/init")
 	public ModelAndView initService() {

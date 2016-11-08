@@ -49,7 +49,6 @@
 		UPDATE node
 		set 
 		title = #{title},
-		rank = #{rank},
 		description = #{description}
 		WHERE		
 		id = #{id}
