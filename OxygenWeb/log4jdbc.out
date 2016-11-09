@@ -174,3 +174,131 @@
 
 2016-11-08 19:15:14.413 [http-8090-5] INFO - 45. SELECT * FROM node WHERE del_flag = 0 AND parent = 'c019d68a-9c0f-4211-aa04-fd5b97397922'  {executed in 0 ms}
 
+2016-11-09 19:24:49.319 [http-8090-2] INFO - 1. INSERT INTO file_upload ( id, file_name, file_type, file_size, file_content_type, file_content, 
+secure_level ) values( 'b181c7f8-4cd1-4377-96c6-366573231be0', 'Screen09.png', NULL, 2243074, 
+'image/png', NULL, 2 )  {executed in 72 ms}
+
+2016-11-09 19:24:49.323 [http-8090-2] INFO - 2. INSERT INTO file_upload ( id, file_name, file_type, file_size, file_content_type, file_content, 
+secure_level ) values( 'b181c7f8-4cd1-4377-96c6-366573231be0', 'Screen09.png', NULL, 2243074, 
+'image/png', NULL, 2 )  {executed in 77 ms}
+
+2016-11-09 19:25:09.075 [http-8090-5] INFO - 1. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = 'b181c7f8-4cd1-4377-96c6-366573231be0'  {executed in 2 ms}
+
+2016-11-09 19:25:09.076 [http-8090-5] INFO - 3. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = 'b181c7f8-4cd1-4377-96c6-366573231be0'  {executed in 3 ms}
+
+2016-11-09 19:25:10.203 [http-8090-6] INFO - 1. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = 'b181c7f8-4cd1-4377-96c6-366573231be0'  {executed in 2 ms}
+
+2016-11-09 19:25:10.203 [http-8090-6] INFO - 4. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = 'b181c7f8-4cd1-4377-96c6-366573231be0'  {executed in 2 ms}
+
+2016-11-09 19:35:42.655 [http-8090-4] INFO - 1. INSERT INTO file_upload ( id, file_name, file_type, file_size, file_content_type, file_content, 
+secure_level ) values( 'c7f12554-39de-4bc6-bfd4-85b90109741b', 'Screen07.png', NULL, 3037980, 
+'image/png', NULL, 2 )  {executed in 60 ms}
+
+2016-11-09 19:35:42.656 [http-8090-4] INFO - 2. INSERT INTO file_upload ( id, file_name, file_type, file_size, file_content_type, file_content, 
+secure_level ) values( 'c7f12554-39de-4bc6-bfd4-85b90109741b', 'Screen07.png', NULL, 3037980, 
+'image/png', NULL, 2 )  {executed in 62 ms}
+
+2016-11-09 19:35:54.677 [http-8090-1] INFO - 1. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = 'c7f12554-39de-4bc6-bfd4-85b90109741b'  {executed in 1 ms}
+
+2016-11-09 19:35:54.678 [http-8090-1] INFO - 3. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = 'c7f12554-39de-4bc6-bfd4-85b90109741b'  {executed in 2 ms}
+
+2016-11-09 19:43:32.155 [http-8090-2] INFO - 1. INSERT INTO file_upload ( id, file_name, file_type, file_size, file_content_type, file_content, 
+secure_level ) values( 'af0fee63-6aa3-4399-893c-cecffdc23b1c', 'Screen06.png', NULL, 2229212, 
+'image/png', NULL, 2 )  {executed in 50 ms}
+
+2016-11-09 19:43:32.159 [http-8090-2] INFO - 2. INSERT INTO file_upload ( id, file_name, file_type, file_size, file_content_type, file_content, 
+secure_level ) values( 'af0fee63-6aa3-4399-893c-cecffdc23b1c', 'Screen06.png', NULL, 2229212, 
+'image/png', NULL, 2 )  {executed in 55 ms}
+
+2016-11-09 19:43:56.695 [http-8090-5] INFO - 1. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = 'af0fee63-6aa3-4399-893c-cecffdc23b1c'  {executed in 2 ms}
+
+2016-11-09 19:43:56.695 [http-8090-5] INFO - 3. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = 'af0fee63-6aa3-4399-893c-cecffdc23b1c'  {executed in 2 ms}
+
+2016-11-09 20:58:08.120 [http-8090-5] INFO - 1. INSERT INTO file_upload ( id, file_name, file_type, file_size, file_content_type, file_content, 
+secure_level ) values( 'ec643b5b-332f-4e70-a4de-0c59386499ab', 'Screen09.png', NULL, 2243074, 
+'image/png', NULL, 2 )  {executed in 92 ms}
+
+2016-11-09 20:58:08.127 [http-8090-5] INFO - 2. INSERT INTO file_upload ( id, file_name, file_type, file_size, file_content_type, file_content, 
+secure_level ) values( 'ec643b5b-332f-4e70-a4de-0c59386499ab', 'Screen09.png', NULL, 2243074, 
+'image/png', NULL, 2 )  {executed in 101 ms}
+
+2016-11-09 21:00:07.903 [http-8090-4] INFO - 1. INSERT INTO file_upload ( id, file_name, file_type, file_size, file_content_type, file_content, 
+secure_level ) values( '0fd04980-62d6-440e-8312-118edd20bcb9', 'Screen10.png', NULL, 2415389, 
+'image/png', NULL, 2 )  {executed in 128 ms}
+
+2016-11-09 21:00:07.907 [http-8090-4] INFO - 3. INSERT INTO file_upload ( id, file_name, file_type, file_size, file_content_type, file_content, 
+secure_level ) values( '0fd04980-62d6-440e-8312-118edd20bcb9', 'Screen10.png', NULL, 2415389, 
+'image/png', NULL, 2 )  {executed in 133 ms}
+
+2016-11-09 21:05:08.733 [http-8090-5] INFO - 1. INSERT INTO file_upload ( id, file_name, file_type, file_size, file_content_type, file_content, 
+secure_level ) values( '15bd78ec-afdd-4754-8d1b-38b165d51d54', 'Screen09.png', NULL, 2243074, 
+'image/png', NULL, 2 )  {executed in 125 ms}
+
+2016-11-09 21:05:08.733 [http-8090-5] INFO - 4. INSERT INTO file_upload ( id, file_name, file_type, file_size, file_content_type, file_content, 
+secure_level ) values( '15bd78ec-afdd-4754-8d1b-38b165d51d54', 'Screen09.png', NULL, 2243074, 
+'image/png', NULL, 2 )  {executed in 125 ms}
+
+2016-11-09 21:05:08.793 [http-8090-5] INFO - 1. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '15bd78ec-afdd-4754-8d1b-38b165d51d54'  {executed in 1 ms}
+
+2016-11-09 21:05:08.793 [http-8090-5] INFO - 5. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '15bd78ec-afdd-4754-8d1b-38b165d51d54'  {executed in 1 ms}
+
+2016-11-09 21:05:15.458 [http-8090-4] INFO - 1. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '15bd78ec-afdd-4754-8d1b-38b165d51d54'  {executed in 1 ms}
+
+2016-11-09 21:05:15.459 [http-8090-4] INFO - 6. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '15bd78ec-afdd-4754-8d1b-38b165d51d54'  {executed in 2 ms}
+
+2016-11-09 21:05:33.582 [http-8090-4] INFO - 1. INSERT INTO file_upload ( id, file_name, file_type, file_size, file_content_type, file_content, 
+secure_level ) values( 'dcd9b121-dbf7-48c4-8086-cce1659fff8d', 'Screen02.png', NULL, 1259900, 
+'image/png', NULL, 1 )  {executed in 67 ms}
+
+2016-11-09 21:05:33.582 [http-8090-4] INFO - 7. INSERT INTO file_upload ( id, file_name, file_type, file_size, file_content_type, file_content, 
+secure_level ) values( 'dcd9b121-dbf7-48c4-8086-cce1659fff8d', 'Screen02.png', NULL, 1259900, 
+'image/png', NULL, 1 )  {executed in 67 ms}
+
+2016-11-09 21:05:36.242 [http-8090-4] INFO - 1. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = 'dcd9b121-dbf7-48c4-8086-cce1659fff8d'  {executed in 2 ms}
+
+2016-11-09 21:05:36.242 [http-8090-4] INFO - 8. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = 'dcd9b121-dbf7-48c4-8086-cce1659fff8d'  {executed in 2 ms}
+
+2016-11-09 21:05:57.983 [http-8090-4] INFO - 1. INSERT INTO file_upload ( id, file_name, file_type, file_size, file_content_type, file_content, 
+secure_level ) values( 'a1d8cc88-c1f6-4a87-ab91-52e77bc0a82c', 'Screen10.png', NULL, 2415389, 
+'image/png', NULL, 2 )  {executed in 72 ms}
+
+2016-11-09 21:05:57.984 [http-8090-4] INFO - 9. INSERT INTO file_upload ( id, file_name, file_type, file_size, file_content_type, file_content, 
+secure_level ) values( 'a1d8cc88-c1f6-4a87-ab91-52e77bc0a82c', 'Screen10.png', NULL, 2415389, 
+'image/png', NULL, 2 )  {executed in 73 ms}
+
+2016-11-09 21:05:58.013 [http-8090-4] INFO - 1. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = 'a1d8cc88-c1f6-4a87-ab91-52e77bc0a82c'  {executed in 0 ms}
+
+2016-11-09 21:05:58.014 [http-8090-4] INFO - 10. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = 'a1d8cc88-c1f6-4a87-ab91-52e77bc0a82c'  {executed in 1 ms}
+

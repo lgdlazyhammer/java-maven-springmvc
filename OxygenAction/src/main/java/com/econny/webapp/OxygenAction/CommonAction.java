@@ -103,16 +103,22 @@ public class CommonAction {
 				// do nothing
 			} else if (secureLevel == FileSecureLevel.LevelTwo.getCode()) {
 				// 这里不必处理IO流关闭的问题，因为FileUtils.copyInputStreamToFile()方法内部会自动把用到的IO流关掉
-				FileUtils.copyFileToDirectory(multipartToFile(myfile), new File(realPath, uploadFileEntity.getId()));
+				File tempFile = multipartToFile(myfile);
+				FileUtils.copyFileToDirectory(tempFile, new File(realPath, uploadFileEntity.getId()));
+				//delete the temporary file or it leave a file in root path
+				tempFile.delete();
 
 				uploadFileServiceImpl.insert(uploadFileEntity);
 
 				return new ApiResultEntity(true, uploadFileEntity.getId(), 200, "");
 			} else if (secureLevel == FileSecureLevel.LevelThree.getCode()) {
 				// 这里不必处理IO流关闭的问题，因为FileUtils.copyInputStreamToFile()方法内部会自动把用到的IO流关掉
-				FileUtils.copyFileToDirectory(multipartToFile(myfile),
+				// 这里不必处理IO流关闭的问题，因为FileUtils.copyInputStreamToFile()方法内部会自动把用到的IO流关掉
+				File tempFile = multipartToFile(myfile);
+				FileUtils.copyFileToDirectory(tempFile,
 						new File(realPathStatic, uploadFileEntity.getId()));
-
+				//delete the temporary file or it leave a file in root path
+				tempFile.delete();
 				uploadFileServiceImpl.insert(uploadFileEntity);
 
 				return new ApiResultEntity(true, uploadFileEntity.getId(), 200, "");
@@ -192,16 +198,20 @@ public class CommonAction {
 					// do nothing
 				} else if (secureLevel == FileSecureLevel.LevelTwo.getCode()) {
 					// 这里不必处理IO流关闭的问题，因为FileUtils.copyInputStreamToFile()方法内部会自动把用到的IO流关掉
-					FileUtils.copyFileToDirectory(multipartToFile(myfile), new File(realPath, uploadFileEntity.getId()));
+					File tempFile = multipartToFile(myfile);
+					FileUtils.copyFileToDirectory(tempFile, new File(realPath, uploadFileEntity.getId()));
+					//delete the temporary file or it leave a file in root path
+					tempFile.delete();
 
 					uploadFileServiceImpl.insert(uploadFileEntity);
 
 					return new ApiResultEntity(true, uploadFileEntity.getId(), 200, "");
 				} else if (secureLevel == FileSecureLevel.LevelThree.getCode()) {
 					// 这里不必处理IO流关闭的问题，因为FileUtils.copyInputStreamToFile()方法内部会自动把用到的IO流关掉
-					FileUtils.copyFileToDirectory(multipartToFile(myfile),
+					File tempFile = multipartToFile(myfile);
+					FileUtils.copyFileToDirectory(tempFile,
 							new File(realPathStatic, uploadFileEntity.getId()));
-
+					tempFile.delete();
 					uploadFileServiceImpl.insert(uploadFileEntity);
 
 					return new ApiResultEntity(true, uploadFileEntity.getId(), 200, "");
