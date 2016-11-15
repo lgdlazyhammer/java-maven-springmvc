@@ -31,6 +31,8 @@ $(function(){
 								rootNode.addChild(node);
 							}
 						}
+						displayDocTable(data.result.docs);
+						displayPicTable(data.result.pics);
 					}
 					displayTree(globalTree.getTree());
 				},
@@ -41,6 +43,87 @@ $(function(){
 			};
 			//initialize the page
 			$.ajax(getTreeOption);
+	};
+	
+	function deleteFileById(nodeId, fileId, type){
+		var fileDeleteSingleOption = {
+				type : 'POST',
+				url : '/OxygenWeb/econnyTreeService/deleteNodeFile',
+				data : {
+					nodeId : nodeId,
+					fileId : fileId,
+					type : type
+				},
+				success : function(data) {
+					//refresh page
+					getByNodeId();
+				},
+				error : function(XMLHttpRequest, textStatus, errorThrown) {
+				},
+				timeout : function(data) {
+				}
+			};
+			// initialize the page
+			$.ajax(fileDeleteSingleOption);
+	};
+	
+	function displayDocTable(param){
+		if(param){
+			var contentHtml = "";
+			for(var i=0;i<param.length;i++){
+				contentHtml += "<tr><td><a href='/OxygenWeb/commonService/fileDownloadSingle?id="+param[i].fileId+"'>doc</a></td><td><button title='"+param[i].fileId+"' class='btn btn-primary node-doc-delete-button'>delete</button></td></tr>";
+			};
+			
+			$("#nodeDocsTable").html(contentHtml);
+			$(".node-doc-delete-button").click(function(){
+				$(this).attr('title');
+				deleteFileById(globalTreeRootSelected,$(this).attr('title'),0);
+			});
+		};
+	};
+	
+	function getPicRefUrl(fileId){
+		var getResourceOwnerAllOption = {
+				type : 'POST',
+				url : '/OxygenWeb/commonService/fileDownloadSingle',
+				data : {
+					id : fileId
+				},
+				success : function(data) {
+					if(data){
+						$(".node-pics-img[title="+fileId+"]").attr("src","/OxygenWeb/" + data.result.refUrl);
+					}
+				},
+				error : function(XMLHttpRequest, textStatus, errorThrown) {
+				},
+				timeout : function(data) {
+				}
+			};
+			// initialize the page
+			$.ajax(getResourceOwnerAllOption);
+	};
+	
+	function displayPicTable(param){
+		if(param){
+			var contentHtml = "";
+			for(var i=0;i<param.length;i++){
+				contentHtml += "<tr><td><img title='"+param[i].fileId+"' class='node-pics-img' src='/OxygenWeb/'/></td><td><button title='"+param[i].fileId+"' class='btn btn-primary node-pic-delete-button'>delete</button></td></tr>";
+			};
+			
+			$("#nodePicsTable").html(contentHtml);
+			
+			$(".node-pic-delete-button").click(function(){
+				$(this).attr('title');
+				deleteFileById(globalTreeRootSelected,$(this).attr('title'),1);
+			});
+			
+			$(".node-pics-img").click(function(){
+				$(this).attr('title');
+				getPicRefUrl($(this).attr('title'));
+			});
+			
+			$(".node-pics-img").click();
+		};
 	};
 	
 	//display the tree
@@ -82,6 +165,9 @@ $(function(){
 
 					 $("#nodeDescriptionInput").attr("readonly",true);
 					 $("#nodeTitleInput").attr("readonly",true);
+					 
+					 $("#saveNodeDocButton").attr("disabled",true);
+					 $("#saveNodePicButton").attr("disabled",true);
 				}else{
 					globalTreeRootSelected = $(this).attr("title");
 					displayTree(globalTree.getTree());
@@ -94,6 +180,9 @@ $(function(){
 					 
 					 $("#nodeDescriptionInput").attr("readonly",false);
 					 $("#nodeTitleInput").attr("readonly",false);
+					 
+					 $("#saveNodeDocButton").attr("disabled",false);
+					 $("#saveNodePicButton").attr("disabled",false);
 				}
 			});
 			
@@ -186,6 +275,93 @@ $(function(){
 			};
 			//initialize the page
 			$.ajax(updateTreeNodeOption);
+	});
+	
+
+	
+	//add a node doc
+	$("#saveNodeDocButton").click(function(){
+		$.ajaxFileUpload({
+			url : '/OxygenWeb/commonService/fileUploadSingle', // 需要链接到服务器地址
+			secureuri : false,
+			fileElementId : 'fileNodeDoc', // 文件选择框的id属性
+			dataType : 'json', // 服务器返回的格式，可以是json
+			type: 'post',
+			data : {
+				secureLevel : 1
+			},
+			success : function(data, status) // 相当于java中try语句块的用法
+			{
+				if(data.result){
+					
+					var param = {id:globalTreeRootSelected,fileId:data.result};
+					
+					var saveTreeNodeDocOption = {
+							type: 'POST',
+							url: '/OxygenWeb/econnyTreeService/saveNodeDoc',
+							data: param,
+							dataType: 'json',
+							success: function(data){
+								//refresh page
+								getByNodeId();
+							},
+							error: function(XMLHttpRequest, textStatus, errorThrown){
+							},
+							timeout: function(data){
+							}
+						};
+						//initialize the page
+						$.ajax(saveTreeNodeDocOption);
+					
+				};
+			},
+			error : function(data, status, e) // 相当于java中catch语句块的用法
+			{
+			}
+		});
+	});
+	
+	//add a node doc
+	$("#saveNodePicButton").click(function(){
+		
+		$.ajaxFileUpload({
+			url : '/OxygenWeb/commonService/fileUploadSingle', // 需要链接到服务器地址
+			secureuri : false,
+			fileElementId : 'fileNodePic', // 文件选择框的id属性
+			dataType : 'json', // 服务器返回的格式，可以是json
+			type: 'post',
+			data : {
+				secureLevel : 2
+			},
+			success : function(data, status) // 相当于java中try语句块的用法
+			{
+				if(data.result){
+					
+					var param = {id:globalTreeRootSelected,fileId:data.result};
+					
+					var saveTreeNodePicOption = {
+							type: 'POST',
+							url: '/OxygenWeb/econnyTreeService/saveNodePic',
+							data: param,
+							dataType: 'json',
+							success: function(data){
+								//refresh page
+								getByNodeId();
+							},
+							error: function(XMLHttpRequest, textStatus, errorThrown){
+							},
+							timeout: function(data){
+							}
+						};
+						//initialize the page
+						$.ajax(saveTreeNodePicOption);
+					
+				};
+			},
+			error : function(data, status, e) // 相当于java中catch语句块的用法
+			{
+			}
+		});
 	});
 	
 	//format title

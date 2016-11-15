@@ -55,4 +55,11 @@
 		</if>
 	</select>
 
+	<delete id="delete" parameterType="com.econny.webapp.OxygenEntity.UploadFileEntity">
+		DELETE FROM file_upload
+		where
+		id =
+		#{id}
+	</delete>
+
 </mapper>

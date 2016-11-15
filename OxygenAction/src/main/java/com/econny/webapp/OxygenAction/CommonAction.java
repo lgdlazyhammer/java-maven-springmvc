@@ -363,4 +363,20 @@ public class CommonAction {
 		}
 	}
 
+	/*
+	 * file delete
+	 */
+	@CrossOrigin(origins = "*", maxAge = 3600, methods = { RequestMethod.POST })
+	@RequestMapping(value = "/fileDeleteSinglePost", method = RequestMethod.POST)
+	@ResponseBody
+	public Object fileDeleteSinglePost(HttpServletRequest request, HttpServletResponse response,
+			@RequestParam(required = true) String id) throws IOException {
+
+		UploadFileEntity uploadFileEntity = new UploadFileEntity();
+		uploadFileEntity.setId(id);
+		uploadFileServiceImpl.delete(uploadFileEntity, "", "");
+		return new ApiResultEntity(true, uploadFileEntity , 200, "");
+
+	}
+
 }

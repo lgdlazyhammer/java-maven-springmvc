@@ -8,3 +8,5 @@
 /OxygenService/target
 /OxygenWeb/target
 /OxygenWebClient/target
+/OxygenWeb/src/main/webapp/WEB-INF/upload/file/save
+/OxygenWeb/src/main/webapp/WEB-INF/resources/img

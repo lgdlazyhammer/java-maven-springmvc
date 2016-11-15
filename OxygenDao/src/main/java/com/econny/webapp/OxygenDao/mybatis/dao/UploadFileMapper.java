@@ -10,4 +10,6 @@ public interface UploadFileMapper {
 	public void insert(UploadFileEntity UploadFileEntity);
 	
 	public UploadFileEntity getById(UploadFileEntity UploadFileEntity);
+	
+	public void delete(UploadFileEntity UploadFileEntity);
 }
