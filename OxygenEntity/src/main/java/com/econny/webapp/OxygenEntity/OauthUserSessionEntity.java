@@ -61,6 +61,6 @@ public class OauthUserSessionEntity implements Serializable {
 	
 	@Override
 	public String toString(){
-		return "{id:"+id+",user:{id:"+user.getId()+",name:"+user.getName()+",password:"+user.getPassword()+"},expires:"+expires+"}";
+		return "{\"id\":"+id+",\"user\":{\"id\":\""+user.getId()+"\",\"name\":\""+user.getName()+"\",\"password\":\""+user.getPassword()+"\"},\"expires\":\""+expires+"\"}";
 	}
 }

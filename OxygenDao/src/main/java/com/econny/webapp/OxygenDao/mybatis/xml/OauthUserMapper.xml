@@ -102,8 +102,15 @@
 	<select id="findList" parameterType="com.econny.webapp.OxygenEntity.OauthUserEntity" resultMap="userHashEntity">
 		SELECT * FROM oauth_user
 		WHERE
+			del_flag = 0
 			<if test="id != null and id !=''">
-				id = #{id}
+				AND id = #{id}
+			</if>
+			<if test="name != null and name !=''">
+				AND name = #{name}
+			</if>
+			<if test="password != null and password !=''">
+				AND password = #{password}
 			</if>
 	</select>
 

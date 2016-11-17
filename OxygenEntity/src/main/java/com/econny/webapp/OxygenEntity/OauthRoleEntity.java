@@ -12,7 +12,6 @@ public class OauthRoleEntity {
 
 	public OauthRoleEntity() {
 		super();
-		this.id = UUID.randomUUID().toString();
 		this.delFlag = "0";
 	}
 

@@ -1,5 +1,6 @@
 package com.econny.webapp.OxygenService.impl;
 
+import java.io.IOException;
 import java.io.Serializable;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,15 +8,19 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.data.redis.connection.RedisConnection;
 import org.springframework.data.redis.core.RedisCallback;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import com.econny.webapp.OxygenEntity.OauthUserSessionEntity;
 import com.econny.webapp.OxygenService.inter.OauthUserSessionService;
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.MapperFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
-@Repository("oauthUserSessionServiceImpl")
+@Service
 public class OauthUserSessionServiceImpl implements OauthUserSessionService{
 
-	public void save(OauthUserSessionEntity user) {
+	/*public void save(OauthUserSessionEntity user) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -28,9 +33,9 @@ public class OauthUserSessionServiceImpl implements OauthUserSessionService{
 	public void delete(String uid) {
 		// TODO Auto-generated method stub
 		
-	}
+	}*/
 
-	/*@Autowired
+	@Autowired
 	private RedisTemplate<Serializable, Serializable> redisTemplate;
 
 	public void save(final OauthUserSessionEntity user) {
@@ -60,11 +65,20 @@ public class OauthUserSessionServiceImpl implements OauthUserSessionService{
 					String userInfoStr = redisTemplate.getStringSerializer()
 							.deserialize(value);
 					OauthUserSessionEntity userSaved = new OauthUserSessionEntity();
-					userSaved = objectMapper.readValue(userInfoStr, OauthUserSessionEntity.class);
-					OauthUserSessionEntity user = new OauthUserSessionEntity();
-					user.setId(id);
-					
-					return user;
+					ObjectMapper mapper = new ObjectMapper();
+					try {
+						userSaved = mapper.readValue(userInfoStr, OauthUserSessionEntity.class);
+					} catch (JsonParseException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					} catch (JsonMappingException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					return userSaved;
 				}
 				return null;
 			}
@@ -80,5 +94,5 @@ public class OauthUserSessionServiceImpl implements OauthUserSessionService{
 				return null;
 			}
 		});
-	}*/
+	}
 }

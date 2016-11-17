@@ -1,7 +1,5 @@
 package com.econny.webapp.OxygenEntity;
 
-import java.util.UUID;
-
 public class OauthUserEntity {
 
 	private String id;
@@ -17,7 +15,6 @@ public class OauthUserEntity {
 	
 	public OauthUserEntity(){
 		super();
-		this.id = UUID.randomUUID().toString();
 		this.delFlag = "0";
 	}
 

@@ -13,7 +13,6 @@ public class OauthServiceEntity {
 
 	public OauthServiceEntity() {
 		super();
-		this.id = UUID.randomUUID().toString();
 		this.delFlag = "0";
 	}
 
