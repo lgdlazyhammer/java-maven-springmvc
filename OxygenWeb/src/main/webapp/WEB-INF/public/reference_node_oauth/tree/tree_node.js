@@ -153,12 +153,14 @@ $(function(){
 			
 			$(".tree-node-item-root").click(function(){
 				if(globalTreeRootSelected == $(this).attr("title")){
+					 $("#goToDeatilNodePage").removeClass("btn-success");
+					 $("#goToDeatilNodePage").addClass("btn-primary");
+					 
 					globalTreeRootSelected = "";
 					displayTree(globalTree.getTree());
 					 $("#addNode").removeClass("btn-success");
 					 $("#addNode").addClass("btn-primary");
 					 
-
 					 $("#updateNodeButton").removeClass("btn-success");
 					 $("#updateNodeButton").addClass("btn-primary");
 					 $("#updateNodeButton").attr("disabled",true);
@@ -169,6 +171,10 @@ $(function(){
 					 $("#saveNodeDocButton").attr("disabled",true);
 					 $("#saveNodePicButton").attr("disabled",true);
 				}else{
+					$("#goToDeatilNodePage").attr("href",globalAttrHref+"?id="+$(this).attr("title"));
+					$("#goToDeatilNodePage").removeClass("btn-primary");
+					$("#goToDeatilNodePage").addClass("btn-success");
+					
 					globalTreeRootSelected = $(this).attr("title");
 					displayTree(globalTree.getTree());
 					 $("#addNode").removeClass("btn-primary");

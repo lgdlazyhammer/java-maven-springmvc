@@ -5,12 +5,14 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.econny.webapp.OxygenDao.mybatis.dao.OauthUserMapper;
 import com.econny.webapp.OxygenEntity.OauthUserEntity;
 import com.econny.webapp.OxygenService.inter.OauthUserService;
 
 @Service
+@Transactional(readOnly=true)
 public class OauthUserServiceImplTwo implements OauthUserService {
 	
 	@Autowired
@@ -26,22 +28,26 @@ public class OauthUserServiceImplTwo implements OauthUserService {
 		return oauthUserMapper.qryUserByPage(map);
 	}
 
+	@Transactional(readOnly=false)
 	public void insertUser(Map<String, Object> map) {
 		// TODO Auto-generated method stub
 		oauthUserMapper.insertUser(map);
 		
 	}
 
+	@Transactional(readOnly=false)
 	public void updateUserById(Map<String, Object> map) {
 		// TODO Auto-generated method stub
 		oauthUserMapper.updateUserById(map);
 	}
 
+	@Transactional(readOnly=false)
 	public void deleteUserById(Map<String, Object> map) {
 		// TODO Auto-generated method stub
 		oauthUserMapper.deleteUserById(map);
 	}
 
+	@Transactional(readOnly=false)
 	public void insertUserBatch(Map<String, Object> map) {
 		// TODO Auto-generated method stub
 		oauthUserMapper.insertUserBatch(map);

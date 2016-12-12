@@ -141,11 +141,11 @@ public class EconnyTreeAction {
 	@CrossOrigin(origins = "*", maxAge = 3600, methods = { RequestMethod.POST })
 	@RequestMapping(value = "/getUserTrees", method = RequestMethod.POST)
 	@ResponseBody
-	public Object getUserTrees(HttpServletRequest request, HttpServletResponse response)
+	public Object getUserTrees(HttpServletRequest request, HttpServletResponse response, @RequestParam(required = true) String userId)
 			throws IOException {
 		TreeNodeEntity treeNodeEntity = new TreeNodeEntity();
 		treeNodeEntity.setType(TreeNodeType.LevelOne.getCode());
-		treeNodeEntity.setUserId("111");
+		treeNodeEntity.setUserId(userId);
 		List<TreeNodeEntity> list = econnyTreeNodeServiceImpl.findList(treeNodeEntity);
 		List<TreeNodeEntity> listRes = new ArrayList<TreeNodeEntity>();
 		if(list.size()>0){

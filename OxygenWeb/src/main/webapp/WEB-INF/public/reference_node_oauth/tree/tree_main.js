@@ -3,15 +3,15 @@ $(function(){
 	var globalTree = new econny.work.tree();
 	var globalTreeRootSelected = "";
 	var globalTreeItemSelected = "";
-	var globalAttrHref = $("#goToDeatilNodePage").attr("href");
+	var globalAttrHref = $("#goToDetailNodePage").attr("href");
 	
 	//create a tree
 	$("#addTree").click(function(){
-		
+		var userId = $.cookie('oxygenId');
 		var getTreeOption = {
 				type: 'POST',
 				url: '/OxygenWeb/econnyTreeService/createTree',
-				data: {userId:'111'},
+				data: {userId:userId},
 				dataType: 'json',
 				success: function(data){
 					if(data.result){
@@ -55,15 +55,22 @@ $(function(){
 			
 			$(".tree-node-item-root").click(function(){
 				if(globalTreeRootSelected == $(this).attr("title")){
-					globalTreeRootSelected = "";
-					displayTree(globalTree.getTree());
+					 
+					 $("#goToDetailNodePage").removeClass("btn-success");
+					 $("#goToDetailNodePage").addClass("btn-primary");
 					 $("#addNode").removeClass("btn-success");
 					 $("#addNode").addClass("btn-primary");
+					 
+					globalTreeRootSelected = "";
+					displayTree(globalTree.getTree());
 				}else{
+					$("#goToDetailNodePage").attr("href",globalAttrHref+"?id="+$(this).attr("title"));
 					globalTreeRootSelected = $(this).attr("title");
 					displayTree(globalTree.getTree());
 					 $("#addNode").removeClass("btn-primary");
 					 $("#addNode").addClass("btn-success");
+					 $("#goToDetailNodePage").removeClass("btn-primary");
+					 $("#goToDetailNodePage").addClass("btn-success");
 				}
 			});
 			
@@ -71,13 +78,13 @@ $(function(){
 				if(globalTreeItemSelected){
 					//if the global selected exist and equals the clicked one means double click
 					if(globalTreeItemSelected==$(this).attr("title")){
-						 $("#goToDeatilNodePage").attr("href",globalAttrHref+"?id="+$(this).attr("title"));
-						 $("#goToDeatilNodePage").removeClass("btn-primary");
-						 $("#goToDeatilNodePage").addClass("btn-success");
+						 $("#goToDetailNodePage").attr("href",globalAttrHref+"?id="+$(this).attr("title"));
+						 $("#goToDetailNodePage").removeClass("btn-primary");
+						 $("#goToDetailNodePage").addClass("btn-success");
 						 
 						 $(this).removeClass("btn-primary");
 						 $(this).addClass("btn-success");
-					}else{						 
+					}else{ 
 						 $("[title='"+globalTreeItemSelected+"']").removeClass("btn-success");
 						 $("[title='"+globalTreeItemSelected+"']").addClass("btn-primary");
 						 
@@ -127,4 +134,43 @@ $(function(){
 			return "title not defined";
 		}
 	};
+	
+	
+	$("#loginTitleIcon").click(function(){
+
+		$('#loginModel').modal('show');
+		
+		$("#loginButton").click(function(){
+			var param = { name:$("#userName").val(), password:$("#password").val()};
+			
+			var loginOption = {
+					type: 'POST',
+					url: '/OxygenWeb/oauthUserService/login',
+					data: param,
+					dataType: 'json',
+					success: function(data){
+						if(data.result){
+							$.cookie('oxygenId', data.result.id); 
+							$('#loginModel').modal('hide');
+						}
+					},
+					error: function(XMLHttpRequest, textStatus, errorThrown){
+						alert("login failed: " + errorThrown);
+					},
+					timeout: function(data){
+					}
+				};
+				//initialize the page
+				$.ajax(loginOption);
+		});
+	});
+	
+	$("#logoutTitleIcon").click(function(){
+		
+		if($.removeCookie('oxygenId')){
+			alert("logout successed.");
+		}else{
+			alert("already logout.");
+		}
+	});
 });

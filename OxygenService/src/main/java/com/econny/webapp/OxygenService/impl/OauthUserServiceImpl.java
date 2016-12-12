@@ -6,12 +6,14 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.econny.webapp.OxygenDao.mybatis.dao.OauthUserMapper;
 import com.econny.webapp.OxygenEntity.OauthUserEntity;
 import com.econny.webapp.OxygenService.inter.OauthUserService;
 
 @Service
+@Transactional(readOnly=true)
 public class OauthUserServiceImpl implements OauthUserService {
 	
 	@Autowired
@@ -46,16 +48,19 @@ public class OauthUserServiceImpl implements OauthUserService {
 
 	}
 
+	@Transactional(readOnly=false)
 	public void save(OauthUserEntity oauthUserEntity) {
 		// TODO Auto-generated method stub
 		oauthUserMapper.save(oauthUserEntity);
 	}
 
+	@Transactional(readOnly=false)
 	public void delete(OauthUserEntity oauthUserEntity) {
 		// TODO Auto-generated method stub
 		oauthUserMapper.delete(oauthUserEntity);
 	}
 
+	@Transactional(readOnly=false)
 	public void update(OauthUserEntity oauthUserEntity) {
 		// TODO Auto-generated method stub
 		oauthUserMapper.update(oauthUserEntity);
@@ -66,6 +71,7 @@ public class OauthUserServiceImpl implements OauthUserService {
 		return oauthUserMapper.findList(oauthUserEntity);
 	}
 
+	@Transactional(readOnly=false)
 	public void saveBatch(Map<String, Object> map) {
 		// TODO Auto-generated method stub
 		oauthUserMapper.saveBatch(map);		

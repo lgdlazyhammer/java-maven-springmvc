@@ -1,11 +1,11 @@
 package com.econny.webapp.OxygenService.impl;
 
-import java.io.File;
 import java.io.IOException;
 
 import org.codehaus.plexus.util.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.econny.webapp.OxygenDao.mybatis.dao.UploadFileMapper;
 import com.econny.webapp.OxygenEntity.UploadFileEntity;
@@ -13,11 +13,13 @@ import com.econny.webapp.OxygenEnum.FileSecureLevel;
 import com.econny.webapp.OxygenService.inter.UploadFileService;
 
 @Service
+@Transactional(readOnly=true)
 public class UploadFileServiceImpl implements UploadFileService {
 
 	@Autowired
 	UploadFileMapper uploadFileMapper;
 	
+	@Transactional(readOnly=false)
 	public void insert(UploadFileEntity UploadFileEntity) {
 		// TODO Auto-generated method stub
 		uploadFileMapper.insert(UploadFileEntity);
@@ -28,7 +30,7 @@ public class UploadFileServiceImpl implements UploadFileService {
 		return uploadFileMapper.getById(UploadFileEntity);
 	}
 
-
+	@Transactional(readOnly=false)
 	public void delete(UploadFileEntity UploadFileEntity, String filePath, String filePathStatic) {
 		// TODO Auto-generated method stub
 		UploadFileEntity uploadFileEntityDel = uploadFileMapper.getById(UploadFileEntity);

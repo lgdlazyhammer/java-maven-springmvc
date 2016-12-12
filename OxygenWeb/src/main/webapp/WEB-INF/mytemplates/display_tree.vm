@@ -7,6 +7,8 @@
 		<link href="/OxygenWeb/public/reference_node_oauth/css/animate.min.css" rel="stylesheet">
 		<link href="/OxygenWeb/public/reference_node_oauth/css/bootstrap.min.css" rel="stylesheet">
 		<link href="/OxygenWeb/public/reference_node_oauth/css/bootstrap-theme.min.css" rel="stylesheet">
+		<link href="/OxygenWeb/public/reference_node_oauth/js/bootstrap-modal-master/css/bootstrap-modal.css" rel="stylesheet">
+		<link href="/OxygenWeb/public/reference_node_oauth/js/bootstrap-modal-master/css/all.css" rel="stylesheet">
 	</head>
 	<body class="bg-info page-background">
 		<nav class="navbar navbar-inverse">
@@ -17,14 +19,14 @@
 					</a>
 				</div>
 				<div class="navbar-header pull-right ">
-					<a class="navbar-brand" href="#">
+					<span id="logoutTitleIcon" class="navbar-brand">
 						Logout
-					</a>
+					</span>
 				</div>
 				<div class="navbar-header pull-right">
-					<a class="navbar-brand" href="#">
+					<span id="loginTitleIcon" class="navbar-brand">
 						Login
-					</a>
+					</span>
 				</div>
 			</div>
 		</nav>
@@ -42,9 +44,33 @@
 				</tbody>
 			</table>
 		</div>
+			
+		<div id="loginModel" class="modal fade">
+		  <div class="modal-header">
+		  </div>
+		  <div class="modal-body">
+		    <div class="row-fluid">
+		      <div class="span6">
+		        <h4>User Name</h4>
+		        <p><input id="userName" type="text"  class="form-control"></p>
+		      </div>
+		      <div class="span6">
+		        <h4>Password</h4>
+		        <p><input id="password" type="text"  class="form-control"></p>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="modal-footer">
+		    <button type="button" data-dismiss="modal" class="btn">Close</button>
+		    <button id="loginButton" type="button" class="btn btn-primary">Login</button>
+		  </div>
+		</div>
 	</body>	
     <script src="/OxygenWeb/public/reference_node_oauth/js/jquery-3.0.0.min.js"></script>
     <script src="/OxygenWeb/public/reference_node_oauth/js/bootstrap.min.js"></script>
+    <script src="/OxygenWeb/public/reference_node_oauth/js/bootstrap-modal-master/js/bootstrap-modalmanager.js"></script>
+    <script src="/OxygenWeb/public/reference_node_oauth/js/bootstrap-modal-master/js/bootstrap-modal.js"></script>
+    <script src="/OxygenWeb/public/reference_node_oauth/js/jquery-cookie-master/src/jquery.cookie.js"></script>
     <script src="/OxygenWeb/public/reference_node_oauth/econny-work-tree/js/EconnyNamespace.js"></script>
     <script src="/OxygenWeb/public/reference_node_oauth/econny-work-tree/js/node.js"></script>
     <script src="/OxygenWeb/public/reference_node_oauth/econny-work-tree/js/tree.js"></script>
