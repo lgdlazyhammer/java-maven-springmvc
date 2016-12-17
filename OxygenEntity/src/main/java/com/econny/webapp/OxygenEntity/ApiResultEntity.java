@@ -6,6 +6,10 @@ public class ApiResultEntity {
 	private Object result;
 	private Integer statusCode;
 	private String error;
+	
+	public ApiResultEntity() {
+		super();
+	}
 
 	public ApiResultEntity(Boolean success, Object result, Integer statusCode, String error) {
 		super();

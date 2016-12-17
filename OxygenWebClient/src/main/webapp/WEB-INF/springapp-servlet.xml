@@ -1,32 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
-	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:aop="http://www.springframework.org/schema/aop" 
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
-                    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                    http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
                     http://www.springframework.org/schema/context
-                    http://www.springframework.org/schema/context/spring-context-3.0.xsd
+                    http://www.springframework.org/schema/context/spring-context-4.0.xsd
                     http://www.springframework.org/schema/mvc
-                    http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
+                    http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+                    http://www.springframework.org/schema/aop 
+                    http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+                    http://www.springframework.org/schema/tx 
+                    http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+  
+	<!-- 引入jdbc配置文件 <context:property-placeholder location="classpath:conf/config.properties" 
+		/> -->
+	<!-- <context:property-placeholder
+	location="/WEB-INF/applicationContext-redis.properties" /> -->
+	<context:property-placeholder location="/WEB-INF/conf/config.properties" />
 
-	<!-- 引入jdbc配置文件 -->
-	<context:property-placeholder location="classpath:conf/config.properties" />
-
+	<aop:aspectj-autoproxy /> 
+	
 	<!-- 对静态资源文件的访问 -->
-	<mvc:resources mapping="/public/**" location="/public/"/>
-	<mvc:default-servlet-handler/>
-	<mvc:annotation-driven/>
+	<mvc:resources mapping="/public/**" location="/WEB-INF/public/" />
+	<mvc:resources mapping="/resources/**" location="/WEB-INF/resources/" />
+	<mvc:default-servlet-handler />
+	<mvc:annotation-driven />
 	<context:annotation-config />
+	<context:component-scan base-package="com.econny.webapp.OxygenAspect" />
 	<context:component-scan base-package="com.econny.webapp.OxygenService" />
 	<context:component-scan base-package="com.econny.webapp.OxygenAction" />
-	<context:component-scan base-package="com.econny.webapp.OxygenTasks" />
-	
-	
-	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-
-        <property name="maxUploadSize" value="100000"/>
-
+	<context:component-scan base-package="com.econny.webapp.OxygenTasks" />  
+	     
+	<aop:config proxy-target-class="true"/>  
+    <tx:annotation-driven transaction-manager="txManager" />  
+    <!-- 数据源的Bean事务管理器 -->  
+    <bean id="txManager"  
+        class="org.springframework.jdbc.datasource.DataSourceTransactionManager">  
+        <property name="dataSource">  
+            <ref bean="dataSource" />  
+        </property>  
     </bean>
+
+	<!-- <mvc:annotation-driven content-negotiation-manager="contentNegotiationManager"> 
+		<mvc:message-converters> <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"> 
+		<property name="objectMapper" ref="jacksonObjectMapper" /> </bean> </mvc:message-converters> 
+		</mvc:annotation-driven> <bean id="jacksonObjectMapper" class="com.demo.CustomJacksonObjectMapper" 
+		/> <bean class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter"> 
+		<property name="objectMapper" ref="jacksonObjectMapper" /> <property name="supportedMediaTypes" 
+		value="application/json" /> </bean> -->
+
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!-- 对静态资源文件的访问 default 100000bytes reset to 10M -->
+		<property name="maxUploadSize" value="10485760" />
+
+	</bean>
 
 	<bean id="velocityConfig"
 		class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
@@ -38,6 +68,9 @@
 				<prop key="resource.loader">webapp</prop>
 				<prop key="webapp.resource.loader.class">org.apache.velocity.tools.view.WebappResourceLoader
 				</prop>
+				<prop key="input.encoding">utf-8</prop>
+				<prop key="output.encoding">utf-8</prop>
+				<prop key="contentType">text/html;charset=utf-8</prop>
 			</props>
 		</property>
 	</bean>
@@ -50,21 +83,26 @@
 		<property name="suffix">
 			<value>.vm</value>
 		</property>
+		<property name="contentType" value="text/html;charset=UTF-8" />
 	</bean>
 
-	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"
+	<bean id="dataSource" class="net.sf.log4jdbc.sql.jdbcapi.DataSourceSpy">
+		<constructor-arg ref="dataSourceSpied" />
+	</bean>
+
+	<bean id="dataSourceSpied" class="com.alibaba.druid.pool.DruidDataSource"
 		init-method="init" destroy-method="close">
 		<property name="driverClassName">
-			<value>${driver}</value>
+			<value>net.sf.log4jdbc.sql.jdbcapi.DriverSpy</value>
 		</property>
 		<property name="url">
-			<value>${url}</value>
+			<value>jdbc:log4jdbc:mysql://127.0.0.1:3306/oxygen_service</value>
 		</property>
 		<property name="username">
-			<value>${username}</value>
+			<value>root</value>
 		</property>
 		<property name="password">
-			<value>${password}</value>
+			<value>root</value>
 		</property>
 		<!-- 连接池最大使用连接数 -->
 		<property name="maxActive">
@@ -122,43 +160,64 @@
 		<property name="targetObject" ref="myBean" />
 		<property name="targetMethod" value="printMessage" />
 	</bean>
-	
+
 	<!-- Run the job every 1 hour with initial delay of 1 second -->
-    <bean id="simpleTrigger"  class="org.springframework.scheduling.quartz.SimpleTriggerFactoryBean">
-        <property name="jobDetail" ref="simpleJobDetail" />
-        <property name="startDelay" value="1000" />
-        <property name="repeatInterval" value="3600000" />
-    </bean>
-    
-    <!-- For times when you just need to invoke a method on a specific object -->
+	<bean id="simpleTrigger"
+		class="org.springframework.scheduling.quartz.SimpleTriggerFactoryBean">
+		<property name="jobDetail" ref="simpleJobDetail" />
+		<property name="startDelay" value="1000" />
+		<property name="repeatInterval" value="3600000" />
+	</bean>
+
+	<!-- For times when you just need to invoke a method on a specific object -->
 	<bean id="createFileUploadFolderTaskDetail"
 		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
 		<property name="targetObject" ref="CreateFileUploadFolderTask" />
 		<property name="targetMethod" value="CreateFileUploadFolder" />
 	</bean>
-	
+
 	<!-- Run the job every 10000 day with initial delay of 1 seconds -->
-    <bean id="createFileUploadFolderTaskTrigger"  class="org.springframework.scheduling.quartz.SimpleTriggerFactoryBean">
-        <property name="jobDetail" ref="createFileUploadFolderTaskDetail" />
-        <property name="startDelay" value="1000" />
-        <property name="repeatInterval" value="864000000000" />
-    </bean>
-    
-    <!-- Scheduler factory bean to glue together jobDetails and triggers to Configure Quartz Scheduler -->
-    <bean  class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
-        <property name="jobDetails">
-            <list>
-                <ref bean="simpleJobDetail" />
-                <ref bean="createFileUploadFolderTaskDetail" />
-            </list>
-        </property>
- 
-        <property name="triggers">
-            <list>
-                <ref bean="simpleTrigger" />
-                <ref bean="createFileUploadFolderTaskTrigger" />
-            </list>
-        </property>
-    </bean>
+	<bean id="createFileUploadFolderTaskTrigger"
+		class="org.springframework.scheduling.quartz.SimpleTriggerFactoryBean">
+		<property name="jobDetail" ref="createFileUploadFolderTaskDetail" />
+		<property name="startDelay" value="1000" />
+		<property name="repeatInterval" value="864000000000" />
+	</bean>
+
+	<!-- Scheduler factory bean to glue together jobDetails and triggers to 
+		Configure Quartz Scheduler -->
+	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="jobDetails">
+			<list>
+				<ref bean="simpleJobDetail" />
+				<ref bean="createFileUploadFolderTaskDetail" />
+			</list>
+		</property>
+
+		<property name="triggers">
+			<list>
+				<ref bean="simpleTrigger" />
+				<ref bean="createFileUploadFolderTaskTrigger" />
+			</list>
+		</property>
+	</bean>
+	<!-- Jedis 连接池配置 -->
+	<bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
+		<property name="maxTotal" value="${redis.pool.maxActive}" />
+		<property name="maxIdle" value="${redis.pool.maxIdle}" />
+		<property name="MaxWaitMillis" value="${redis.pool.maxWait}" />
+		<property name="testOnBorrow" value="${redis.pool.testOnBorrow}" />
+	</bean>
+	<!-- Jedis ConnectionFactory 数据库连接配置 -->
+	<bean id="jedisConnectionFactory"
+		class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory">
+		<property name="hostName" value="${redis.hostname}" />
+		<property name="port" value="${redis.port}" />
+		<property name="password" value="${redis.password}" />
+		<property name="poolConfig" ref="jedisPoolConfig" />
+	</bean>
+	<!-- redisTemplate配置，redisTemplate是对Jedis的对redis操作的扩展，有更多的操作，封装使操作更便捷 -->
+	<bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate"
+		p:connection-factory-ref="jedisConnectionFactory" />
 
 </beans>
