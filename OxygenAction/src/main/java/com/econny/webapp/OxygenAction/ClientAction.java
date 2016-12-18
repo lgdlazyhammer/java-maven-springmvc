@@ -95,13 +95,13 @@ public class ClientAction {
 	@ResponseBody
 	public Object testCrossDomainGetLogin(){
 		
-		RestTemplate restTemplate = new RestTemplate();
+		/*RestTemplate restTemplate = new RestTemplate();
 		Map<String ,Object> uriVariables = new HashMap<String ,Object>(); 
 		uriVariables.put("name", "peter"); 
 		uriVariables.put("password", "123456"); 
 		ResponseEntity<ApiResultEntity> responseEntity = restTemplate.postForEntity("http://localhost:8090/OxygenWeb/oauthUserService/login", HttpMethod.POST, ApiResultEntity.class, uriVariables);
-		return responseEntity.getBody();
-		/*MultiValueMap<String, String> map = new LinkedMultiValueMap<String, String>();
+		return responseEntity.getBody();*/
+		MultiValueMap<String, String> map = new LinkedMultiValueMap<String, String>();
 		map.add("name", "peter");
 		map.add("password", "123456");
 
@@ -113,7 +113,7 @@ public class ClientAction {
 
 		try {
 		    RestTemplate restTemplate = new RestTemplate();
-		    org.springframework.http.ResponseEntity<String> responseEntity = (org.springframework.http.ResponseEntity) restTemplate.exchange(
+		    ResponseEntity<String> responseEntity = restTemplate.exchange(
 		            "http://localhost:8090/OxygenWeb/oauthUserService/login", HttpMethod.POST, entity,
 		            String.class);
 
@@ -122,9 +122,17 @@ public class ClientAction {
 		        System.out.println("jsonObject " + temp);		        
 		        return temp;
 		    }
+		    
+		    if (responseEntity.getStatusCode() == HttpStatus.OK) {
+		        String temp = responseEntity.getBody();
+		        System.out.println("jsonObject " + temp);		        
+		        return temp;
+		    }
 		} catch (final HttpClientErrorException | HttpServerErrorException e) {
 		    throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, e.getResponseBodyAsString());
-		}*/
+		}
+		
+		return "";
 	}
 
 }
