@@ -36,13 +36,13 @@
 					</span>
 				</div>
 				<div class="navbar-header">
-					<a class="navbar-brand btn btn-primary" href="#">
-						Delete Node Descendent
+					<a class="navbar-brand" href="#">
+						<img class="herder-icon" alt="Brand" src="/OxygenWeb/public/reference_node_oauth/img/icon-header.png">
 					</a>
 				</div>
 				<div class="navbar-header">
 					<a id="goToDeatilNodePage" href="/OxygenWeb/treeNode" class="navbar-brand btn btn-primary">
-						Go To Detail Page
+						Detail Page
 					</a>
 				</div>
 			</div>
@@ -80,7 +80,8 @@
 		<div>
 			<table class="table">
 				<tbody>
-					<tr><td>节点文档:</td><td><input id="fileNodeDoc" type="file" name="file_data" multiple></td></tr>
+					<tr><td>节点文档:</td><td><input id="fileNodeDoc" class="hidden" type="file" name="file_data" multiple></td><td><label class="btn btn-primary" for="fileNodeDoc">选择文件</label></td></tr>
+					<tr><td><span id="fileNodeDocLabel"></span></td></tr>
 					<tr><td id="saveNodeDocButton" class="btn btn-primary" disabled="disabled">增加文档</td></tr>
 				</tbody>
 			</table>
@@ -89,7 +90,7 @@
 		<div>
 			<table class="table">
 				<tbody>
-					<tr><td>节点图片:</td><td><input id="fileNodePic" type="file" name="file_data" multiple></td></tr>
+					<tr><td>节点图片:</td><td><input id="fileNodePic" class="btn btn-primary" type="file" name="file_data" multiple></td></tr>
 					<tr><td id="saveNodePicButton" class="btn btn-primary" disabled="disabled">增加图片</td></tr>
 				</tbody>
 			</table>

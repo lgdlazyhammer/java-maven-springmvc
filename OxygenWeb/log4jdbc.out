@@ -9508,3 +9508,1841 @@ fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '
 AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
 fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = 'fa5c2159-7646-4785-9c98-db6aaf5ac963'  {executed in 0 ms}
 
+2016-12-20 16:07:10.908 [http-8090-4] INFO - 1. SELECT * FROM oauth_user WHERE del_flag = 0 AND name = 'peter' AND password = '123456'  {executed in 24 ms}
+
+2016-12-20 16:07:10.911 [http-8090-4] INFO - 2. SELECT * FROM oauth_user WHERE del_flag = 0 AND name = 'peter' AND password = '123456'  {executed in 28 ms}
+
+2016-12-20 16:07:47.636 [http-8090-4] INFO - 1. SELECT * FROM oauth_user WHERE del_flag = 0 AND name = 'peter' AND password = '123456'  {executed in 1 ms}
+
+2016-12-20 16:07:47.637 [http-8090-4] INFO - 3. SELECT * FROM oauth_user WHERE del_flag = 0 AND name = 'peter' AND password = '123456'  {executed in 2 ms}
+
+2016-12-20 16:07:49.633 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND user_id = '111'  {executed in 52 ms}
+
+2016-12-20 16:07:49.634 [http-8090-6] INFO - 4. SELECT * FROM node WHERE del_flag = 0 AND user_id = '111'  {executed in 53 ms}
+
+2016-12-20 16:07:49.643 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '005d794b-c4c2-41da-b342-bcef18211b2a'  {executed in 0 ms}
+
+2016-12-20 16:07:49.644 [http-8090-6] INFO - 5. SELECT * FROM node WHERE del_flag = 0 AND parent = '005d794b-c4c2-41da-b342-bcef18211b2a'  {executed in 1 ms}
+
+2016-12-20 16:07:49.647 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '3b08f807-5ab0-406c-8be8-c181013979a1'  {executed in 0 ms}
+
+2016-12-20 16:07:49.647 [http-8090-6] INFO - 6. SELECT * FROM node WHERE del_flag = 0 AND parent = '3b08f807-5ab0-406c-8be8-c181013979a1'  {executed in 1 ms}
+
+2016-12-20 16:07:49.652 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '5a8b9243-b3c8-4e43-8eb2-3b3cb8d78bc0'  {executed in 0 ms}
+
+2016-12-20 16:07:49.652 [http-8090-6] INFO - 7. SELECT * FROM node WHERE del_flag = 0 AND parent = '5a8b9243-b3c8-4e43-8eb2-3b3cb8d78bc0'  {executed in 0 ms}
+
+2016-12-20 16:07:49.661 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '2f993102-76f3-477a-881c-2e366da1f3e0'  {executed in 1 ms}
+
+2016-12-20 16:07:49.661 [http-8090-6] INFO - 8. SELECT * FROM node WHERE del_flag = 0 AND parent = '2f993102-76f3-477a-881c-2e366da1f3e0'  {executed in 1 ms}
+
+2016-12-20 16:07:49.666 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '834d5172-3042-48b8-bf63-cbadb45a47e3'  {executed in 0 ms}
+
+2016-12-20 16:07:49.668 [http-8090-6] INFO - 9. SELECT * FROM node WHERE del_flag = 0 AND parent = '834d5172-3042-48b8-bf63-cbadb45a47e3'  {executed in 2 ms}
+
+2016-12-20 16:07:49.671 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'a9113a58-a2e7-4ab3-9f66-e9137a493549'  {executed in 0 ms}
+
+2016-12-20 16:07:49.672 [http-8090-6] INFO - 10. SELECT * FROM node WHERE del_flag = 0 AND parent = 'a9113a58-a2e7-4ab3-9f66-e9137a493549'  {executed in 1 ms}
+
+2016-12-20 16:07:49.676 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'e0df38b3-0cf6-40f4-b2c3-e4a435690818'  {executed in 0 ms}
+
+2016-12-20 16:07:49.677 [http-8090-6] INFO - 11. SELECT * FROM node WHERE del_flag = 0 AND parent = 'e0df38b3-0cf6-40f4-b2c3-e4a435690818'  {executed in 1 ms}
+
+2016-12-20 16:07:49.681 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'edc1a882-cd21-4c4e-9cbe-d0d4d6867271'  {executed in 0 ms}
+
+2016-12-20 16:07:49.682 [http-8090-6] INFO - 12. SELECT * FROM node WHERE del_flag = 0 AND parent = 'edc1a882-cd21-4c4e-9cbe-d0d4d6867271'  {executed in 1 ms}
+
+2016-12-20 16:07:49.684 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'fe5b5355-8f0f-4d55-9e3e-f8f0c3b1cc33'  {executed in 0 ms}
+
+2016-12-20 16:07:49.684 [http-8090-6] INFO - 13. SELECT * FROM node WHERE del_flag = 0 AND parent = 'fe5b5355-8f0f-4d55-9e3e-f8f0c3b1cc33'  {executed in 0 ms}
+
+2016-12-20 16:07:49.688 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:07:49.688 [http-8090-6] INFO - 14. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:07:49.690 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '8a903692-f135-45d6-8d47-2e64a5b781ec'  {executed in 0 ms}
+
+2016-12-20 16:07:49.691 [http-8090-6] INFO - 15. SELECT * FROM node WHERE del_flag = 0 AND parent = '8a903692-f135-45d6-8d47-2e64a5b781ec'  {executed in 1 ms}
+
+2016-12-20 16:07:49.694 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'f1c4a240-2797-4194-a2b3-36c49de91600'  {executed in 1 ms}
+
+2016-12-20 16:07:49.694 [http-8090-6] INFO - 16. SELECT * FROM node WHERE del_flag = 0 AND parent = 'f1c4a240-2797-4194-a2b3-36c49de91600'  {executed in 1 ms}
+
+2016-12-20 16:07:49.696 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'f7f95724-041f-49df-a185-6a8db952be86'  {executed in 0 ms}
+
+2016-12-20 16:07:49.697 [http-8090-6] INFO - 17. SELECT * FROM node WHERE del_flag = 0 AND parent = 'f7f95724-041f-49df-a185-6a8db952be86'  {executed in 1 ms}
+
+2016-12-20 16:07:49.699 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '9a4c2d4f-4248-401b-af5e-0d02ce86ff2e'  {executed in 0 ms}
+
+2016-12-20 16:07:49.699 [http-8090-6] INFO - 18. SELECT * FROM node WHERE del_flag = 0 AND parent = '9a4c2d4f-4248-401b-af5e-0d02ce86ff2e'  {executed in 0 ms}
+
+2016-12-20 16:07:49.701 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'ad2f4324-ff55-45af-b23c-9017dc17665d'  {executed in 0 ms}
+
+2016-12-20 16:07:49.702 [http-8090-6] INFO - 19. SELECT * FROM node WHERE del_flag = 0 AND parent = 'ad2f4324-ff55-45af-b23c-9017dc17665d'  {executed in 1 ms}
+
+2016-12-20 16:07:49.703 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '63d1eb76-b8b8-45f1-94a3-af16dfa16848'  {executed in 0 ms}
+
+2016-12-20 16:07:49.704 [http-8090-6] INFO - 20. SELECT * FROM node WHERE del_flag = 0 AND parent = '63d1eb76-b8b8-45f1-94a3-af16dfa16848'  {executed in 1 ms}
+
+2016-12-20 16:07:49.705 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '7066cc49-2991-4bf9-b022-5998168642cd'  {executed in 0 ms}
+
+2016-12-20 16:07:49.705 [http-8090-6] INFO - 21. SELECT * FROM node WHERE del_flag = 0 AND parent = '7066cc49-2991-4bf9-b022-5998168642cd'  {executed in 0 ms}
+
+2016-12-20 16:07:49.707 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '71682430-7ae2-41c0-bfde-3e626647718a'  {executed in 0 ms}
+
+2016-12-20 16:07:49.707 [http-8090-6] INFO - 22. SELECT * FROM node WHERE del_flag = 0 AND parent = '71682430-7ae2-41c0-bfde-3e626647718a'  {executed in 0 ms}
+
+2016-12-20 16:07:49.710 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '7d30d671-c5d4-4455-92c1-db45ce409dfd'  {executed in 0 ms}
+
+2016-12-20 16:07:49.710 [http-8090-6] INFO - 23. SELECT * FROM node WHERE del_flag = 0 AND parent = '7d30d671-c5d4-4455-92c1-db45ce409dfd'  {executed in 1 ms}
+
+2016-12-20 16:07:49.713 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '0b593e37-6281-4376-afc6-4588a08548a0'  {executed in 1 ms}
+
+2016-12-20 16:07:49.713 [http-8090-6] INFO - 24. SELECT * FROM node WHERE del_flag = 0 AND parent = '0b593e37-6281-4376-afc6-4588a08548a0'  {executed in 1 ms}
+
+2016-12-20 16:07:49.717 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '3df03eb0-c4f0-4f81-bbad-b36ee41ff458'  {executed in 0 ms}
+
+2016-12-20 16:07:49.718 [http-8090-6] INFO - 25. SELECT * FROM node WHERE del_flag = 0 AND parent = '3df03eb0-c4f0-4f81-bbad-b36ee41ff458'  {executed in 1 ms}
+
+2016-12-20 16:07:49.719 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '4a41de6c-0acf-4afa-803e-b35aaefe9fef'  {executed in 0 ms}
+
+2016-12-20 16:07:49.720 [http-8090-6] INFO - 26. SELECT * FROM node WHERE del_flag = 0 AND parent = '4a41de6c-0acf-4afa-803e-b35aaefe9fef'  {executed in 1 ms}
+
+2016-12-20 16:07:49.721 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '6f6f7fd9-e3d0-43d5-849e-82c90d376c4e'  {executed in 0 ms}
+
+2016-12-20 16:07:49.721 [http-8090-6] INFO - 27. SELECT * FROM node WHERE del_flag = 0 AND parent = '6f6f7fd9-e3d0-43d5-849e-82c90d376c4e'  {executed in 0 ms}
+
+2016-12-20 16:07:49.723 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'cc92d4d8-9275-4995-a536-08018349036a'  {executed in 0 ms}
+
+2016-12-20 16:07:49.723 [http-8090-6] INFO - 28. SELECT * FROM node WHERE del_flag = 0 AND parent = 'cc92d4d8-9275-4995-a536-08018349036a'  {executed in 0 ms}
+
+2016-12-20 16:07:49.726 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'ec1bdc39-6b5d-4009-9862-81c8002a34bd'  {executed in 0 ms}
+
+2016-12-20 16:07:49.727 [http-8090-6] INFO - 29. SELECT * FROM node WHERE del_flag = 0 AND parent = 'ec1bdc39-6b5d-4009-9862-81c8002a34bd'  {executed in 1 ms}
+
+2016-12-20 16:07:49.731 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '01913d05-b40e-4244-93e6-522aa1feaf47'  {executed in 0 ms}
+
+2016-12-20 16:07:49.731 [http-8090-6] INFO - 30. SELECT * FROM node WHERE del_flag = 0 AND parent = '01913d05-b40e-4244-93e6-522aa1feaf47'  {executed in 0 ms}
+
+2016-12-20 16:07:49.734 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '022f54a7-82ff-42fc-a84d-a0ffdbe7a302'  {executed in 0 ms}
+
+2016-12-20 16:07:49.734 [http-8090-6] INFO - 31. SELECT * FROM node WHERE del_flag = 0 AND parent = '022f54a7-82ff-42fc-a84d-a0ffdbe7a302'  {executed in 0 ms}
+
+2016-12-20 16:07:49.737 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '1ca63554-ae73-44a0-996e-30b445c737b7'  {executed in 1 ms}
+
+2016-12-20 16:07:49.737 [http-8090-6] INFO - 32. SELECT * FROM node WHERE del_flag = 0 AND parent = '1ca63554-ae73-44a0-996e-30b445c737b7'  {executed in 1 ms}
+
+2016-12-20 16:07:49.740 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '3c9b0acb-56a2-4a85-9ab9-f8b67def291d'  {executed in 1 ms}
+
+2016-12-20 16:07:49.740 [http-8090-6] INFO - 33. SELECT * FROM node WHERE del_flag = 0 AND parent = '3c9b0acb-56a2-4a85-9ab9-f8b67def291d'  {executed in 1 ms}
+
+2016-12-20 16:07:49.743 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '42095e95-2dc0-4121-a4a5-9b75e94b95b1'  {executed in 0 ms}
+
+2016-12-20 16:07:49.743 [http-8090-6] INFO - 34. SELECT * FROM node WHERE del_flag = 0 AND parent = '42095e95-2dc0-4121-a4a5-9b75e94b95b1'  {executed in 0 ms}
+
+2016-12-20 16:07:49.745 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'a1de4efb-f0e3-4cbe-8053-389271fb8ebc'  {executed in 0 ms}
+
+2016-12-20 16:07:49.746 [http-8090-6] INFO - 35. SELECT * FROM node WHERE del_flag = 0 AND parent = 'a1de4efb-f0e3-4cbe-8053-389271fb8ebc'  {executed in 1 ms}
+
+2016-12-20 16:07:49.748 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '0d5b0792-91fa-4350-8a61-7ebb590b1fb3'  {executed in 0 ms}
+
+2016-12-20 16:07:49.748 [http-8090-6] INFO - 36. SELECT * FROM node WHERE del_flag = 0 AND parent = '0d5b0792-91fa-4350-8a61-7ebb590b1fb3'  {executed in 0 ms}
+
+2016-12-20 16:07:49.750 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '94a78c99-e938-4acf-aabb-1a5ec04812ae'  {executed in 0 ms}
+
+2016-12-20 16:07:49.750 [http-8090-6] INFO - 37. SELECT * FROM node WHERE del_flag = 0 AND parent = '94a78c99-e938-4acf-aabb-1a5ec04812ae'  {executed in 0 ms}
+
+2016-12-20 16:07:49.752 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'af955c97-4edf-451e-bbef-c3e6dfa421ff'  {executed in 0 ms}
+
+2016-12-20 16:07:49.752 [http-8090-6] INFO - 38. SELECT * FROM node WHERE del_flag = 0 AND parent = 'af955c97-4edf-451e-bbef-c3e6dfa421ff'  {executed in 0 ms}
+
+2016-12-20 16:07:49.754 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'c5c5a85e-2caa-427b-a3cc-79cb642e1e46'  {executed in 0 ms}
+
+2016-12-20 16:07:49.754 [http-8090-6] INFO - 39. SELECT * FROM node WHERE del_flag = 0 AND parent = 'c5c5a85e-2caa-427b-a3cc-79cb642e1e46'  {executed in 0 ms}
+
+2016-12-20 16:07:49.756 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '3bfa15f8-2d59-410c-af4f-351b4c6a2f83'  {executed in 0 ms}
+
+2016-12-20 16:07:49.757 [http-8090-6] INFO - 40. SELECT * FROM node WHERE del_flag = 0 AND parent = '3bfa15f8-2d59-410c-af4f-351b4c6a2f83'  {executed in 1 ms}
+
+2016-12-20 16:07:49.759 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '536f545c-5b40-4824-b128-f2bda7f27974'  {executed in 0 ms}
+
+2016-12-20 16:07:49.759 [http-8090-6] INFO - 41. SELECT * FROM node WHERE del_flag = 0 AND parent = '536f545c-5b40-4824-b128-f2bda7f27974'  {executed in 0 ms}
+
+2016-12-20 16:07:49.761 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'c9858318-596a-454a-90c2-dcac4e38ff28'  {executed in 1 ms}
+
+2016-12-20 16:07:49.761 [http-8090-6] INFO - 42. SELECT * FROM node WHERE del_flag = 0 AND parent = 'c9858318-596a-454a-90c2-dcac4e38ff28'  {executed in 1 ms}
+
+2016-12-20 16:07:49.762 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'd699b785-dfc2-4a90-bd11-006f2b47566c'  {executed in 0 ms}
+
+2016-12-20 16:07:49.762 [http-8090-6] INFO - 43. SELECT * FROM node WHERE del_flag = 0 AND parent = 'd699b785-dfc2-4a90-bd11-006f2b47566c'  {executed in 0 ms}
+
+2016-12-20 16:07:49.764 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'fa20247e-9e99-40c6-954d-a35d92a5ef8b'  {executed in 1 ms}
+
+2016-12-20 16:07:49.764 [http-8090-6] INFO - 44. SELECT * FROM node WHERE del_flag = 0 AND parent = 'fa20247e-9e99-40c6-954d-a35d92a5ef8b'  {executed in 1 ms}
+
+2016-12-20 16:07:49.765 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'afaf7f9c-305d-4f4a-94ea-1646c645b512'  {executed in 0 ms}
+
+2016-12-20 16:07:49.766 [http-8090-6] INFO - 45. SELECT * FROM node WHERE del_flag = 0 AND parent = 'afaf7f9c-305d-4f4a-94ea-1646c645b512'  {executed in 0 ms}
+
+2016-12-20 16:07:49.767 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '46551a41-8bf3-4d84-8fc0-416e7ddeeefb'  {executed in 0 ms}
+
+2016-12-20 16:07:49.767 [http-8090-6] INFO - 46. SELECT * FROM node WHERE del_flag = 0 AND parent = '46551a41-8bf3-4d84-8fc0-416e7ddeeefb'  {executed in 0 ms}
+
+2016-12-20 16:07:49.769 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '75edf6f3-5436-44af-84d0-61999ae4a1ea'  {executed in 0 ms}
+
+2016-12-20 16:07:49.769 [http-8090-6] INFO - 47. SELECT * FROM node WHERE del_flag = 0 AND parent = '75edf6f3-5436-44af-84d0-61999ae4a1ea'  {executed in 0 ms}
+
+2016-12-20 16:07:49.770 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '92075344-0025-4bcc-af2b-98c637230b46'  {executed in 0 ms}
+
+2016-12-20 16:07:49.771 [http-8090-6] INFO - 48. SELECT * FROM node WHERE del_flag = 0 AND parent = '92075344-0025-4bcc-af2b-98c637230b46'  {executed in 1 ms}
+
+2016-12-20 16:07:49.772 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '9d951b4e-94cd-4b6e-a637-48930d830f3a'  {executed in 0 ms}
+
+2016-12-20 16:07:49.772 [http-8090-6] INFO - 49. SELECT * FROM node WHERE del_flag = 0 AND parent = '9d951b4e-94cd-4b6e-a637-48930d830f3a'  {executed in 0 ms}
+
+2016-12-20 16:07:49.774 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'bfcfd127-b2d5-40a3-95db-cc038b7243a2'  {executed in 0 ms}
+
+2016-12-20 16:07:49.774 [http-8090-6] INFO - 50. SELECT * FROM node WHERE del_flag = 0 AND parent = 'bfcfd127-b2d5-40a3-95db-cc038b7243a2'  {executed in 0 ms}
+
+2016-12-20 16:07:49.776 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'c019d68a-9c0f-4211-aa04-fd5b97397922'  {executed in 0 ms}
+
+2016-12-20 16:07:49.776 [http-8090-6] INFO - 51. SELECT * FROM node WHERE del_flag = 0 AND parent = 'c019d68a-9c0f-4211-aa04-fd5b97397922'  {executed in 0 ms}
+
+2016-12-20 16:07:49.778 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '8dbfa61e-7093-4c11-b816-c39a12d7c150'  {executed in 0 ms}
+
+2016-12-20 16:07:49.778 [http-8090-6] INFO - 52. SELECT * FROM node WHERE del_flag = 0 AND parent = '8dbfa61e-7093-4c11-b816-c39a12d7c150'  {executed in 0 ms}
+
+2016-12-20 16:07:49.780 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'b1e6d8d3-db1c-4d93-926a-612505332f56'  {executed in 1 ms}
+
+2016-12-20 16:07:49.780 [http-8090-6] INFO - 53. SELECT * FROM node WHERE del_flag = 0 AND parent = 'b1e6d8d3-db1c-4d93-926a-612505332f56'  {executed in 1 ms}
+
+2016-12-20 16:07:49.782 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'b5343413-731f-4e24-928d-8cd906e122ed'  {executed in 1 ms}
+
+2016-12-20 16:07:49.782 [http-8090-6] INFO - 54. SELECT * FROM node WHERE del_flag = 0 AND parent = 'b5343413-731f-4e24-928d-8cd906e122ed'  {executed in 1 ms}
+
+2016-12-20 16:07:49.784 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'dbf699c9-fd65-4063-9eab-16242d220080'  {executed in 1 ms}
+
+2016-12-20 16:07:49.784 [http-8090-6] INFO - 55. SELECT * FROM node WHERE del_flag = 0 AND parent = 'dbf699c9-fd65-4063-9eab-16242d220080'  {executed in 1 ms}
+
+2016-12-20 16:07:49.786 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'f55b7178-6b0a-4ab0-99e6-6483c37793a1'  {executed in 0 ms}
+
+2016-12-20 16:07:49.786 [http-8090-6] INFO - 56. SELECT * FROM node WHERE del_flag = 0 AND parent = 'f55b7178-6b0a-4ab0-99e6-6483c37793a1'  {executed in 0 ms}
+
+2016-12-20 16:07:54.186 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND id = '71682430-7ae2-41c0-bfde-3e626647718a'  {executed in 1 ms}
+
+2016-12-20 16:07:54.186 [http-8090-6] INFO - 57. SELECT * FROM node WHERE del_flag = 0 AND id = '71682430-7ae2-41c0-bfde-3e626647718a'  {executed in 1 ms}
+
+2016-12-20 16:07:54.188 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '71682430-7ae2-41c0-bfde-3e626647718a'  {executed in 0 ms}
+
+2016-12-20 16:07:54.189 [http-8090-6] INFO - 58. SELECT * FROM node WHERE del_flag = 0 AND parent = '71682430-7ae2-41c0-bfde-3e626647718a'  {executed in 1 ms}
+
+2016-12-20 16:07:54.215 [http-8090-6] INFO - 1. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '71682430-7ae2-41c0-bfde-3e626647718a'  {executed in 11 ms}
+
+2016-12-20 16:07:54.215 [http-8090-6] INFO - 59. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '71682430-7ae2-41c0-bfde-3e626647718a'  {executed in 11 ms}
+
+2016-12-20 16:07:54.249 [http-8090-6] INFO - 1. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '71682430-7ae2-41c0-bfde-3e626647718a'  {executed in 25 ms}
+
+2016-12-20 16:07:54.249 [http-8090-6] INFO - 60. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '71682430-7ae2-41c0-bfde-3e626647718a'  {executed in 25 ms}
+
+2016-12-20 16:07:56.053 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND user_id = '111'  {executed in 1 ms}
+
+2016-12-20 16:07:56.053 [http-8090-6] INFO - 61. SELECT * FROM node WHERE del_flag = 0 AND user_id = '111'  {executed in 1 ms}
+
+2016-12-20 16:07:56.059 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '005d794b-c4c2-41da-b342-bcef18211b2a'  {executed in 0 ms}
+
+2016-12-20 16:07:56.059 [http-8090-6] INFO - 62. SELECT * FROM node WHERE del_flag = 0 AND parent = '005d794b-c4c2-41da-b342-bcef18211b2a'  {executed in 0 ms}
+
+2016-12-20 16:07:56.063 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '3b08f807-5ab0-406c-8be8-c181013979a1'  {executed in 0 ms}
+
+2016-12-20 16:07:56.064 [http-8090-6] INFO - 63. SELECT * FROM node WHERE del_flag = 0 AND parent = '3b08f807-5ab0-406c-8be8-c181013979a1'  {executed in 2 ms}
+
+2016-12-20 16:07:56.067 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '5a8b9243-b3c8-4e43-8eb2-3b3cb8d78bc0'  {executed in 0 ms}
+
+2016-12-20 16:07:56.067 [http-8090-6] INFO - 64. SELECT * FROM node WHERE del_flag = 0 AND parent = '5a8b9243-b3c8-4e43-8eb2-3b3cb8d78bc0'  {executed in 0 ms}
+
+2016-12-20 16:07:56.071 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '2f993102-76f3-477a-881c-2e366da1f3e0'  {executed in 0 ms}
+
+2016-12-20 16:07:56.072 [http-8090-6] INFO - 65. SELECT * FROM node WHERE del_flag = 0 AND parent = '2f993102-76f3-477a-881c-2e366da1f3e0'  {executed in 1 ms}
+
+2016-12-20 16:07:56.076 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '834d5172-3042-48b8-bf63-cbadb45a47e3'  {executed in 1 ms}
+
+2016-12-20 16:07:56.076 [http-8090-6] INFO - 66. SELECT * FROM node WHERE del_flag = 0 AND parent = '834d5172-3042-48b8-bf63-cbadb45a47e3'  {executed in 1 ms}
+
+2016-12-20 16:07:56.078 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'a9113a58-a2e7-4ab3-9f66-e9137a493549'  {executed in 0 ms}
+
+2016-12-20 16:07:56.079 [http-8090-6] INFO - 67. SELECT * FROM node WHERE del_flag = 0 AND parent = 'a9113a58-a2e7-4ab3-9f66-e9137a493549'  {executed in 1 ms}
+
+2016-12-20 16:07:56.081 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'e0df38b3-0cf6-40f4-b2c3-e4a435690818'  {executed in 0 ms}
+
+2016-12-20 16:07:56.081 [http-8090-6] INFO - 68. SELECT * FROM node WHERE del_flag = 0 AND parent = 'e0df38b3-0cf6-40f4-b2c3-e4a435690818'  {executed in 0 ms}
+
+2016-12-20 16:07:56.083 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'edc1a882-cd21-4c4e-9cbe-d0d4d6867271'  {executed in 0 ms}
+
+2016-12-20 16:07:56.083 [http-8090-6] INFO - 69. SELECT * FROM node WHERE del_flag = 0 AND parent = 'edc1a882-cd21-4c4e-9cbe-d0d4d6867271'  {executed in 0 ms}
+
+2016-12-20 16:07:56.085 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'fe5b5355-8f0f-4d55-9e3e-f8f0c3b1cc33'  {executed in 0 ms}
+
+2016-12-20 16:07:56.086 [http-8090-6] INFO - 70. SELECT * FROM node WHERE del_flag = 0 AND parent = 'fe5b5355-8f0f-4d55-9e3e-f8f0c3b1cc33'  {executed in 1 ms}
+
+2016-12-20 16:07:56.089 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 2 ms}
+
+2016-12-20 16:07:56.090 [http-8090-6] INFO - 71. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 3 ms}
+
+2016-12-20 16:07:56.092 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '8a903692-f135-45d6-8d47-2e64a5b781ec'  {executed in 0 ms}
+
+2016-12-20 16:07:56.092 [http-8090-6] INFO - 72. SELECT * FROM node WHERE del_flag = 0 AND parent = '8a903692-f135-45d6-8d47-2e64a5b781ec'  {executed in 0 ms}
+
+2016-12-20 16:07:56.094 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'f1c4a240-2797-4194-a2b3-36c49de91600'  {executed in 0 ms}
+
+2016-12-20 16:07:56.094 [http-8090-6] INFO - 73. SELECT * FROM node WHERE del_flag = 0 AND parent = 'f1c4a240-2797-4194-a2b3-36c49de91600'  {executed in 0 ms}
+
+2016-12-20 16:07:56.096 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'f7f95724-041f-49df-a185-6a8db952be86'  {executed in 0 ms}
+
+2016-12-20 16:07:56.096 [http-8090-6] INFO - 74. SELECT * FROM node WHERE del_flag = 0 AND parent = 'f7f95724-041f-49df-a185-6a8db952be86'  {executed in 0 ms}
+
+2016-12-20 16:07:56.098 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '9a4c2d4f-4248-401b-af5e-0d02ce86ff2e'  {executed in 0 ms}
+
+2016-12-20 16:07:56.098 [http-8090-6] INFO - 75. SELECT * FROM node WHERE del_flag = 0 AND parent = '9a4c2d4f-4248-401b-af5e-0d02ce86ff2e'  {executed in 0 ms}
+
+2016-12-20 16:07:56.100 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'ad2f4324-ff55-45af-b23c-9017dc17665d'  {executed in 0 ms}
+
+2016-12-20 16:07:56.100 [http-8090-6] INFO - 76. SELECT * FROM node WHERE del_flag = 0 AND parent = 'ad2f4324-ff55-45af-b23c-9017dc17665d'  {executed in 0 ms}
+
+2016-12-20 16:07:56.103 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '63d1eb76-b8b8-45f1-94a3-af16dfa16848'  {executed in 1 ms}
+
+2016-12-20 16:07:56.103 [http-8090-6] INFO - 77. SELECT * FROM node WHERE del_flag = 0 AND parent = '63d1eb76-b8b8-45f1-94a3-af16dfa16848'  {executed in 1 ms}
+
+2016-12-20 16:07:56.109 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '7066cc49-2991-4bf9-b022-5998168642cd'  {executed in 1 ms}
+
+2016-12-20 16:07:56.109 [http-8090-6] INFO - 78. SELECT * FROM node WHERE del_flag = 0 AND parent = '7066cc49-2991-4bf9-b022-5998168642cd'  {executed in 1 ms}
+
+2016-12-20 16:07:56.111 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '71682430-7ae2-41c0-bfde-3e626647718a'  {executed in 0 ms}
+
+2016-12-20 16:07:56.111 [http-8090-6] INFO - 79. SELECT * FROM node WHERE del_flag = 0 AND parent = '71682430-7ae2-41c0-bfde-3e626647718a'  {executed in 0 ms}
+
+2016-12-20 16:07:56.113 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '7d30d671-c5d4-4455-92c1-db45ce409dfd'  {executed in 0 ms}
+
+2016-12-20 16:07:56.113 [http-8090-6] INFO - 80. SELECT * FROM node WHERE del_flag = 0 AND parent = '7d30d671-c5d4-4455-92c1-db45ce409dfd'  {executed in 0 ms}
+
+2016-12-20 16:07:56.119 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '0b593e37-6281-4376-afc6-4588a08548a0'  {executed in 1 ms}
+
+2016-12-20 16:07:56.119 [http-8090-6] INFO - 81. SELECT * FROM node WHERE del_flag = 0 AND parent = '0b593e37-6281-4376-afc6-4588a08548a0'  {executed in 1 ms}
+
+2016-12-20 16:07:56.121 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '3df03eb0-c4f0-4f81-bbad-b36ee41ff458'  {executed in 0 ms}
+
+2016-12-20 16:07:56.121 [http-8090-6] INFO - 82. SELECT * FROM node WHERE del_flag = 0 AND parent = '3df03eb0-c4f0-4f81-bbad-b36ee41ff458'  {executed in 0 ms}
+
+2016-12-20 16:07:56.123 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '4a41de6c-0acf-4afa-803e-b35aaefe9fef'  {executed in 0 ms}
+
+2016-12-20 16:07:56.124 [http-8090-6] INFO - 83. SELECT * FROM node WHERE del_flag = 0 AND parent = '4a41de6c-0acf-4afa-803e-b35aaefe9fef'  {executed in 1 ms}
+
+2016-12-20 16:07:56.126 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '6f6f7fd9-e3d0-43d5-849e-82c90d376c4e'  {executed in 1 ms}
+
+2016-12-20 16:07:56.126 [http-8090-6] INFO - 84. SELECT * FROM node WHERE del_flag = 0 AND parent = '6f6f7fd9-e3d0-43d5-849e-82c90d376c4e'  {executed in 1 ms}
+
+2016-12-20 16:07:56.128 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'cc92d4d8-9275-4995-a536-08018349036a'  {executed in 0 ms}
+
+2016-12-20 16:07:56.128 [http-8090-6] INFO - 85. SELECT * FROM node WHERE del_flag = 0 AND parent = 'cc92d4d8-9275-4995-a536-08018349036a'  {executed in 0 ms}
+
+2016-12-20 16:07:56.130 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'ec1bdc39-6b5d-4009-9862-81c8002a34bd'  {executed in 0 ms}
+
+2016-12-20 16:07:56.130 [http-8090-6] INFO - 86. SELECT * FROM node WHERE del_flag = 0 AND parent = 'ec1bdc39-6b5d-4009-9862-81c8002a34bd'  {executed in 0 ms}
+
+2016-12-20 16:07:56.133 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '01913d05-b40e-4244-93e6-522aa1feaf47'  {executed in 0 ms}
+
+2016-12-20 16:07:56.134 [http-8090-6] INFO - 87. SELECT * FROM node WHERE del_flag = 0 AND parent = '01913d05-b40e-4244-93e6-522aa1feaf47'  {executed in 1 ms}
+
+2016-12-20 16:07:56.137 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '022f54a7-82ff-42fc-a84d-a0ffdbe7a302'  {executed in 1 ms}
+
+2016-12-20 16:07:56.137 [http-8090-6] INFO - 88. SELECT * FROM node WHERE del_flag = 0 AND parent = '022f54a7-82ff-42fc-a84d-a0ffdbe7a302'  {executed in 1 ms}
+
+2016-12-20 16:07:56.139 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '1ca63554-ae73-44a0-996e-30b445c737b7'  {executed in 0 ms}
+
+2016-12-20 16:07:56.140 [http-8090-6] INFO - 89. SELECT * FROM node WHERE del_flag = 0 AND parent = '1ca63554-ae73-44a0-996e-30b445c737b7'  {executed in 1 ms}
+
+2016-12-20 16:07:56.142 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '3c9b0acb-56a2-4a85-9ab9-f8b67def291d'  {executed in 0 ms}
+
+2016-12-20 16:07:56.142 [http-8090-6] INFO - 90. SELECT * FROM node WHERE del_flag = 0 AND parent = '3c9b0acb-56a2-4a85-9ab9-f8b67def291d'  {executed in 0 ms}
+
+2016-12-20 16:07:56.144 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '42095e95-2dc0-4121-a4a5-9b75e94b95b1'  {executed in 0 ms}
+
+2016-12-20 16:07:56.144 [http-8090-6] INFO - 91. SELECT * FROM node WHERE del_flag = 0 AND parent = '42095e95-2dc0-4121-a4a5-9b75e94b95b1'  {executed in 0 ms}
+
+2016-12-20 16:07:56.146 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'a1de4efb-f0e3-4cbe-8053-389271fb8ebc'  {executed in 0 ms}
+
+2016-12-20 16:07:56.146 [http-8090-6] INFO - 92. SELECT * FROM node WHERE del_flag = 0 AND parent = 'a1de4efb-f0e3-4cbe-8053-389271fb8ebc'  {executed in 0 ms}
+
+2016-12-20 16:07:56.149 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '0d5b0792-91fa-4350-8a61-7ebb590b1fb3'  {executed in 0 ms}
+
+2016-12-20 16:07:56.149 [http-8090-6] INFO - 93. SELECT * FROM node WHERE del_flag = 0 AND parent = '0d5b0792-91fa-4350-8a61-7ebb590b1fb3'  {executed in 0 ms}
+
+2016-12-20 16:07:56.151 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '94a78c99-e938-4acf-aabb-1a5ec04812ae'  {executed in 0 ms}
+
+2016-12-20 16:07:56.152 [http-8090-6] INFO - 94. SELECT * FROM node WHERE del_flag = 0 AND parent = '94a78c99-e938-4acf-aabb-1a5ec04812ae'  {executed in 1 ms}
+
+2016-12-20 16:07:56.154 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'af955c97-4edf-451e-bbef-c3e6dfa421ff'  {executed in 1 ms}
+
+2016-12-20 16:07:56.154 [http-8090-6] INFO - 95. SELECT * FROM node WHERE del_flag = 0 AND parent = 'af955c97-4edf-451e-bbef-c3e6dfa421ff'  {executed in 1 ms}
+
+2016-12-20 16:07:56.157 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'c5c5a85e-2caa-427b-a3cc-79cb642e1e46'  {executed in 1 ms}
+
+2016-12-20 16:07:56.157 [http-8090-6] INFO - 96. SELECT * FROM node WHERE del_flag = 0 AND parent = 'c5c5a85e-2caa-427b-a3cc-79cb642e1e46'  {executed in 1 ms}
+
+2016-12-20 16:07:56.161 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '3bfa15f8-2d59-410c-af4f-351b4c6a2f83'  {executed in 0 ms}
+
+2016-12-20 16:07:56.161 [http-8090-6] INFO - 97. SELECT * FROM node WHERE del_flag = 0 AND parent = '3bfa15f8-2d59-410c-af4f-351b4c6a2f83'  {executed in 1 ms}
+
+2016-12-20 16:07:56.163 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '536f545c-5b40-4824-b128-f2bda7f27974'  {executed in 0 ms}
+
+2016-12-20 16:07:56.163 [http-8090-6] INFO - 98. SELECT * FROM node WHERE del_flag = 0 AND parent = '536f545c-5b40-4824-b128-f2bda7f27974'  {executed in 0 ms}
+
+2016-12-20 16:07:56.165 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'c9858318-596a-454a-90c2-dcac4e38ff28'  {executed in 0 ms}
+
+2016-12-20 16:07:56.165 [http-8090-6] INFO - 99. SELECT * FROM node WHERE del_flag = 0 AND parent = 'c9858318-596a-454a-90c2-dcac4e38ff28'  {executed in 0 ms}
+
+2016-12-20 16:07:56.167 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'd699b785-dfc2-4a90-bd11-006f2b47566c'  {executed in 0 ms}
+
+2016-12-20 16:07:56.167 [http-8090-6] INFO - 100. SELECT * FROM node WHERE del_flag = 0 AND parent = 'd699b785-dfc2-4a90-bd11-006f2b47566c'  {executed in 0 ms}
+
+2016-12-20 16:07:56.169 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'fa20247e-9e99-40c6-954d-a35d92a5ef8b'  {executed in 0 ms}
+
+2016-12-20 16:07:56.170 [http-8090-6] INFO - 101. SELECT * FROM node WHERE del_flag = 0 AND parent = 'fa20247e-9e99-40c6-954d-a35d92a5ef8b'  {executed in 1 ms}
+
+2016-12-20 16:07:56.172 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'afaf7f9c-305d-4f4a-94ea-1646c645b512'  {executed in 0 ms}
+
+2016-12-20 16:07:56.172 [http-8090-6] INFO - 102. SELECT * FROM node WHERE del_flag = 0 AND parent = 'afaf7f9c-305d-4f4a-94ea-1646c645b512'  {executed in 0 ms}
+
+2016-12-20 16:07:56.175 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '46551a41-8bf3-4d84-8fc0-416e7ddeeefb'  {executed in 0 ms}
+
+2016-12-20 16:07:56.175 [http-8090-6] INFO - 103. SELECT * FROM node WHERE del_flag = 0 AND parent = '46551a41-8bf3-4d84-8fc0-416e7ddeeefb'  {executed in 0 ms}
+
+2016-12-20 16:07:56.177 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '75edf6f3-5436-44af-84d0-61999ae4a1ea'  {executed in 0 ms}
+
+2016-12-20 16:07:56.178 [http-8090-6] INFO - 104. SELECT * FROM node WHERE del_flag = 0 AND parent = '75edf6f3-5436-44af-84d0-61999ae4a1ea'  {executed in 1 ms}
+
+2016-12-20 16:07:56.180 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '92075344-0025-4bcc-af2b-98c637230b46'  {executed in 0 ms}
+
+2016-12-20 16:07:56.180 [http-8090-6] INFO - 105. SELECT * FROM node WHERE del_flag = 0 AND parent = '92075344-0025-4bcc-af2b-98c637230b46'  {executed in 1 ms}
+
+2016-12-20 16:07:56.182 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '9d951b4e-94cd-4b6e-a637-48930d830f3a'  {executed in 1 ms}
+
+2016-12-20 16:07:56.182 [http-8090-6] INFO - 106. SELECT * FROM node WHERE del_flag = 0 AND parent = '9d951b4e-94cd-4b6e-a637-48930d830f3a'  {executed in 1 ms}
+
+2016-12-20 16:07:56.184 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'bfcfd127-b2d5-40a3-95db-cc038b7243a2'  {executed in 0 ms}
+
+2016-12-20 16:07:56.184 [http-8090-6] INFO - 107. SELECT * FROM node WHERE del_flag = 0 AND parent = 'bfcfd127-b2d5-40a3-95db-cc038b7243a2'  {executed in 0 ms}
+
+2016-12-20 16:07:56.186 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'c019d68a-9c0f-4211-aa04-fd5b97397922'  {executed in 0 ms}
+
+2016-12-20 16:07:56.186 [http-8090-6] INFO - 108. SELECT * FROM node WHERE del_flag = 0 AND parent = 'c019d68a-9c0f-4211-aa04-fd5b97397922'  {executed in 0 ms}
+
+2016-12-20 16:07:56.190 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '8dbfa61e-7093-4c11-b816-c39a12d7c150'  {executed in 1 ms}
+
+2016-12-20 16:07:56.190 [http-8090-6] INFO - 109. SELECT * FROM node WHERE del_flag = 0 AND parent = '8dbfa61e-7093-4c11-b816-c39a12d7c150'  {executed in 1 ms}
+
+2016-12-20 16:07:56.192 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'b1e6d8d3-db1c-4d93-926a-612505332f56'  {executed in 0 ms}
+
+2016-12-20 16:07:56.192 [http-8090-6] INFO - 110. SELECT * FROM node WHERE del_flag = 0 AND parent = 'b1e6d8d3-db1c-4d93-926a-612505332f56'  {executed in 0 ms}
+
+2016-12-20 16:07:56.194 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'b5343413-731f-4e24-928d-8cd906e122ed'  {executed in 0 ms}
+
+2016-12-20 16:07:56.194 [http-8090-6] INFO - 111. SELECT * FROM node WHERE del_flag = 0 AND parent = 'b5343413-731f-4e24-928d-8cd906e122ed'  {executed in 0 ms}
+
+2016-12-20 16:07:56.196 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'dbf699c9-fd65-4063-9eab-16242d220080'  {executed in 1 ms}
+
+2016-12-20 16:07:56.196 [http-8090-6] INFO - 112. SELECT * FROM node WHERE del_flag = 0 AND parent = 'dbf699c9-fd65-4063-9eab-16242d220080'  {executed in 1 ms}
+
+2016-12-20 16:07:56.198 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'f55b7178-6b0a-4ab0-99e6-6483c37793a1'  {executed in 1 ms}
+
+2016-12-20 16:07:56.198 [http-8090-6] INFO - 113. SELECT * FROM node WHERE del_flag = 0 AND parent = 'f55b7178-6b0a-4ab0-99e6-6483c37793a1'  {executed in 1 ms}
+
+2016-12-20 16:08:00.121 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND id = 'dbf699c9-fd65-4063-9eab-16242d220080'  {executed in 1 ms}
+
+2016-12-20 16:08:00.121 [http-8090-6] INFO - 114. SELECT * FROM node WHERE del_flag = 0 AND id = 'dbf699c9-fd65-4063-9eab-16242d220080'  {executed in 1 ms}
+
+2016-12-20 16:08:00.125 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'dbf699c9-fd65-4063-9eab-16242d220080'  {executed in 0 ms}
+
+2016-12-20 16:08:00.125 [http-8090-6] INFO - 115. SELECT * FROM node WHERE del_flag = 0 AND parent = 'dbf699c9-fd65-4063-9eab-16242d220080'  {executed in 0 ms}
+
+2016-12-20 16:08:00.128 [http-8090-6] INFO - 1. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = 'dbf699c9-fd65-4063-9eab-16242d220080'  {executed in 1 ms}
+
+2016-12-20 16:08:00.128 [http-8090-6] INFO - 116. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = 'dbf699c9-fd65-4063-9eab-16242d220080'  {executed in 1 ms}
+
+2016-12-20 16:08:00.130 [http-8090-6] INFO - 1. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = 'dbf699c9-fd65-4063-9eab-16242d220080'  {executed in 0 ms}
+
+2016-12-20 16:08:00.130 [http-8090-6] INFO - 117. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = 'dbf699c9-fd65-4063-9eab-16242d220080'  {executed in 0 ms}
+
+2016-12-20 16:08:01.782 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND user_id = '111'  {executed in 1 ms}
+
+2016-12-20 16:08:01.782 [http-8090-6] INFO - 118. SELECT * FROM node WHERE del_flag = 0 AND user_id = '111'  {executed in 1 ms}
+
+2016-12-20 16:08:01.789 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '005d794b-c4c2-41da-b342-bcef18211b2a'  {executed in 0 ms}
+
+2016-12-20 16:08:01.789 [http-8090-6] INFO - 119. SELECT * FROM node WHERE del_flag = 0 AND parent = '005d794b-c4c2-41da-b342-bcef18211b2a'  {executed in 1 ms}
+
+2016-12-20 16:08:01.791 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '3b08f807-5ab0-406c-8be8-c181013979a1'  {executed in 0 ms}
+
+2016-12-20 16:08:01.792 [http-8090-6] INFO - 120. SELECT * FROM node WHERE del_flag = 0 AND parent = '3b08f807-5ab0-406c-8be8-c181013979a1'  {executed in 1 ms}
+
+2016-12-20 16:08:01.794 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '5a8b9243-b3c8-4e43-8eb2-3b3cb8d78bc0'  {executed in 0 ms}
+
+2016-12-20 16:08:01.794 [http-8090-6] INFO - 121. SELECT * FROM node WHERE del_flag = 0 AND parent = '5a8b9243-b3c8-4e43-8eb2-3b3cb8d78bc0'  {executed in 0 ms}
+
+2016-12-20 16:08:01.797 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '2f993102-76f3-477a-881c-2e366da1f3e0'  {executed in 1 ms}
+
+2016-12-20 16:08:01.797 [http-8090-6] INFO - 122. SELECT * FROM node WHERE del_flag = 0 AND parent = '2f993102-76f3-477a-881c-2e366da1f3e0'  {executed in 1 ms}
+
+2016-12-20 16:08:01.800 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '834d5172-3042-48b8-bf63-cbadb45a47e3'  {executed in 1 ms}
+
+2016-12-20 16:08:01.800 [http-8090-6] INFO - 123. SELECT * FROM node WHERE del_flag = 0 AND parent = '834d5172-3042-48b8-bf63-cbadb45a47e3'  {executed in 1 ms}
+
+2016-12-20 16:08:01.802 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'a9113a58-a2e7-4ab3-9f66-e9137a493549'  {executed in 1 ms}
+
+2016-12-20 16:08:01.802 [http-8090-6] INFO - 124. SELECT * FROM node WHERE del_flag = 0 AND parent = 'a9113a58-a2e7-4ab3-9f66-e9137a493549'  {executed in 1 ms}
+
+2016-12-20 16:08:01.803 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'e0df38b3-0cf6-40f4-b2c3-e4a435690818'  {executed in 0 ms}
+
+2016-12-20 16:08:01.804 [http-8090-6] INFO - 125. SELECT * FROM node WHERE del_flag = 0 AND parent = 'e0df38b3-0cf6-40f4-b2c3-e4a435690818'  {executed in 1 ms}
+
+2016-12-20 16:08:01.806 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'edc1a882-cd21-4c4e-9cbe-d0d4d6867271'  {executed in 1 ms}
+
+2016-12-20 16:08:01.806 [http-8090-6] INFO - 126. SELECT * FROM node WHERE del_flag = 0 AND parent = 'edc1a882-cd21-4c4e-9cbe-d0d4d6867271'  {executed in 1 ms}
+
+2016-12-20 16:08:01.808 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'fe5b5355-8f0f-4d55-9e3e-f8f0c3b1cc33'  {executed in 0 ms}
+
+2016-12-20 16:08:01.808 [http-8090-6] INFO - 127. SELECT * FROM node WHERE del_flag = 0 AND parent = 'fe5b5355-8f0f-4d55-9e3e-f8f0c3b1cc33'  {executed in 0 ms}
+
+2016-12-20 16:08:01.810 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:08:01.810 [http-8090-6] INFO - 128. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:08:01.812 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '8a903692-f135-45d6-8d47-2e64a5b781ec'  {executed in 0 ms}
+
+2016-12-20 16:08:01.812 [http-8090-6] INFO - 129. SELECT * FROM node WHERE del_flag = 0 AND parent = '8a903692-f135-45d6-8d47-2e64a5b781ec'  {executed in 0 ms}
+
+2016-12-20 16:08:01.814 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'f1c4a240-2797-4194-a2b3-36c49de91600'  {executed in 0 ms}
+
+2016-12-20 16:08:01.814 [http-8090-6] INFO - 130. SELECT * FROM node WHERE del_flag = 0 AND parent = 'f1c4a240-2797-4194-a2b3-36c49de91600'  {executed in 0 ms}
+
+2016-12-20 16:08:01.816 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'f7f95724-041f-49df-a185-6a8db952be86'  {executed in 0 ms}
+
+2016-12-20 16:08:01.816 [http-8090-6] INFO - 131. SELECT * FROM node WHERE del_flag = 0 AND parent = 'f7f95724-041f-49df-a185-6a8db952be86'  {executed in 0 ms}
+
+2016-12-20 16:08:01.818 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '9a4c2d4f-4248-401b-af5e-0d02ce86ff2e'  {executed in 1 ms}
+
+2016-12-20 16:08:01.818 [http-8090-6] INFO - 132. SELECT * FROM node WHERE del_flag = 0 AND parent = '9a4c2d4f-4248-401b-af5e-0d02ce86ff2e'  {executed in 1 ms}
+
+2016-12-20 16:08:01.819 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'ad2f4324-ff55-45af-b23c-9017dc17665d'  {executed in 0 ms}
+
+2016-12-20 16:08:01.819 [http-8090-6] INFO - 133. SELECT * FROM node WHERE del_flag = 0 AND parent = 'ad2f4324-ff55-45af-b23c-9017dc17665d'  {executed in 0 ms}
+
+2016-12-20 16:08:01.821 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '63d1eb76-b8b8-45f1-94a3-af16dfa16848'  {executed in 0 ms}
+
+2016-12-20 16:08:01.821 [http-8090-6] INFO - 134. SELECT * FROM node WHERE del_flag = 0 AND parent = '63d1eb76-b8b8-45f1-94a3-af16dfa16848'  {executed in 0 ms}
+
+2016-12-20 16:08:01.823 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '7066cc49-2991-4bf9-b022-5998168642cd'  {executed in 1 ms}
+
+2016-12-20 16:08:01.823 [http-8090-6] INFO - 135. SELECT * FROM node WHERE del_flag = 0 AND parent = '7066cc49-2991-4bf9-b022-5998168642cd'  {executed in 1 ms}
+
+2016-12-20 16:08:01.824 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '71682430-7ae2-41c0-bfde-3e626647718a'  {executed in 0 ms}
+
+2016-12-20 16:08:01.824 [http-8090-6] INFO - 136. SELECT * FROM node WHERE del_flag = 0 AND parent = '71682430-7ae2-41c0-bfde-3e626647718a'  {executed in 0 ms}
+
+2016-12-20 16:08:01.826 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '7d30d671-c5d4-4455-92c1-db45ce409dfd'  {executed in 1 ms}
+
+2016-12-20 16:08:01.826 [http-8090-6] INFO - 137. SELECT * FROM node WHERE del_flag = 0 AND parent = '7d30d671-c5d4-4455-92c1-db45ce409dfd'  {executed in 1 ms}
+
+2016-12-20 16:08:01.828 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '0b593e37-6281-4376-afc6-4588a08548a0'  {executed in 0 ms}
+
+2016-12-20 16:08:01.828 [http-8090-6] INFO - 138. SELECT * FROM node WHERE del_flag = 0 AND parent = '0b593e37-6281-4376-afc6-4588a08548a0'  {executed in 0 ms}
+
+2016-12-20 16:08:01.830 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '3df03eb0-c4f0-4f81-bbad-b36ee41ff458'  {executed in 0 ms}
+
+2016-12-20 16:08:01.830 [http-8090-6] INFO - 139. SELECT * FROM node WHERE del_flag = 0 AND parent = '3df03eb0-c4f0-4f81-bbad-b36ee41ff458'  {executed in 0 ms}
+
+2016-12-20 16:08:01.832 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '4a41de6c-0acf-4afa-803e-b35aaefe9fef'  {executed in 0 ms}
+
+2016-12-20 16:08:01.832 [http-8090-6] INFO - 140. SELECT * FROM node WHERE del_flag = 0 AND parent = '4a41de6c-0acf-4afa-803e-b35aaefe9fef'  {executed in 0 ms}
+
+2016-12-20 16:08:01.834 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '6f6f7fd9-e3d0-43d5-849e-82c90d376c4e'  {executed in 0 ms}
+
+2016-12-20 16:08:01.834 [http-8090-6] INFO - 141. SELECT * FROM node WHERE del_flag = 0 AND parent = '6f6f7fd9-e3d0-43d5-849e-82c90d376c4e'  {executed in 0 ms}
+
+2016-12-20 16:08:01.836 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'cc92d4d8-9275-4995-a536-08018349036a'  {executed in 1 ms}
+
+2016-12-20 16:08:01.836 [http-8090-6] INFO - 142. SELECT * FROM node WHERE del_flag = 0 AND parent = 'cc92d4d8-9275-4995-a536-08018349036a'  {executed in 1 ms}
+
+2016-12-20 16:08:01.839 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'ec1bdc39-6b5d-4009-9862-81c8002a34bd'  {executed in 1 ms}
+
+2016-12-20 16:08:01.839 [http-8090-6] INFO - 143. SELECT * FROM node WHERE del_flag = 0 AND parent = 'ec1bdc39-6b5d-4009-9862-81c8002a34bd'  {executed in 1 ms}
+
+2016-12-20 16:08:01.841 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '01913d05-b40e-4244-93e6-522aa1feaf47'  {executed in 0 ms}
+
+2016-12-20 16:08:01.842 [http-8090-6] INFO - 144. SELECT * FROM node WHERE del_flag = 0 AND parent = '01913d05-b40e-4244-93e6-522aa1feaf47'  {executed in 1 ms}
+
+2016-12-20 16:08:01.845 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '022f54a7-82ff-42fc-a84d-a0ffdbe7a302'  {executed in 1 ms}
+
+2016-12-20 16:08:01.845 [http-8090-6] INFO - 145. SELECT * FROM node WHERE del_flag = 0 AND parent = '022f54a7-82ff-42fc-a84d-a0ffdbe7a302'  {executed in 1 ms}
+
+2016-12-20 16:08:01.846 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '1ca63554-ae73-44a0-996e-30b445c737b7'  {executed in 0 ms}
+
+2016-12-20 16:08:01.847 [http-8090-6] INFO - 146. SELECT * FROM node WHERE del_flag = 0 AND parent = '1ca63554-ae73-44a0-996e-30b445c737b7'  {executed in 1 ms}
+
+2016-12-20 16:08:01.848 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '3c9b0acb-56a2-4a85-9ab9-f8b67def291d'  {executed in 0 ms}
+
+2016-12-20 16:08:01.848 [http-8090-6] INFO - 147. SELECT * FROM node WHERE del_flag = 0 AND parent = '3c9b0acb-56a2-4a85-9ab9-f8b67def291d'  {executed in 0 ms}
+
+2016-12-20 16:08:01.850 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '42095e95-2dc0-4121-a4a5-9b75e94b95b1'  {executed in 1 ms}
+
+2016-12-20 16:08:01.850 [http-8090-6] INFO - 148. SELECT * FROM node WHERE del_flag = 0 AND parent = '42095e95-2dc0-4121-a4a5-9b75e94b95b1'  {executed in 1 ms}
+
+2016-12-20 16:08:01.851 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'a1de4efb-f0e3-4cbe-8053-389271fb8ebc'  {executed in 0 ms}
+
+2016-12-20 16:08:01.852 [http-8090-6] INFO - 149. SELECT * FROM node WHERE del_flag = 0 AND parent = 'a1de4efb-f0e3-4cbe-8053-389271fb8ebc'  {executed in 1 ms}
+
+2016-12-20 16:08:01.855 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '0d5b0792-91fa-4350-8a61-7ebb590b1fb3'  {executed in 0 ms}
+
+2016-12-20 16:08:01.855 [http-8090-6] INFO - 150. SELECT * FROM node WHERE del_flag = 0 AND parent = '0d5b0792-91fa-4350-8a61-7ebb590b1fb3'  {executed in 0 ms}
+
+2016-12-20 16:08:01.858 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '94a78c99-e938-4acf-aabb-1a5ec04812ae'  {executed in 1 ms}
+
+2016-12-20 16:08:01.858 [http-8090-6] INFO - 151. SELECT * FROM node WHERE del_flag = 0 AND parent = '94a78c99-e938-4acf-aabb-1a5ec04812ae'  {executed in 1 ms}
+
+2016-12-20 16:08:01.860 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'af955c97-4edf-451e-bbef-c3e6dfa421ff'  {executed in 1 ms}
+
+2016-12-20 16:08:01.860 [http-8090-6] INFO - 152. SELECT * FROM node WHERE del_flag = 0 AND parent = 'af955c97-4edf-451e-bbef-c3e6dfa421ff'  {executed in 1 ms}
+
+2016-12-20 16:08:01.862 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'c5c5a85e-2caa-427b-a3cc-79cb642e1e46'  {executed in 0 ms}
+
+2016-12-20 16:08:01.862 [http-8090-6] INFO - 153. SELECT * FROM node WHERE del_flag = 0 AND parent = 'c5c5a85e-2caa-427b-a3cc-79cb642e1e46'  {executed in 1 ms}
+
+2016-12-20 16:08:01.865 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '3bfa15f8-2d59-410c-af4f-351b4c6a2f83'  {executed in 0 ms}
+
+2016-12-20 16:08:01.865 [http-8090-6] INFO - 154. SELECT * FROM node WHERE del_flag = 0 AND parent = '3bfa15f8-2d59-410c-af4f-351b4c6a2f83'  {executed in 0 ms}
+
+2016-12-20 16:08:01.867 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '536f545c-5b40-4824-b128-f2bda7f27974'  {executed in 0 ms}
+
+2016-12-20 16:08:01.867 [http-8090-6] INFO - 155. SELECT * FROM node WHERE del_flag = 0 AND parent = '536f545c-5b40-4824-b128-f2bda7f27974'  {executed in 0 ms}
+
+2016-12-20 16:08:01.869 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'c9858318-596a-454a-90c2-dcac4e38ff28'  {executed in 0 ms}
+
+2016-12-20 16:08:01.869 [http-8090-6] INFO - 156. SELECT * FROM node WHERE del_flag = 0 AND parent = 'c9858318-596a-454a-90c2-dcac4e38ff28'  {executed in 0 ms}
+
+2016-12-20 16:08:01.872 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'd699b785-dfc2-4a90-bd11-006f2b47566c'  {executed in 0 ms}
+
+2016-12-20 16:08:01.872 [http-8090-6] INFO - 157. SELECT * FROM node WHERE del_flag = 0 AND parent = 'd699b785-dfc2-4a90-bd11-006f2b47566c'  {executed in 0 ms}
+
+2016-12-20 16:08:01.874 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'fa20247e-9e99-40c6-954d-a35d92a5ef8b'  {executed in 0 ms}
+
+2016-12-20 16:08:01.874 [http-8090-6] INFO - 158. SELECT * FROM node WHERE del_flag = 0 AND parent = 'fa20247e-9e99-40c6-954d-a35d92a5ef8b'  {executed in 0 ms}
+
+2016-12-20 16:08:01.876 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'afaf7f9c-305d-4f4a-94ea-1646c645b512'  {executed in 0 ms}
+
+2016-12-20 16:08:01.877 [http-8090-6] INFO - 159. SELECT * FROM node WHERE del_flag = 0 AND parent = 'afaf7f9c-305d-4f4a-94ea-1646c645b512'  {executed in 1 ms}
+
+2016-12-20 16:08:01.879 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '46551a41-8bf3-4d84-8fc0-416e7ddeeefb'  {executed in 1 ms}
+
+2016-12-20 16:08:01.879 [http-8090-6] INFO - 160. SELECT * FROM node WHERE del_flag = 0 AND parent = '46551a41-8bf3-4d84-8fc0-416e7ddeeefb'  {executed in 1 ms}
+
+2016-12-20 16:08:01.881 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '75edf6f3-5436-44af-84d0-61999ae4a1ea'  {executed in 0 ms}
+
+2016-12-20 16:08:01.882 [http-8090-6] INFO - 161. SELECT * FROM node WHERE del_flag = 0 AND parent = '75edf6f3-5436-44af-84d0-61999ae4a1ea'  {executed in 1 ms}
+
+2016-12-20 16:08:01.883 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '92075344-0025-4bcc-af2b-98c637230b46'  {executed in 0 ms}
+
+2016-12-20 16:08:01.883 [http-8090-6] INFO - 162. SELECT * FROM node WHERE del_flag = 0 AND parent = '92075344-0025-4bcc-af2b-98c637230b46'  {executed in 0 ms}
+
+2016-12-20 16:08:01.890 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '9d951b4e-94cd-4b6e-a637-48930d830f3a'  {executed in 1 ms}
+
+2016-12-20 16:08:01.890 [http-8090-6] INFO - 163. SELECT * FROM node WHERE del_flag = 0 AND parent = '9d951b4e-94cd-4b6e-a637-48930d830f3a'  {executed in 1 ms}
+
+2016-12-20 16:08:01.892 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'bfcfd127-b2d5-40a3-95db-cc038b7243a2'  {executed in 0 ms}
+
+2016-12-20 16:08:01.892 [http-8090-6] INFO - 164. SELECT * FROM node WHERE del_flag = 0 AND parent = 'bfcfd127-b2d5-40a3-95db-cc038b7243a2'  {executed in 0 ms}
+
+2016-12-20 16:08:01.894 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'c019d68a-9c0f-4211-aa04-fd5b97397922'  {executed in 0 ms}
+
+2016-12-20 16:08:01.894 [http-8090-6] INFO - 165. SELECT * FROM node WHERE del_flag = 0 AND parent = 'c019d68a-9c0f-4211-aa04-fd5b97397922'  {executed in 0 ms}
+
+2016-12-20 16:08:01.896 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '8dbfa61e-7093-4c11-b816-c39a12d7c150'  {executed in 0 ms}
+
+2016-12-20 16:08:01.896 [http-8090-6] INFO - 166. SELECT * FROM node WHERE del_flag = 0 AND parent = '8dbfa61e-7093-4c11-b816-c39a12d7c150'  {executed in 0 ms}
+
+2016-12-20 16:08:01.899 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'b1e6d8d3-db1c-4d93-926a-612505332f56'  {executed in 0 ms}
+
+2016-12-20 16:08:01.899 [http-8090-6] INFO - 167. SELECT * FROM node WHERE del_flag = 0 AND parent = 'b1e6d8d3-db1c-4d93-926a-612505332f56'  {executed in 0 ms}
+
+2016-12-20 16:08:01.901 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'b5343413-731f-4e24-928d-8cd906e122ed'  {executed in 1 ms}
+
+2016-12-20 16:08:01.901 [http-8090-6] INFO - 168. SELECT * FROM node WHERE del_flag = 0 AND parent = 'b5343413-731f-4e24-928d-8cd906e122ed'  {executed in 1 ms}
+
+2016-12-20 16:08:01.902 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'dbf699c9-fd65-4063-9eab-16242d220080'  {executed in 0 ms}
+
+2016-12-20 16:08:01.902 [http-8090-6] INFO - 169. SELECT * FROM node WHERE del_flag = 0 AND parent = 'dbf699c9-fd65-4063-9eab-16242d220080'  {executed in 0 ms}
+
+2016-12-20 16:08:01.903 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'f55b7178-6b0a-4ab0-99e6-6483c37793a1'  {executed in 0 ms}
+
+2016-12-20 16:08:01.903 [http-8090-6] INFO - 170. SELECT * FROM node WHERE del_flag = 0 AND parent = 'f55b7178-6b0a-4ab0-99e6-6483c37793a1'  {executed in 0 ms}
+
+2016-12-20 16:08:04.976 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:08:04.976 [http-8090-6] INFO - 171. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:08:04.979 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:08:04.980 [http-8090-6] INFO - 172. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:08:04.982 [http-8090-6] INFO - 1. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:08:04.982 [http-8090-6] INFO - 173. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:08:04.984 [http-8090-6] INFO - 1. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:08:04.984 [http-8090-6] INFO - 174. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:08:05.074 [http-8090-6] INFO - 1. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = 'fa5c2159-7646-4785-9c98-db6aaf5ac963'  {executed in 20 ms}
+
+2016-12-20 16:08:05.074 [http-8090-6] INFO - 175. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = 'fa5c2159-7646-4785-9c98-db6aaf5ac963'  {executed in 20 ms}
+
+2016-12-20 16:08:08.410 [http-8090-6] INFO - 1. DELETE FROM node_doc where del_flag = 0 AND file_id = '2af4d00b-a892-4790-8286-53afcf722c86'  {executed in 1 ms}
+
+2016-12-20 16:08:08.410 [http-8090-6] INFO - 176. DELETE FROM node_doc where del_flag = 0 AND file_id = '2af4d00b-a892-4790-8286-53afcf722c86'  {executed in 1 ms}
+
+2016-12-20 16:08:08.481 [http-8090-6] INFO - 1. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '2af4d00b-a892-4790-8286-53afcf722c86'  {executed in 1 ms}
+
+2016-12-20 16:08:08.481 [http-8090-6] INFO - 177. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '2af4d00b-a892-4790-8286-53afcf722c86'  {executed in 1 ms}
+
+2016-12-20 16:08:08.495 [http-8090-6] INFO - 1. DELETE FROM file_upload where id = '2af4d00b-a892-4790-8286-53afcf722c86'  {executed in 0 ms}
+
+2016-12-20 16:08:08.496 [http-8090-6] INFO - 177. DELETE FROM file_upload where id = '2af4d00b-a892-4790-8286-53afcf722c86'  {executed in 1 ms}
+
+2016-12-20 16:08:08.548 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:08:08.549 [http-8090-6] INFO - 178. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:08:08.553 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:08:08.553 [http-8090-6] INFO - 179. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:08:08.557 [http-8090-6] INFO - 1. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:08:08.557 [http-8090-6] INFO - 180. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:08:08.560 [http-8090-6] INFO - 1. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:08:08.561 [http-8090-6] INFO - 181. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:08:08.571 [http-8090-6] INFO - 1. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = 'fa5c2159-7646-4785-9c98-db6aaf5ac963'  {executed in 1 ms}
+
+2016-12-20 16:08:08.571 [http-8090-6] INFO - 182. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = 'fa5c2159-7646-4785-9c98-db6aaf5ac963'  {executed in 1 ms}
+
+2016-12-20 16:08:13.196 [http-8090-5] INFO - 1. DELETE FROM node_pic where del_flag = 0 AND file_id = 'fa5c2159-7646-4785-9c98-db6aaf5ac963'  {executed in 1 ms}
+
+2016-12-20 16:08:13.196 [http-8090-5] INFO - 183. DELETE FROM node_pic where del_flag = 0 AND file_id = 'fa5c2159-7646-4785-9c98-db6aaf5ac963'  {executed in 1 ms}
+
+2016-12-20 16:08:13.250 [http-8090-5] INFO - 1. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = 'fa5c2159-7646-4785-9c98-db6aaf5ac963'  {executed in 0 ms}
+
+2016-12-20 16:08:13.250 [http-8090-5] INFO - 184. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = 'fa5c2159-7646-4785-9c98-db6aaf5ac963'  {executed in 0 ms}
+
+2016-12-20 16:08:13.254 [http-8090-5] INFO - 1. DELETE FROM file_upload where id = 'fa5c2159-7646-4785-9c98-db6aaf5ac963'  {executed in 0 ms}
+
+2016-12-20 16:08:13.254 [http-8090-5] INFO - 184. DELETE FROM file_upload where id = 'fa5c2159-7646-4785-9c98-db6aaf5ac963'  {executed in 0 ms}
+
+2016-12-20 16:08:13.309 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:08:13.310 [http-8090-5] INFO - 185. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:08:13.315 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:08:13.315 [http-8090-5] INFO - 186. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:08:13.320 [http-8090-5] INFO - 1. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:08:13.320 [http-8090-5] INFO - 187. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:08:13.325 [http-8090-5] INFO - 1. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:08:13.325 [http-8090-5] INFO - 188. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:08:24.576 [http-8090-5] INFO - 1. INSERT INTO file_upload ( id, file_name, file_type, file_size, file_content_type, file_content, 
+secure_level ) values( '66b65440-337c-495e-9fee-a88322bff165', 'Screen11.png', NULL, 2354487, 
+'image/png', NULL, 1 )  {executed in 0 ms}
+
+2016-12-20 16:08:24.576 [http-8090-5] INFO - 189. INSERT INTO file_upload ( id, file_name, file_type, file_size, file_content_type, file_content, 
+secure_level ) values( '66b65440-337c-495e-9fee-a88322bff165', 'Screen11.png', NULL, 2354487, 
+'image/png', NULL, 1 )  {executed in 0 ms}
+
+2016-12-20 16:08:24.672 [http-8090-5] INFO - 1. INSERT INTO node_doc ( id, node_id, file_id, del_flag ) values( '365cb169-1912-4617-a717-265587ec27a4', 
+'7e3d7ee7-0352-4e10-9c51-cd72c7c6669e', '66b65440-337c-495e-9fee-a88322bff165', '0' )  {executed in 0 ms}
+
+2016-12-20 16:08:24.673 [http-8090-5] INFO - 190. INSERT INTO node_doc ( id, node_id, file_id, del_flag ) values( '365cb169-1912-4617-a717-265587ec27a4', 
+'7e3d7ee7-0352-4e10-9c51-cd72c7c6669e', '66b65440-337c-495e-9fee-a88322bff165', '0' )  {executed in 1 ms}
+
+2016-12-20 16:08:24.713 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:08:24.713 [http-8090-5] INFO - 191. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:08:24.715 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:08:24.715 [http-8090-5] INFO - 192. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:08:24.717 [http-8090-5] INFO - 1. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:08:24.718 [http-8090-5] INFO - 193. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:08:24.719 [http-8090-5] INFO - 1. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:08:24.719 [http-8090-5] INFO - 194. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:08:32.604 [http-8090-5] INFO - 1. INSERT INTO file_upload ( id, file_name, file_type, file_size, file_content_type, file_content, 
+secure_level ) values( '8a971b1d-7565-4d0e-8180-6423c3c610f4', 'Screen07.png', NULL, 3037980, 
+'image/png', NULL, 2 )  {executed in 0 ms}
+
+2016-12-20 16:08:32.604 [http-8090-5] INFO - 195. INSERT INTO file_upload ( id, file_name, file_type, file_size, file_content_type, file_content, 
+secure_level ) values( '8a971b1d-7565-4d0e-8180-6423c3c610f4', 'Screen07.png', NULL, 3037980, 
+'image/png', NULL, 2 )  {executed in 0 ms}
+
+2016-12-20 16:08:32.783 [http-8090-5] INFO - 1. INSERT INTO node_pic ( id, node_id, file_id, del_flag ) values( '55042ef4-03f0-44b8-b8b8-ff4640b9f638', 
+'7e3d7ee7-0352-4e10-9c51-cd72c7c6669e', '8a971b1d-7565-4d0e-8180-6423c3c610f4', '0' )  {executed in 0 ms}
+
+2016-12-20 16:08:32.784 [http-8090-5] INFO - 196. INSERT INTO node_pic ( id, node_id, file_id, del_flag ) values( '55042ef4-03f0-44b8-b8b8-ff4640b9f638', 
+'7e3d7ee7-0352-4e10-9c51-cd72c7c6669e', '8a971b1d-7565-4d0e-8180-6423c3c610f4', '0' )  {executed in 2 ms}
+
+2016-12-20 16:08:32.820 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:08:32.821 [http-8090-5] INFO - 197. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:08:32.823 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:08:32.823 [http-8090-5] INFO - 198. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:08:32.825 [http-8090-5] INFO - 1. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:08:32.825 [http-8090-5] INFO - 199. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:08:32.827 [http-8090-5] INFO - 1. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:08:32.827 [http-8090-5] INFO - 200. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:08:32.842 [http-8090-5] INFO - 1. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '8a971b1d-7565-4d0e-8180-6423c3c610f4'  {executed in 2 ms}
+
+2016-12-20 16:08:32.842 [http-8090-5] INFO - 201. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '8a971b1d-7565-4d0e-8180-6423c3c610f4'  {executed in 2 ms}
+
+2016-12-20 16:14:04.473 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:14:04.474 [http-8090-5] INFO - 202. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:14:04.479 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:14:04.479 [http-8090-5] INFO - 203. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:14:04.481 [http-8090-5] INFO - 1. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:14:04.481 [http-8090-5] INFO - 204. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:14:04.482 [http-8090-5] INFO - 1. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:14:04.483 [http-8090-5] INFO - 205. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:14:04.495 [http-8090-5] INFO - 1. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '8a971b1d-7565-4d0e-8180-6423c3c610f4'  {executed in 0 ms}
+
+2016-12-20 16:14:04.496 [http-8090-5] INFO - 206. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '8a971b1d-7565-4d0e-8180-6423c3c610f4'  {executed in 1 ms}
+
+2016-12-20 16:14:32.220 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND user_id = '111'  {executed in 0 ms}
+
+2016-12-20 16:14:32.221 [http-8090-5] INFO - 207. SELECT * FROM node WHERE del_flag = 0 AND user_id = '111'  {executed in 1 ms}
+
+2016-12-20 16:14:32.223 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '005d794b-c4c2-41da-b342-bcef18211b2a'  {executed in 0 ms}
+
+2016-12-20 16:14:32.224 [http-8090-5] INFO - 208. SELECT * FROM node WHERE del_flag = 0 AND parent = '005d794b-c4c2-41da-b342-bcef18211b2a'  {executed in 0 ms}
+
+2016-12-20 16:14:32.226 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '3b08f807-5ab0-406c-8be8-c181013979a1'  {executed in 0 ms}
+
+2016-12-20 16:14:32.226 [http-8090-5] INFO - 209. SELECT * FROM node WHERE del_flag = 0 AND parent = '3b08f807-5ab0-406c-8be8-c181013979a1'  {executed in 0 ms}
+
+2016-12-20 16:14:32.230 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '5a8b9243-b3c8-4e43-8eb2-3b3cb8d78bc0'  {executed in 0 ms}
+
+2016-12-20 16:14:32.230 [http-8090-5] INFO - 210. SELECT * FROM node WHERE del_flag = 0 AND parent = '5a8b9243-b3c8-4e43-8eb2-3b3cb8d78bc0'  {executed in 0 ms}
+
+2016-12-20 16:14:32.233 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '2f993102-76f3-477a-881c-2e366da1f3e0'  {executed in 0 ms}
+
+2016-12-20 16:14:32.233 [http-8090-5] INFO - 211. SELECT * FROM node WHERE del_flag = 0 AND parent = '2f993102-76f3-477a-881c-2e366da1f3e0'  {executed in 0 ms}
+
+2016-12-20 16:14:32.235 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '834d5172-3042-48b8-bf63-cbadb45a47e3'  {executed in 0 ms}
+
+2016-12-20 16:14:32.235 [http-8090-5] INFO - 212. SELECT * FROM node WHERE del_flag = 0 AND parent = '834d5172-3042-48b8-bf63-cbadb45a47e3'  {executed in 0 ms}
+
+2016-12-20 16:14:32.237 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'a9113a58-a2e7-4ab3-9f66-e9137a493549'  {executed in 1 ms}
+
+2016-12-20 16:14:32.237 [http-8090-5] INFO - 213. SELECT * FROM node WHERE del_flag = 0 AND parent = 'a9113a58-a2e7-4ab3-9f66-e9137a493549'  {executed in 1 ms}
+
+2016-12-20 16:14:32.240 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'e0df38b3-0cf6-40f4-b2c3-e4a435690818'  {executed in 0 ms}
+
+2016-12-20 16:14:32.240 [http-8090-5] INFO - 214. SELECT * FROM node WHERE del_flag = 0 AND parent = 'e0df38b3-0cf6-40f4-b2c3-e4a435690818'  {executed in 0 ms}
+
+2016-12-20 16:14:32.242 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'edc1a882-cd21-4c4e-9cbe-d0d4d6867271'  {executed in 0 ms}
+
+2016-12-20 16:14:32.243 [http-8090-5] INFO - 215. SELECT * FROM node WHERE del_flag = 0 AND parent = 'edc1a882-cd21-4c4e-9cbe-d0d4d6867271'  {executed in 1 ms}
+
+2016-12-20 16:14:32.244 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'fe5b5355-8f0f-4d55-9e3e-f8f0c3b1cc33'  {executed in 0 ms}
+
+2016-12-20 16:14:32.244 [http-8090-5] INFO - 216. SELECT * FROM node WHERE del_flag = 0 AND parent = 'fe5b5355-8f0f-4d55-9e3e-f8f0c3b1cc33'  {executed in 0 ms}
+
+2016-12-20 16:14:32.246 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:14:32.247 [http-8090-5] INFO - 217. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:14:32.248 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '8a903692-f135-45d6-8d47-2e64a5b781ec'  {executed in 0 ms}
+
+2016-12-20 16:14:32.249 [http-8090-5] INFO - 218. SELECT * FROM node WHERE del_flag = 0 AND parent = '8a903692-f135-45d6-8d47-2e64a5b781ec'  {executed in 1 ms}
+
+2016-12-20 16:14:32.252 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'f1c4a240-2797-4194-a2b3-36c49de91600'  {executed in 0 ms}
+
+2016-12-20 16:14:32.252 [http-8090-5] INFO - 219. SELECT * FROM node WHERE del_flag = 0 AND parent = 'f1c4a240-2797-4194-a2b3-36c49de91600'  {executed in 0 ms}
+
+2016-12-20 16:14:32.254 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'f7f95724-041f-49df-a185-6a8db952be86'  {executed in 1 ms}
+
+2016-12-20 16:14:32.254 [http-8090-5] INFO - 220. SELECT * FROM node WHERE del_flag = 0 AND parent = 'f7f95724-041f-49df-a185-6a8db952be86'  {executed in 1 ms}
+
+2016-12-20 16:14:32.255 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '9a4c2d4f-4248-401b-af5e-0d02ce86ff2e'  {executed in 0 ms}
+
+2016-12-20 16:14:32.255 [http-8090-5] INFO - 221. SELECT * FROM node WHERE del_flag = 0 AND parent = '9a4c2d4f-4248-401b-af5e-0d02ce86ff2e'  {executed in 0 ms}
+
+2016-12-20 16:14:32.256 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'ad2f4324-ff55-45af-b23c-9017dc17665d'  {executed in 0 ms}
+
+2016-12-20 16:14:32.256 [http-8090-5] INFO - 222. SELECT * FROM node WHERE del_flag = 0 AND parent = 'ad2f4324-ff55-45af-b23c-9017dc17665d'  {executed in 0 ms}
+
+2016-12-20 16:14:32.257 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '63d1eb76-b8b8-45f1-94a3-af16dfa16848'  {executed in 0 ms}
+
+2016-12-20 16:14:32.257 [http-8090-5] INFO - 223. SELECT * FROM node WHERE del_flag = 0 AND parent = '63d1eb76-b8b8-45f1-94a3-af16dfa16848'  {executed in 0 ms}
+
+2016-12-20 16:14:32.258 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '7066cc49-2991-4bf9-b022-5998168642cd'  {executed in 0 ms}
+
+2016-12-20 16:14:32.258 [http-8090-5] INFO - 224. SELECT * FROM node WHERE del_flag = 0 AND parent = '7066cc49-2991-4bf9-b022-5998168642cd'  {executed in 0 ms}
+
+2016-12-20 16:14:32.259 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '71682430-7ae2-41c0-bfde-3e626647718a'  {executed in 0 ms}
+
+2016-12-20 16:14:32.259 [http-8090-5] INFO - 225. SELECT * FROM node WHERE del_flag = 0 AND parent = '71682430-7ae2-41c0-bfde-3e626647718a'  {executed in 0 ms}
+
+2016-12-20 16:14:32.260 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '7d30d671-c5d4-4455-92c1-db45ce409dfd'  {executed in 0 ms}
+
+2016-12-20 16:14:32.260 [http-8090-5] INFO - 226. SELECT * FROM node WHERE del_flag = 0 AND parent = '7d30d671-c5d4-4455-92c1-db45ce409dfd'  {executed in 0 ms}
+
+2016-12-20 16:14:32.264 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '0b593e37-6281-4376-afc6-4588a08548a0'  {executed in 0 ms}
+
+2016-12-20 16:14:32.264 [http-8090-5] INFO - 227. SELECT * FROM node WHERE del_flag = 0 AND parent = '0b593e37-6281-4376-afc6-4588a08548a0'  {executed in 0 ms}
+
+2016-12-20 16:14:32.267 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '3df03eb0-c4f0-4f81-bbad-b36ee41ff458'  {executed in 1 ms}
+
+2016-12-20 16:14:32.267 [http-8090-5] INFO - 228. SELECT * FROM node WHERE del_flag = 0 AND parent = '3df03eb0-c4f0-4f81-bbad-b36ee41ff458'  {executed in 1 ms}
+
+2016-12-20 16:14:32.269 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '4a41de6c-0acf-4afa-803e-b35aaefe9fef'  {executed in 1 ms}
+
+2016-12-20 16:14:32.269 [http-8090-5] INFO - 229. SELECT * FROM node WHERE del_flag = 0 AND parent = '4a41de6c-0acf-4afa-803e-b35aaefe9fef'  {executed in 1 ms}
+
+2016-12-20 16:14:32.270 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '6f6f7fd9-e3d0-43d5-849e-82c90d376c4e'  {executed in 0 ms}
+
+2016-12-20 16:14:32.270 [http-8090-5] INFO - 230. SELECT * FROM node WHERE del_flag = 0 AND parent = '6f6f7fd9-e3d0-43d5-849e-82c90d376c4e'  {executed in 0 ms}
+
+2016-12-20 16:14:32.271 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'cc92d4d8-9275-4995-a536-08018349036a'  {executed in 0 ms}
+
+2016-12-20 16:14:32.271 [http-8090-5] INFO - 231. SELECT * FROM node WHERE del_flag = 0 AND parent = 'cc92d4d8-9275-4995-a536-08018349036a'  {executed in 0 ms}
+
+2016-12-20 16:14:32.272 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'ec1bdc39-6b5d-4009-9862-81c8002a34bd'  {executed in 0 ms}
+
+2016-12-20 16:14:32.272 [http-8090-5] INFO - 232. SELECT * FROM node WHERE del_flag = 0 AND parent = 'ec1bdc39-6b5d-4009-9862-81c8002a34bd'  {executed in 0 ms}
+
+2016-12-20 16:14:32.274 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '01913d05-b40e-4244-93e6-522aa1feaf47'  {executed in 1 ms}
+
+2016-12-20 16:14:32.274 [http-8090-5] INFO - 233. SELECT * FROM node WHERE del_flag = 0 AND parent = '01913d05-b40e-4244-93e6-522aa1feaf47'  {executed in 1 ms}
+
+2016-12-20 16:14:32.275 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '022f54a7-82ff-42fc-a84d-a0ffdbe7a302'  {executed in 0 ms}
+
+2016-12-20 16:14:32.276 [http-8090-5] INFO - 234. SELECT * FROM node WHERE del_flag = 0 AND parent = '022f54a7-82ff-42fc-a84d-a0ffdbe7a302'  {executed in 1 ms}
+
+2016-12-20 16:14:32.277 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '1ca63554-ae73-44a0-996e-30b445c737b7'  {executed in 0 ms}
+
+2016-12-20 16:14:32.277 [http-8090-5] INFO - 235. SELECT * FROM node WHERE del_flag = 0 AND parent = '1ca63554-ae73-44a0-996e-30b445c737b7'  {executed in 0 ms}
+
+2016-12-20 16:14:32.280 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '3c9b0acb-56a2-4a85-9ab9-f8b67def291d'  {executed in 1 ms}
+
+2016-12-20 16:14:32.280 [http-8090-5] INFO - 236. SELECT * FROM node WHERE del_flag = 0 AND parent = '3c9b0acb-56a2-4a85-9ab9-f8b67def291d'  {executed in 1 ms}
+
+2016-12-20 16:14:32.282 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '42095e95-2dc0-4121-a4a5-9b75e94b95b1'  {executed in 0 ms}
+
+2016-12-20 16:14:32.282 [http-8090-5] INFO - 237. SELECT * FROM node WHERE del_flag = 0 AND parent = '42095e95-2dc0-4121-a4a5-9b75e94b95b1'  {executed in 0 ms}
+
+2016-12-20 16:14:32.285 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'a1de4efb-f0e3-4cbe-8053-389271fb8ebc'  {executed in 0 ms}
+
+2016-12-20 16:14:32.285 [http-8090-5] INFO - 238. SELECT * FROM node WHERE del_flag = 0 AND parent = 'a1de4efb-f0e3-4cbe-8053-389271fb8ebc'  {executed in 0 ms}
+
+2016-12-20 16:14:32.287 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '0d5b0792-91fa-4350-8a61-7ebb590b1fb3'  {executed in 0 ms}
+
+2016-12-20 16:14:32.287 [http-8090-5] INFO - 239. SELECT * FROM node WHERE del_flag = 0 AND parent = '0d5b0792-91fa-4350-8a61-7ebb590b1fb3'  {executed in 0 ms}
+
+2016-12-20 16:14:32.288 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '94a78c99-e938-4acf-aabb-1a5ec04812ae'  {executed in 0 ms}
+
+2016-12-20 16:14:32.288 [http-8090-5] INFO - 240. SELECT * FROM node WHERE del_flag = 0 AND parent = '94a78c99-e938-4acf-aabb-1a5ec04812ae'  {executed in 0 ms}
+
+2016-12-20 16:14:32.290 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'af955c97-4edf-451e-bbef-c3e6dfa421ff'  {executed in 1 ms}
+
+2016-12-20 16:14:32.290 [http-8090-5] INFO - 241. SELECT * FROM node WHERE del_flag = 0 AND parent = 'af955c97-4edf-451e-bbef-c3e6dfa421ff'  {executed in 1 ms}
+
+2016-12-20 16:14:32.291 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'c5c5a85e-2caa-427b-a3cc-79cb642e1e46'  {executed in 0 ms}
+
+2016-12-20 16:14:32.291 [http-8090-5] INFO - 242. SELECT * FROM node WHERE del_flag = 0 AND parent = 'c5c5a85e-2caa-427b-a3cc-79cb642e1e46'  {executed in 0 ms}
+
+2016-12-20 16:14:32.293 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '3bfa15f8-2d59-410c-af4f-351b4c6a2f83'  {executed in 1 ms}
+
+2016-12-20 16:14:32.293 [http-8090-5] INFO - 243. SELECT * FROM node WHERE del_flag = 0 AND parent = '3bfa15f8-2d59-410c-af4f-351b4c6a2f83'  {executed in 1 ms}
+
+2016-12-20 16:14:32.294 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '536f545c-5b40-4824-b128-f2bda7f27974'  {executed in 0 ms}
+
+2016-12-20 16:14:32.294 [http-8090-5] INFO - 244. SELECT * FROM node WHERE del_flag = 0 AND parent = '536f545c-5b40-4824-b128-f2bda7f27974'  {executed in 0 ms}
+
+2016-12-20 16:14:32.296 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'c9858318-596a-454a-90c2-dcac4e38ff28'  {executed in 0 ms}
+
+2016-12-20 16:14:32.297 [http-8090-5] INFO - 245. SELECT * FROM node WHERE del_flag = 0 AND parent = 'c9858318-596a-454a-90c2-dcac4e38ff28'  {executed in 1 ms}
+
+2016-12-20 16:14:32.298 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'd699b785-dfc2-4a90-bd11-006f2b47566c'  {executed in 0 ms}
+
+2016-12-20 16:14:32.298 [http-8090-5] INFO - 246. SELECT * FROM node WHERE del_flag = 0 AND parent = 'd699b785-dfc2-4a90-bd11-006f2b47566c'  {executed in 0 ms}
+
+2016-12-20 16:14:32.300 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'fa20247e-9e99-40c6-954d-a35d92a5ef8b'  {executed in 1 ms}
+
+2016-12-20 16:14:32.300 [http-8090-5] INFO - 247. SELECT * FROM node WHERE del_flag = 0 AND parent = 'fa20247e-9e99-40c6-954d-a35d92a5ef8b'  {executed in 1 ms}
+
+2016-12-20 16:14:32.301 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'afaf7f9c-305d-4f4a-94ea-1646c645b512'  {executed in 0 ms}
+
+2016-12-20 16:14:32.301 [http-8090-5] INFO - 248. SELECT * FROM node WHERE del_flag = 0 AND parent = 'afaf7f9c-305d-4f4a-94ea-1646c645b512'  {executed in 0 ms}
+
+2016-12-20 16:14:32.303 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '46551a41-8bf3-4d84-8fc0-416e7ddeeefb'  {executed in 0 ms}
+
+2016-12-20 16:14:32.303 [http-8090-5] INFO - 249. SELECT * FROM node WHERE del_flag = 0 AND parent = '46551a41-8bf3-4d84-8fc0-416e7ddeeefb'  {executed in 0 ms}
+
+2016-12-20 16:14:32.304 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '75edf6f3-5436-44af-84d0-61999ae4a1ea'  {executed in 0 ms}
+
+2016-12-20 16:14:32.305 [http-8090-5] INFO - 250. SELECT * FROM node WHERE del_flag = 0 AND parent = '75edf6f3-5436-44af-84d0-61999ae4a1ea'  {executed in 1 ms}
+
+2016-12-20 16:14:32.306 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '92075344-0025-4bcc-af2b-98c637230b46'  {executed in 1 ms}
+
+2016-12-20 16:14:32.306 [http-8090-5] INFO - 251. SELECT * FROM node WHERE del_flag = 0 AND parent = '92075344-0025-4bcc-af2b-98c637230b46'  {executed in 1 ms}
+
+2016-12-20 16:14:32.307 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '9d951b4e-94cd-4b6e-a637-48930d830f3a'  {executed in 0 ms}
+
+2016-12-20 16:14:32.307 [http-8090-5] INFO - 252. SELECT * FROM node WHERE del_flag = 0 AND parent = '9d951b4e-94cd-4b6e-a637-48930d830f3a'  {executed in 0 ms}
+
+2016-12-20 16:14:32.308 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'bfcfd127-b2d5-40a3-95db-cc038b7243a2'  {executed in 0 ms}
+
+2016-12-20 16:14:32.308 [http-8090-5] INFO - 253. SELECT * FROM node WHERE del_flag = 0 AND parent = 'bfcfd127-b2d5-40a3-95db-cc038b7243a2'  {executed in 0 ms}
+
+2016-12-20 16:14:32.309 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'c019d68a-9c0f-4211-aa04-fd5b97397922'  {executed in 0 ms}
+
+2016-12-20 16:14:32.310 [http-8090-5] INFO - 254. SELECT * FROM node WHERE del_flag = 0 AND parent = 'c019d68a-9c0f-4211-aa04-fd5b97397922'  {executed in 1 ms}
+
+2016-12-20 16:14:32.311 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '8dbfa61e-7093-4c11-b816-c39a12d7c150'  {executed in 0 ms}
+
+2016-12-20 16:14:32.312 [http-8090-5] INFO - 255. SELECT * FROM node WHERE del_flag = 0 AND parent = '8dbfa61e-7093-4c11-b816-c39a12d7c150'  {executed in 0 ms}
+
+2016-12-20 16:14:32.314 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'b1e6d8d3-db1c-4d93-926a-612505332f56'  {executed in 1 ms}
+
+2016-12-20 16:14:32.314 [http-8090-5] INFO - 256. SELECT * FROM node WHERE del_flag = 0 AND parent = 'b1e6d8d3-db1c-4d93-926a-612505332f56'  {executed in 1 ms}
+
+2016-12-20 16:14:32.315 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'b5343413-731f-4e24-928d-8cd906e122ed'  {executed in 0 ms}
+
+2016-12-20 16:14:32.315 [http-8090-5] INFO - 257. SELECT * FROM node WHERE del_flag = 0 AND parent = 'b5343413-731f-4e24-928d-8cd906e122ed'  {executed in 0 ms}
+
+2016-12-20 16:14:32.317 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'dbf699c9-fd65-4063-9eab-16242d220080'  {executed in 1 ms}
+
+2016-12-20 16:14:32.317 [http-8090-5] INFO - 258. SELECT * FROM node WHERE del_flag = 0 AND parent = 'dbf699c9-fd65-4063-9eab-16242d220080'  {executed in 1 ms}
+
+2016-12-20 16:14:32.318 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'f55b7178-6b0a-4ab0-99e6-6483c37793a1'  {executed in 0 ms}
+
+2016-12-20 16:14:32.318 [http-8090-5] INFO - 259. SELECT * FROM node WHERE del_flag = 0 AND parent = 'f55b7178-6b0a-4ab0-99e6-6483c37793a1'  {executed in 0 ms}
+
+2016-12-20 16:14:33.882 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND user_id = '111'  {executed in 1 ms}
+
+2016-12-20 16:14:33.882 [http-8090-7] INFO - 260. SELECT * FROM node WHERE del_flag = 0 AND user_id = '111'  {executed in 1 ms}
+
+2016-12-20 16:14:33.885 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '005d794b-c4c2-41da-b342-bcef18211b2a'  {executed in 1 ms}
+
+2016-12-20 16:14:33.885 [http-8090-7] INFO - 261. SELECT * FROM node WHERE del_flag = 0 AND parent = '005d794b-c4c2-41da-b342-bcef18211b2a'  {executed in 1 ms}
+
+2016-12-20 16:14:33.887 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '3b08f807-5ab0-406c-8be8-c181013979a1'  {executed in 0 ms}
+
+2016-12-20 16:14:33.887 [http-8090-7] INFO - 262. SELECT * FROM node WHERE del_flag = 0 AND parent = '3b08f807-5ab0-406c-8be8-c181013979a1'  {executed in 0 ms}
+
+2016-12-20 16:14:33.891 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '5a8b9243-b3c8-4e43-8eb2-3b3cb8d78bc0'  {executed in 1 ms}
+
+2016-12-20 16:14:33.892 [http-8090-7] INFO - 263. SELECT * FROM node WHERE del_flag = 0 AND parent = '5a8b9243-b3c8-4e43-8eb2-3b3cb8d78bc0'  {executed in 2 ms}
+
+2016-12-20 16:14:33.896 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '2f993102-76f3-477a-881c-2e366da1f3e0'  {executed in 1 ms}
+
+2016-12-20 16:14:33.896 [http-8090-7] INFO - 264. SELECT * FROM node WHERE del_flag = 0 AND parent = '2f993102-76f3-477a-881c-2e366da1f3e0'  {executed in 1 ms}
+
+2016-12-20 16:14:33.898 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '834d5172-3042-48b8-bf63-cbadb45a47e3'  {executed in 0 ms}
+
+2016-12-20 16:14:33.898 [http-8090-7] INFO - 265. SELECT * FROM node WHERE del_flag = 0 AND parent = '834d5172-3042-48b8-bf63-cbadb45a47e3'  {executed in 0 ms}
+
+2016-12-20 16:14:33.901 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'a9113a58-a2e7-4ab3-9f66-e9137a493549'  {executed in 0 ms}
+
+2016-12-20 16:14:33.902 [http-8090-7] INFO - 266. SELECT * FROM node WHERE del_flag = 0 AND parent = 'a9113a58-a2e7-4ab3-9f66-e9137a493549'  {executed in 1 ms}
+
+2016-12-20 16:14:33.904 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'e0df38b3-0cf6-40f4-b2c3-e4a435690818'  {executed in 0 ms}
+
+2016-12-20 16:14:33.904 [http-8090-7] INFO - 267. SELECT * FROM node WHERE del_flag = 0 AND parent = 'e0df38b3-0cf6-40f4-b2c3-e4a435690818'  {executed in 0 ms}
+
+2016-12-20 16:14:33.905 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'edc1a882-cd21-4c4e-9cbe-d0d4d6867271'  {executed in 0 ms}
+
+2016-12-20 16:14:33.906 [http-8090-7] INFO - 268. SELECT * FROM node WHERE del_flag = 0 AND parent = 'edc1a882-cd21-4c4e-9cbe-d0d4d6867271'  {executed in 1 ms}
+
+2016-12-20 16:14:33.907 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'fe5b5355-8f0f-4d55-9e3e-f8f0c3b1cc33'  {executed in 0 ms}
+
+2016-12-20 16:14:33.908 [http-8090-7] INFO - 269. SELECT * FROM node WHERE del_flag = 0 AND parent = 'fe5b5355-8f0f-4d55-9e3e-f8f0c3b1cc33'  {executed in 1 ms}
+
+2016-12-20 16:14:33.909 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:14:33.909 [http-8090-7] INFO - 270. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:14:33.911 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '8a903692-f135-45d6-8d47-2e64a5b781ec'  {executed in 1 ms}
+
+2016-12-20 16:14:33.911 [http-8090-7] INFO - 271. SELECT * FROM node WHERE del_flag = 0 AND parent = '8a903692-f135-45d6-8d47-2e64a5b781ec'  {executed in 1 ms}
+
+2016-12-20 16:14:33.914 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'f1c4a240-2797-4194-a2b3-36c49de91600'  {executed in 0 ms}
+
+2016-12-20 16:14:33.914 [http-8090-7] INFO - 272. SELECT * FROM node WHERE del_flag = 0 AND parent = 'f1c4a240-2797-4194-a2b3-36c49de91600'  {executed in 0 ms}
+
+2016-12-20 16:14:33.916 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'f7f95724-041f-49df-a185-6a8db952be86'  {executed in 0 ms}
+
+2016-12-20 16:14:33.916 [http-8090-7] INFO - 273. SELECT * FROM node WHERE del_flag = 0 AND parent = 'f7f95724-041f-49df-a185-6a8db952be86'  {executed in 0 ms}
+
+2016-12-20 16:14:33.918 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '9a4c2d4f-4248-401b-af5e-0d02ce86ff2e'  {executed in 0 ms}
+
+2016-12-20 16:14:33.918 [http-8090-7] INFO - 274. SELECT * FROM node WHERE del_flag = 0 AND parent = '9a4c2d4f-4248-401b-af5e-0d02ce86ff2e'  {executed in 0 ms}
+
+2016-12-20 16:14:33.920 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'ad2f4324-ff55-45af-b23c-9017dc17665d'  {executed in 0 ms}
+
+2016-12-20 16:14:33.920 [http-8090-7] INFO - 275. SELECT * FROM node WHERE del_flag = 0 AND parent = 'ad2f4324-ff55-45af-b23c-9017dc17665d'  {executed in 0 ms}
+
+2016-12-20 16:14:33.922 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '63d1eb76-b8b8-45f1-94a3-af16dfa16848'  {executed in 1 ms}
+
+2016-12-20 16:14:33.922 [http-8090-7] INFO - 276. SELECT * FROM node WHERE del_flag = 0 AND parent = '63d1eb76-b8b8-45f1-94a3-af16dfa16848'  {executed in 1 ms}
+
+2016-12-20 16:14:33.924 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '7066cc49-2991-4bf9-b022-5998168642cd'  {executed in 1 ms}
+
+2016-12-20 16:14:33.924 [http-8090-7] INFO - 277. SELECT * FROM node WHERE del_flag = 0 AND parent = '7066cc49-2991-4bf9-b022-5998168642cd'  {executed in 1 ms}
+
+2016-12-20 16:14:33.925 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '71682430-7ae2-41c0-bfde-3e626647718a'  {executed in 0 ms}
+
+2016-12-20 16:14:33.925 [http-8090-7] INFO - 278. SELECT * FROM node WHERE del_flag = 0 AND parent = '71682430-7ae2-41c0-bfde-3e626647718a'  {executed in 0 ms}
+
+2016-12-20 16:14:33.927 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '7d30d671-c5d4-4455-92c1-db45ce409dfd'  {executed in 0 ms}
+
+2016-12-20 16:14:33.928 [http-8090-7] INFO - 279. SELECT * FROM node WHERE del_flag = 0 AND parent = '7d30d671-c5d4-4455-92c1-db45ce409dfd'  {executed in 1 ms}
+
+2016-12-20 16:14:33.931 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '0b593e37-6281-4376-afc6-4588a08548a0'  {executed in 0 ms}
+
+2016-12-20 16:14:33.931 [http-8090-7] INFO - 280. SELECT * FROM node WHERE del_flag = 0 AND parent = '0b593e37-6281-4376-afc6-4588a08548a0'  {executed in 0 ms}
+
+2016-12-20 16:14:33.933 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '3df03eb0-c4f0-4f81-bbad-b36ee41ff458'  {executed in 0 ms}
+
+2016-12-20 16:14:33.933 [http-8090-7] INFO - 281. SELECT * FROM node WHERE del_flag = 0 AND parent = '3df03eb0-c4f0-4f81-bbad-b36ee41ff458'  {executed in 0 ms}
+
+2016-12-20 16:14:33.935 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '4a41de6c-0acf-4afa-803e-b35aaefe9fef'  {executed in 0 ms}
+
+2016-12-20 16:14:33.935 [http-8090-7] INFO - 282. SELECT * FROM node WHERE del_flag = 0 AND parent = '4a41de6c-0acf-4afa-803e-b35aaefe9fef'  {executed in 0 ms}
+
+2016-12-20 16:14:33.937 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '6f6f7fd9-e3d0-43d5-849e-82c90d376c4e'  {executed in 1 ms}
+
+2016-12-20 16:14:33.937 [http-8090-7] INFO - 283. SELECT * FROM node WHERE del_flag = 0 AND parent = '6f6f7fd9-e3d0-43d5-849e-82c90d376c4e'  {executed in 1 ms}
+
+2016-12-20 16:14:33.939 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'cc92d4d8-9275-4995-a536-08018349036a'  {executed in 1 ms}
+
+2016-12-20 16:14:33.939 [http-8090-7] INFO - 284. SELECT * FROM node WHERE del_flag = 0 AND parent = 'cc92d4d8-9275-4995-a536-08018349036a'  {executed in 1 ms}
+
+2016-12-20 16:14:33.941 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'ec1bdc39-6b5d-4009-9862-81c8002a34bd'  {executed in 0 ms}
+
+2016-12-20 16:14:33.942 [http-8090-7] INFO - 285. SELECT * FROM node WHERE del_flag = 0 AND parent = 'ec1bdc39-6b5d-4009-9862-81c8002a34bd'  {executed in 1 ms}
+
+2016-12-20 16:14:33.945 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '01913d05-b40e-4244-93e6-522aa1feaf47'  {executed in 0 ms}
+
+2016-12-20 16:14:33.945 [http-8090-7] INFO - 286. SELECT * FROM node WHERE del_flag = 0 AND parent = '01913d05-b40e-4244-93e6-522aa1feaf47'  {executed in 0 ms}
+
+2016-12-20 16:14:33.951 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '022f54a7-82ff-42fc-a84d-a0ffdbe7a302'  {executed in 1 ms}
+
+2016-12-20 16:14:33.952 [http-8090-7] INFO - 287. SELECT * FROM node WHERE del_flag = 0 AND parent = '022f54a7-82ff-42fc-a84d-a0ffdbe7a302'  {executed in 2 ms}
+
+2016-12-20 16:14:33.954 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '1ca63554-ae73-44a0-996e-30b445c737b7'  {executed in 1 ms}
+
+2016-12-20 16:14:33.954 [http-8090-7] INFO - 288. SELECT * FROM node WHERE del_flag = 0 AND parent = '1ca63554-ae73-44a0-996e-30b445c737b7'  {executed in 1 ms}
+
+2016-12-20 16:14:33.955 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '3c9b0acb-56a2-4a85-9ab9-f8b67def291d'  {executed in 0 ms}
+
+2016-12-20 16:14:33.955 [http-8090-7] INFO - 289. SELECT * FROM node WHERE del_flag = 0 AND parent = '3c9b0acb-56a2-4a85-9ab9-f8b67def291d'  {executed in 0 ms}
+
+2016-12-20 16:14:33.957 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '42095e95-2dc0-4121-a4a5-9b75e94b95b1'  {executed in 0 ms}
+
+2016-12-20 16:14:33.957 [http-8090-7] INFO - 290. SELECT * FROM node WHERE del_flag = 0 AND parent = '42095e95-2dc0-4121-a4a5-9b75e94b95b1'  {executed in 0 ms}
+
+2016-12-20 16:14:33.958 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'a1de4efb-f0e3-4cbe-8053-389271fb8ebc'  {executed in 0 ms}
+
+2016-12-20 16:14:33.959 [http-8090-7] INFO - 291. SELECT * FROM node WHERE del_flag = 0 AND parent = 'a1de4efb-f0e3-4cbe-8053-389271fb8ebc'  {executed in 1 ms}
+
+2016-12-20 16:14:33.962 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '0d5b0792-91fa-4350-8a61-7ebb590b1fb3'  {executed in 1 ms}
+
+2016-12-20 16:14:33.962 [http-8090-7] INFO - 292. SELECT * FROM node WHERE del_flag = 0 AND parent = '0d5b0792-91fa-4350-8a61-7ebb590b1fb3'  {executed in 1 ms}
+
+2016-12-20 16:14:33.965 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '94a78c99-e938-4acf-aabb-1a5ec04812ae'  {executed in 0 ms}
+
+2016-12-20 16:14:33.966 [http-8090-7] INFO - 293. SELECT * FROM node WHERE del_flag = 0 AND parent = '94a78c99-e938-4acf-aabb-1a5ec04812ae'  {executed in 1 ms}
+
+2016-12-20 16:14:33.969 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'af955c97-4edf-451e-bbef-c3e6dfa421ff'  {executed in 1 ms}
+
+2016-12-20 16:14:33.969 [http-8090-7] INFO - 294. SELECT * FROM node WHERE del_flag = 0 AND parent = 'af955c97-4edf-451e-bbef-c3e6dfa421ff'  {executed in 1 ms}
+
+2016-12-20 16:14:33.970 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'c5c5a85e-2caa-427b-a3cc-79cb642e1e46'  {executed in 0 ms}
+
+2016-12-20 16:14:33.971 [http-8090-7] INFO - 295. SELECT * FROM node WHERE del_flag = 0 AND parent = 'c5c5a85e-2caa-427b-a3cc-79cb642e1e46'  {executed in 1 ms}
+
+2016-12-20 16:14:33.972 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '3bfa15f8-2d59-410c-af4f-351b4c6a2f83'  {executed in 0 ms}
+
+2016-12-20 16:14:33.973 [http-8090-7] INFO - 296. SELECT * FROM node WHERE del_flag = 0 AND parent = '3bfa15f8-2d59-410c-af4f-351b4c6a2f83'  {executed in 1 ms}
+
+2016-12-20 16:14:33.974 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '536f545c-5b40-4824-b128-f2bda7f27974'  {executed in 0 ms}
+
+2016-12-20 16:14:33.974 [http-8090-7] INFO - 297. SELECT * FROM node WHERE del_flag = 0 AND parent = '536f545c-5b40-4824-b128-f2bda7f27974'  {executed in 0 ms}
+
+2016-12-20 16:14:33.976 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'c9858318-596a-454a-90c2-dcac4e38ff28'  {executed in 1 ms}
+
+2016-12-20 16:14:33.976 [http-8090-7] INFO - 298. SELECT * FROM node WHERE del_flag = 0 AND parent = 'c9858318-596a-454a-90c2-dcac4e38ff28'  {executed in 1 ms}
+
+2016-12-20 16:14:33.977 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'd699b785-dfc2-4a90-bd11-006f2b47566c'  {executed in 0 ms}
+
+2016-12-20 16:14:33.977 [http-8090-7] INFO - 299. SELECT * FROM node WHERE del_flag = 0 AND parent = 'd699b785-dfc2-4a90-bd11-006f2b47566c'  {executed in 0 ms}
+
+2016-12-20 16:14:33.980 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'fa20247e-9e99-40c6-954d-a35d92a5ef8b'  {executed in 0 ms}
+
+2016-12-20 16:14:33.981 [http-8090-7] INFO - 300. SELECT * FROM node WHERE del_flag = 0 AND parent = 'fa20247e-9e99-40c6-954d-a35d92a5ef8b'  {executed in 1 ms}
+
+2016-12-20 16:14:33.983 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'afaf7f9c-305d-4f4a-94ea-1646c645b512'  {executed in 1 ms}
+
+2016-12-20 16:14:33.983 [http-8090-7] INFO - 301. SELECT * FROM node WHERE del_flag = 0 AND parent = 'afaf7f9c-305d-4f4a-94ea-1646c645b512'  {executed in 1 ms}
+
+2016-12-20 16:14:33.985 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '46551a41-8bf3-4d84-8fc0-416e7ddeeefb'  {executed in 0 ms}
+
+2016-12-20 16:14:33.985 [http-8090-7] INFO - 302. SELECT * FROM node WHERE del_flag = 0 AND parent = '46551a41-8bf3-4d84-8fc0-416e7ddeeefb'  {executed in 0 ms}
+
+2016-12-20 16:14:33.987 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '75edf6f3-5436-44af-84d0-61999ae4a1ea'  {executed in 0 ms}
+
+2016-12-20 16:14:33.987 [http-8090-7] INFO - 303. SELECT * FROM node WHERE del_flag = 0 AND parent = '75edf6f3-5436-44af-84d0-61999ae4a1ea'  {executed in 0 ms}
+
+2016-12-20 16:14:33.989 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '92075344-0025-4bcc-af2b-98c637230b46'  {executed in 0 ms}
+
+2016-12-20 16:14:33.989 [http-8090-7] INFO - 304. SELECT * FROM node WHERE del_flag = 0 AND parent = '92075344-0025-4bcc-af2b-98c637230b46'  {executed in 0 ms}
+
+2016-12-20 16:14:33.991 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '9d951b4e-94cd-4b6e-a637-48930d830f3a'  {executed in 0 ms}
+
+2016-12-20 16:14:33.991 [http-8090-7] INFO - 305. SELECT * FROM node WHERE del_flag = 0 AND parent = '9d951b4e-94cd-4b6e-a637-48930d830f3a'  {executed in 0 ms}
+
+2016-12-20 16:14:33.993 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'bfcfd127-b2d5-40a3-95db-cc038b7243a2'  {executed in 1 ms}
+
+2016-12-20 16:14:33.993 [http-8090-7] INFO - 306. SELECT * FROM node WHERE del_flag = 0 AND parent = 'bfcfd127-b2d5-40a3-95db-cc038b7243a2'  {executed in 1 ms}
+
+2016-12-20 16:14:33.996 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'c019d68a-9c0f-4211-aa04-fd5b97397922'  {executed in 1 ms}
+
+2016-12-20 16:14:33.996 [http-8090-7] INFO - 307. SELECT * FROM node WHERE del_flag = 0 AND parent = 'c019d68a-9c0f-4211-aa04-fd5b97397922'  {executed in 1 ms}
+
+2016-12-20 16:14:33.997 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '8dbfa61e-7093-4c11-b816-c39a12d7c150'  {executed in 0 ms}
+
+2016-12-20 16:14:33.998 [http-8090-7] INFO - 308. SELECT * FROM node WHERE del_flag = 0 AND parent = '8dbfa61e-7093-4c11-b816-c39a12d7c150'  {executed in 1 ms}
+
+2016-12-20 16:14:33.999 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'b1e6d8d3-db1c-4d93-926a-612505332f56'  {executed in 0 ms}
+
+2016-12-20 16:14:33.999 [http-8090-7] INFO - 309. SELECT * FROM node WHERE del_flag = 0 AND parent = 'b1e6d8d3-db1c-4d93-926a-612505332f56'  {executed in 0 ms}
+
+2016-12-20 16:14:34.001 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'b5343413-731f-4e24-928d-8cd906e122ed'  {executed in 0 ms}
+
+2016-12-20 16:14:34.001 [http-8090-7] INFO - 310. SELECT * FROM node WHERE del_flag = 0 AND parent = 'b5343413-731f-4e24-928d-8cd906e122ed'  {executed in 0 ms}
+
+2016-12-20 16:14:34.003 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'dbf699c9-fd65-4063-9eab-16242d220080'  {executed in 0 ms}
+
+2016-12-20 16:14:34.003 [http-8090-7] INFO - 311. SELECT * FROM node WHERE del_flag = 0 AND parent = 'dbf699c9-fd65-4063-9eab-16242d220080'  {executed in 0 ms}
+
+2016-12-20 16:14:34.004 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'f55b7178-6b0a-4ab0-99e6-6483c37793a1'  {executed in 0 ms}
+
+2016-12-20 16:14:34.004 [http-8090-7] INFO - 312. SELECT * FROM node WHERE del_flag = 0 AND parent = 'f55b7178-6b0a-4ab0-99e6-6483c37793a1'  {executed in 0 ms}
+
+2016-12-20 16:14:40.169 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:14:40.169 [http-8090-7] INFO - 313. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:14:40.172 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:14:40.172 [http-8090-7] INFO - 314. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:14:40.174 [http-8090-7] INFO - 1. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:14:40.174 [http-8090-7] INFO - 315. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:14:40.176 [http-8090-7] INFO - 1. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:14:40.176 [http-8090-7] INFO - 316. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:14:40.189 [http-8090-7] INFO - 1. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '8a971b1d-7565-4d0e-8180-6423c3c610f4'  {executed in 0 ms}
+
+2016-12-20 16:14:40.190 [http-8090-7] INFO - 317. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '8a971b1d-7565-4d0e-8180-6423c3c610f4'  {executed in 1 ms}
+
+2016-12-20 16:16:31.616 [http-8090-7] INFO - 1. INSERT INTO node ( id, title, type, rank, parent, user_id, description, del_flag ) values( 
+'af086bae-6299-41c2-a26b-7cf262498366', NULL, 0, 0, 'root', '111', NULL, '0' )  {executed in 1 ms}
+
+2016-12-20 16:16:31.616 [http-8090-7] INFO - 318. INSERT INTO node ( id, title, type, rank, parent, user_id, description, del_flag ) values( 
+'af086bae-6299-41c2-a26b-7cf262498366', NULL, 0, 0, 'root', '111', NULL, '0' )  {executed in 1 ms}
+
+2016-12-20 16:16:36.181 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND id = 'af086bae-6299-41c2-a26b-7cf262498366'  {executed in 0 ms}
+
+2016-12-20 16:16:36.182 [http-8090-7] INFO - 319. SELECT * FROM node WHERE del_flag = 0 AND id = 'af086bae-6299-41c2-a26b-7cf262498366'  {executed in 1 ms}
+
+2016-12-20 16:16:36.184 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = 'af086bae-6299-41c2-a26b-7cf262498366'  {executed in 1 ms}
+
+2016-12-20 16:16:36.184 [http-8090-7] INFO - 320. SELECT * FROM node WHERE del_flag = 0 AND parent = 'af086bae-6299-41c2-a26b-7cf262498366'  {executed in 1 ms}
+
+2016-12-20 16:16:36.186 [http-8090-7] INFO - 1. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = 'af086bae-6299-41c2-a26b-7cf262498366'  {executed in 0 ms}
+
+2016-12-20 16:16:36.186 [http-8090-7] INFO - 321. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = 'af086bae-6299-41c2-a26b-7cf262498366'  {executed in 0 ms}
+
+2016-12-20 16:16:36.188 [http-8090-7] INFO - 1. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = 'af086bae-6299-41c2-a26b-7cf262498366'  {executed in 0 ms}
+
+2016-12-20 16:16:36.188 [http-8090-7] INFO - 322. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = 'af086bae-6299-41c2-a26b-7cf262498366'  {executed in 0 ms}
+
+2016-12-20 16:19:57.188 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:19:57.189 [http-8090-6] INFO - 323. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:19:57.191 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:19:57.191 [http-8090-6] INFO - 324. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:19:57.193 [http-8090-6] INFO - 1. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:19:57.194 [http-8090-6] INFO - 325. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:19:57.195 [http-8090-6] INFO - 1. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:19:57.195 [http-8090-6] INFO - 326. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:19:57.209 [http-8090-6] INFO - 1. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '8a971b1d-7565-4d0e-8180-6423c3c610f4'  {executed in 0 ms}
+
+2016-12-20 16:19:57.209 [http-8090-6] INFO - 327. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '8a971b1d-7565-4d0e-8180-6423c3c610f4'  {executed in 0 ms}
+
+2016-12-20 16:21:29.916 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 2 ms}
+
+2016-12-20 16:21:29.916 [http-8090-5] INFO - 328. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 2 ms}
+
+2016-12-20 16:21:29.920 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:21:29.920 [http-8090-5] INFO - 329. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:21:29.922 [http-8090-5] INFO - 1. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:21:29.923 [http-8090-5] INFO - 330. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 2 ms}
+
+2016-12-20 16:21:29.925 [http-8090-5] INFO - 1. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:21:29.925 [http-8090-5] INFO - 331. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:21:29.944 [http-8090-5] INFO - 1. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '8a971b1d-7565-4d0e-8180-6423c3c610f4'  {executed in 1 ms}
+
+2016-12-20 16:21:29.944 [http-8090-5] INFO - 332. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '8a971b1d-7565-4d0e-8180-6423c3c610f4'  {executed in 1 ms}
+
+2016-12-20 16:25:46.022 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:25:46.023 [http-8090-7] INFO - 333. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:25:46.025 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:25:46.025 [http-8090-7] INFO - 334. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:25:46.027 [http-8090-7] INFO - 1. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:25:46.027 [http-8090-7] INFO - 335. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:25:46.028 [http-8090-7] INFO - 1. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:25:46.028 [http-8090-7] INFO - 336. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:25:46.045 [http-8090-7] INFO - 1. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '8a971b1d-7565-4d0e-8180-6423c3c610f4'  {executed in 0 ms}
+
+2016-12-20 16:25:46.046 [http-8090-7] INFO - 337. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '8a971b1d-7565-4d0e-8180-6423c3c610f4'  {executed in 1 ms}
+
+2016-12-20 16:28:33.540 [http-8090-1] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:28:33.541 [http-8090-1] INFO - 338. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 2 ms}
+
+2016-12-20 16:28:33.545 [http-8090-1] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:28:33.545 [http-8090-1] INFO - 339. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:28:33.546 [http-8090-1] INFO - 1. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:28:33.547 [http-8090-1] INFO - 340. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:28:33.550 [http-8090-1] INFO - 1. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:28:33.550 [http-8090-1] INFO - 341. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:28:33.564 [http-8090-1] INFO - 1. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '8a971b1d-7565-4d0e-8180-6423c3c610f4'  {executed in 1 ms}
+
+2016-12-20 16:28:33.564 [http-8090-1] INFO - 342. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '8a971b1d-7565-4d0e-8180-6423c3c610f4'  {executed in 1 ms}
+
+2016-12-20 16:29:13.226 [http-8090-4] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:29:13.226 [http-8090-4] INFO - 343. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:29:13.228 [http-8090-4] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:29:13.228 [http-8090-4] INFO - 344. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:29:13.231 [http-8090-4] INFO - 1. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:29:13.231 [http-8090-4] INFO - 345. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:29:13.235 [http-8090-4] INFO - 1. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:29:13.236 [http-8090-4] INFO - 346. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:29:13.252 [http-8090-4] INFO - 1. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '8a971b1d-7565-4d0e-8180-6423c3c610f4'  {executed in 0 ms}
+
+2016-12-20 16:29:13.252 [http-8090-4] INFO - 347. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '8a971b1d-7565-4d0e-8180-6423c3c610f4'  {executed in 0 ms}
+
+2016-12-20 16:29:42.931 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:29:42.931 [http-8090-5] INFO - 348. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:29:42.932 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:29:42.933 [http-8090-5] INFO - 349. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:29:42.936 [http-8090-5] INFO - 1. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:29:42.936 [http-8090-5] INFO - 350. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:29:42.938 [http-8090-5] INFO - 1. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:29:42.938 [http-8090-5] INFO - 351. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:29:42.956 [http-8090-5] INFO - 1. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '8a971b1d-7565-4d0e-8180-6423c3c610f4'  {executed in 1 ms}
+
+2016-12-20 16:29:42.956 [http-8090-5] INFO - 352. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '8a971b1d-7565-4d0e-8180-6423c3c610f4'  {executed in 1 ms}
+
+2016-12-20 16:33:33.833 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:33:33.833 [http-8090-5] INFO - 353. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:33:33.836 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:33:33.836 [http-8090-5] INFO - 354. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:33:33.838 [http-8090-5] INFO - 1. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:33:33.838 [http-8090-5] INFO - 355. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:33:33.841 [http-8090-5] INFO - 1. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:33:33.842 [http-8090-5] INFO - 356. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:33:33.857 [http-8090-5] INFO - 1. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '8a971b1d-7565-4d0e-8180-6423c3c610f4'  {executed in 0 ms}
+
+2016-12-20 16:33:33.858 [http-8090-5] INFO - 357. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '8a971b1d-7565-4d0e-8180-6423c3c610f4'  {executed in 1 ms}
+
+2016-12-20 16:36:20.942 [http-8090-1] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:36:20.942 [http-8090-1] INFO - 358. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:36:20.945 [http-8090-1] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:36:20.945 [http-8090-1] INFO - 359. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:36:20.949 [http-8090-1] INFO - 1. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:36:20.949 [http-8090-1] INFO - 360. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:36:20.953 [http-8090-1] INFO - 1. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:36:20.953 [http-8090-1] INFO - 361. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:36:20.966 [http-8090-1] INFO - 1. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '8a971b1d-7565-4d0e-8180-6423c3c610f4'  {executed in 0 ms}
+
+2016-12-20 16:36:20.967 [http-8090-1] INFO - 362. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '8a971b1d-7565-4d0e-8180-6423c3c610f4'  {executed in 1 ms}
+
+2016-12-20 16:39:05.387 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:39:05.387 [http-8090-5] INFO - 363. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:39:05.388 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:39:05.388 [http-8090-5] INFO - 364. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:39:05.390 [http-8090-5] INFO - 1. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:39:05.390 [http-8090-5] INFO - 365. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:39:05.393 [http-8090-5] INFO - 1. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:39:05.393 [http-8090-5] INFO - 366. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:39:05.409 [http-8090-5] INFO - 1. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '8a971b1d-7565-4d0e-8180-6423c3c610f4'  {executed in 0 ms}
+
+2016-12-20 16:39:05.410 [http-8090-5] INFO - 367. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '8a971b1d-7565-4d0e-8180-6423c3c610f4'  {executed in 1 ms}
+
+2016-12-20 16:40:06.741 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:40:06.741 [http-8090-6] INFO - 368. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:40:06.743 [http-8090-6] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:40:06.743 [http-8090-6] INFO - 369. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:40:06.744 [http-8090-6] INFO - 1. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:40:06.744 [http-8090-6] INFO - 370. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:40:06.746 [http-8090-6] INFO - 1. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:40:06.747 [http-8090-6] INFO - 371. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:40:06.764 [http-8090-6] INFO - 1. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '8a971b1d-7565-4d0e-8180-6423c3c610f4'  {executed in 1 ms}
+
+2016-12-20 16:40:06.764 [http-8090-6] INFO - 372. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '8a971b1d-7565-4d0e-8180-6423c3c610f4'  {executed in 1 ms}
+
+2016-12-20 16:50:38.305 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:50:38.305 [http-8090-5] INFO - 373. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:50:38.307 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:50:38.307 [http-8090-5] INFO - 374. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:50:38.309 [http-8090-5] INFO - 1. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:50:38.309 [http-8090-5] INFO - 375. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:50:38.314 [http-8090-5] INFO - 1. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:50:38.314 [http-8090-5] INFO - 376. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:50:38.329 [http-8090-5] INFO - 1. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '8a971b1d-7565-4d0e-8180-6423c3c610f4'  {executed in 0 ms}
+
+2016-12-20 16:50:38.329 [http-8090-5] INFO - 377. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '8a971b1d-7565-4d0e-8180-6423c3c610f4'  {executed in 0 ms}
+
+2016-12-20 16:51:26.113 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:51:26.114 [http-8090-7] INFO - 378. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 2 ms}
+
+2016-12-20 16:51:26.116 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:51:26.116 [http-8090-7] INFO - 379. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:51:26.119 [http-8090-7] INFO - 1. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:51:26.119 [http-8090-7] INFO - 380. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:51:26.123 [http-8090-7] INFO - 1. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:51:26.124 [http-8090-7] INFO - 381. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 2 ms}
+
+2016-12-20 16:51:26.138 [http-8090-7] INFO - 1. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '8a971b1d-7565-4d0e-8180-6423c3c610f4'  {executed in 1 ms}
+
+2016-12-20 16:51:26.138 [http-8090-7] INFO - 382. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '8a971b1d-7565-4d0e-8180-6423c3c610f4'  {executed in 1 ms}
+
+2016-12-20 16:53:22.162 [http-8090-3] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:53:22.162 [http-8090-3] INFO - 383. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:53:22.164 [http-8090-3] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:53:22.164 [http-8090-3] INFO - 384. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:53:22.167 [http-8090-3] INFO - 1. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:53:22.167 [http-8090-3] INFO - 385. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:53:22.171 [http-8090-3] INFO - 1. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:53:22.171 [http-8090-3] INFO - 386. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:53:22.186 [http-8090-3] INFO - 1. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '8a971b1d-7565-4d0e-8180-6423c3c610f4'  {executed in 1 ms}
+
+2016-12-20 16:53:22.186 [http-8090-3] INFO - 387. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '8a971b1d-7565-4d0e-8180-6423c3c610f4'  {executed in 1 ms}
+
+2016-12-20 16:54:33.241 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:54:33.241 [http-8090-7] INFO - 388. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:54:33.243 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:54:33.243 [http-8090-7] INFO - 389. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:54:33.245 [http-8090-7] INFO - 1. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:54:33.246 [http-8090-7] INFO - 390. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:54:33.248 [http-8090-7] INFO - 1. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:54:33.248 [http-8090-7] INFO - 391. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:54:33.266 [http-8090-7] INFO - 1. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '8a971b1d-7565-4d0e-8180-6423c3c610f4'  {executed in 0 ms}
+
+2016-12-20 16:54:33.267 [http-8090-7] INFO - 392. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '8a971b1d-7565-4d0e-8180-6423c3c610f4'  {executed in 1 ms}
+
+2016-12-20 16:54:53.128 [http-8090-4] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:54:53.128 [http-8090-4] INFO - 393. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:54:53.130 [http-8090-4] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:54:53.131 [http-8090-4] INFO - 394. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:54:53.136 [http-8090-4] INFO - 1. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:54:53.136 [http-8090-4] INFO - 395. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:54:53.138 [http-8090-4] INFO - 1. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:54:53.138 [http-8090-4] INFO - 396. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:54:53.150 [http-8090-4] INFO - 1. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '8a971b1d-7565-4d0e-8180-6423c3c610f4'  {executed in 0 ms}
+
+2016-12-20 16:54:53.150 [http-8090-4] INFO - 397. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '8a971b1d-7565-4d0e-8180-6423c3c610f4'  {executed in 0 ms}
+
+2016-12-20 16:55:25.082 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:55:25.082 [http-8090-7] INFO - 398. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:55:25.084 [http-8090-7] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:55:25.085 [http-8090-7] INFO - 399. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:55:25.087 [http-8090-7] INFO - 1. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:55:25.087 [http-8090-7] INFO - 400. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:55:25.089 [http-8090-7] INFO - 1. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:55:25.089 [http-8090-7] INFO - 401. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:55:25.107 [http-8090-7] INFO - 1. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '8a971b1d-7565-4d0e-8180-6423c3c610f4'  {executed in 0 ms}
+
+2016-12-20 16:55:25.107 [http-8090-7] INFO - 402. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '8a971b1d-7565-4d0e-8180-6423c3c610f4'  {executed in 0 ms}
+
+2016-12-20 16:55:43.355 [http-8090-3] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:55:43.355 [http-8090-3] INFO - 403. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:55:43.356 [http-8090-3] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:55:43.356 [http-8090-3] INFO - 404. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:55:43.357 [http-8090-3] INFO - 1. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:55:43.358 [http-8090-3] INFO - 405. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:55:43.359 [http-8090-3] INFO - 1. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:55:43.359 [http-8090-3] INFO - 406. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:55:43.374 [http-8090-3] INFO - 1. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '8a971b1d-7565-4d0e-8180-6423c3c610f4'  {executed in 1 ms}
+
+2016-12-20 16:55:43.374 [http-8090-3] INFO - 407. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '8a971b1d-7565-4d0e-8180-6423c3c610f4'  {executed in 1 ms}
+
+2016-12-20 16:56:33.002 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:56:33.003 [http-8090-5] INFO - 408. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:56:33.005 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:56:33.005 [http-8090-5] INFO - 409. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:56:33.007 [http-8090-5] INFO - 1. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:56:33.007 [http-8090-5] INFO - 410. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:56:33.009 [http-8090-5] INFO - 1. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:56:33.009 [http-8090-5] INFO - 411. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:56:33.025 [http-8090-5] INFO - 1. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '8a971b1d-7565-4d0e-8180-6423c3c610f4'  {executed in 0 ms}
+
+2016-12-20 16:56:33.025 [http-8090-5] INFO - 412. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '8a971b1d-7565-4d0e-8180-6423c3c610f4'  {executed in 1 ms}
+
+2016-12-20 16:58:31.939 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:58:31.939 [http-8090-5] INFO - 413. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:58:31.942 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:58:31.942 [http-8090-5] INFO - 414. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:58:31.943 [http-8090-5] INFO - 1. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:58:31.943 [http-8090-5] INFO - 415. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:58:31.945 [http-8090-5] INFO - 1. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:58:31.945 [http-8090-5] INFO - 416. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:58:31.958 [http-8090-5] INFO - 1. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '8a971b1d-7565-4d0e-8180-6423c3c610f4'  {executed in 1 ms}
+
+2016-12-20 16:58:31.958 [http-8090-5] INFO - 417. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '8a971b1d-7565-4d0e-8180-6423c3c610f4'  {executed in 1 ms}
+
+2016-12-20 16:59:06.434 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:59:06.435 [http-8090-5] INFO - 418. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 2 ms}
+
+2016-12-20 16:59:06.442 [http-8090-5] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:59:06.442 [http-8090-5] INFO - 419. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:59:06.444 [http-8090-5] INFO - 1. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:59:06.445 [http-8090-5] INFO - 420. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:59:06.447 [http-8090-5] INFO - 1. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:59:06.447 [http-8090-5] INFO - 421. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:59:06.492 [http-8090-5] INFO - 1. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '8a971b1d-7565-4d0e-8180-6423c3c610f4'  {executed in 0 ms}
+
+2016-12-20 16:59:06.492 [http-8090-5] INFO - 422. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '8a971b1d-7565-4d0e-8180-6423c3c610f4'  {executed in 0 ms}
+
+2016-12-20 16:59:23.182 [http-8090-1] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:59:23.182 [http-8090-1] INFO - 423. SELECT * FROM node WHERE del_flag = 0 AND id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:59:23.184 [http-8090-1] INFO - 1. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:59:23.184 [http-8090-1] INFO - 424. SELECT * FROM node WHERE del_flag = 0 AND parent = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 0 ms}
+
+2016-12-20 16:59:23.187 [http-8090-1] INFO - 1. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:59:23.187 [http-8090-1] INFO - 425. SELECT * FROM node_pic WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:59:23.191 [http-8090-1] INFO - 1. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:59:23.191 [http-8090-1] INFO - 426. SELECT * FROM node_doc WHERE del_flag = 0 AND node_id = '7e3d7ee7-0352-4e10-9c51-cd72c7c6669e'  {executed in 1 ms}
+
+2016-12-20 16:59:23.214 [http-8090-1] INFO - 1. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '8a971b1d-7565-4d0e-8180-6423c3c610f4'  {executed in 0 ms}
+
+2016-12-20 16:59:23.214 [http-8090-1] INFO - 427. SELECT fil_up.id AS "id", fil_up.file_name AS "fileName", fil_up.file_type AS "fileType", fil_up.file_size 
+AS "fileSize", fil_up.file_content_type AS "fileContentType", fil_up.file_content AS "fileContent", 
+fil_up.secure_level AS "secureLevel" FROM file_upload fil_up WHERE fil_up.id = '8a971b1d-7565-4d0e-8180-6423c3c610f4'  {executed in 0 ms}
+

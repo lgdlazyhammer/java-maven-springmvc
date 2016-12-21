@@ -5,6 +5,15 @@ $(function(){
 	var globalTreeItemSelected = "";
 	var globalAttrHref = $("#goToDeatilNodePage").attr("href");
 	
+	//beautify the file select input
+	$("#fileNodeDoc").change(function(){
+		var arr = $(this).val().split("\\");
+		if(arr){
+			var fileName = arr[arr.length-1];
+			$("#fileNodeDocLabel").text(fileName);
+		}
+	});
+	
 	getByNodeId();
 	
 	//create a tree

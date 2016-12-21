@@ -33,7 +33,7 @@
 		<nav class="navbar">
 				<div class="navbar-header">
 					<a id="goToDeatilNodePage" href="/OxygenWeb/treeNode" class="navbar-brand btn btn-primary">
-						Go To Detail Page
+						Detail Page
 					</a>
 				</div>
 			</div>
